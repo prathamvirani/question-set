@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Mathematics: Complex Numbers Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for a better look in dark mode */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a202c; /* A slightly lighter dark color */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568; /* Grayish color for the thumb */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #718096; /* Lighter gray on hover */
+        }
+        .header-card {
+            background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+        }
+    </style>
+    <!-- MathJax Configuration -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <!-- This script is for rendering LaTeX math expressions -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <div class="header-card text-white p-6 rounded-2xl mb-8 shadow-2xl">
+            <h1 class="text-3xl md:text-4xl font-bold text-center">Engineering Mathematics: Complex Numbers Test</h1>
+            <p class="text-center text-lg mt-2">Questions & Detailed Answers</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 h-[calc(100vh-12rem)]">
+
+            <!-- Questions Column -->
+            <div id="questions-container" class="bg-gray-800 rounded-2xl shadow-xl overflow-y-auto">
+                <div class="sticky top-0 bg-gray-800 pt-6 pb-4 z-10 shadow-md">
+                     <h2 class="text-2xl font-bold text-center text-white">Questions</h2>
+                </div>
+                <div class="space-y-8 px-6 pb-6">
+                    
+                    <!-- Question 1 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">1. Quadratic Solutions</h3>
+                        <p>What are the two solutions to the quadratic equation $x^2 + 81 = 0$?</p>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">2. Real & Imaginary Parts</h3>
+                        <p>Identify the real and imaginary parts of the complex number $z = \frac{3}{4} - j\sqrt{5}$.</p>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">3. Powers of j (Positive)</h3>
+                        <p>Simplify the expression $j^{43}$.</p>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">4. Powers of j (Negative)</h3>
+                        <p>Evaluate $j^{-18}$.</p>
+                    </div>
+
+                    <!-- Question 5 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">5. Powers of j (Operations)</h3>
+                        <p>What is the result of $j^{100} - j^{102}$?</p>
+                    </div>
+                    
+                    <!-- Question 6 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">6. Complex Addition</h3>
+                        <p>Given $z_1 = -4 + j7$ and $z_2 = 5 - j2$, find the sum $z_1 + z_2$.</p>
+                    </div>
+
+                    <!-- Question 7 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">7. Complex Subtraction</h3>
+                        <p>Using the same $z_1$ and $z_2$, calculate the difference $z_2 - z_1$.</p>
+                    </div>
+
+                    <!-- Question 8 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">8. Complex Multiplication</h3>
+                        <p>Find the product of $(2 - j5)$ and $(3 + j4)$.</p>
+                    </div>
+
+                    <!-- Question 9 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">9. Complex Conjugate</h3>
+                        <p>What is the complex conjugate of $z = -8 + j$?</p>
+                    </div>
+                    
+                    <!-- Question 10 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">10. Conjugate Product</h3>
+                        <p>Calculate the product of $(3 - j\sqrt{2})$ and its complex conjugate.</p>
+                    </div>
+
+                    <!-- Question 11 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">11. Complex Division</h3>
+                        <p>Perform the division $\frac{2 - j3}{4 + j}$.</p>
+                    </div>
+
+                    <!-- Question 12 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">12. Squaring a Complex Number</h3>
+                        <p>Simplify the expression $(1+j)^2$.</p>
+                    </div>
+
+                    <!-- Question 13 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">13. Evaluating Expressions</h3>
+                        <p>If $z = 2+j$, evaluate $z^2 - 2z + 3$.</p>
+                    </div>
+
+                    <!-- Question 14 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">14. Solving Quadratic Equations</h3>
+                        <p>Solve the quadratic equation $2x^2 + 5x + 4 = 0$.</p>
+                    </div>
+
+                    <!-- Question 15 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">15. Equating Complex Numbers</h3>
+                        <p>Find the real values of `x` and `y` that satisfy the equation: $(x + jy)(3 - j4) = 17 - j6$.</p>
+                    </div>
+
+                    <!-- Question 16 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">16. Solving for Variables</h3>
+                        <p>If $(a+b) + j(a-b) = (2+j5)^2$, find the values of `a` and `b`.</p>
+                    </div>
+
+                    <!-- Question 17 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">17. Argand Diagram Plotting</h3>
+                        <p>Plot the complex number $z = -4 - j3$ on an Argand diagram.</p>
+                    </div>
+
+                    <!-- Question 18 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">18. Graphical Addition</h3>
+                        <p>Given $z_1 = 3+j$ and $z_2 = 1+j4$, graphically represent the sum $z_1 + z_2$ using the parallelogram law on an Argand diagram. What is the resulting complex number?</p>
+                    </div>
+
+                    <!-- Question 19 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">19. Modulus and Argument</h3>
+                        <p>Determine the modulus (r) and the argument ($\theta$ in degrees) of the complex number $z = \sqrt{3} - j$.</p>
+                    </div>
+
+                    <!-- Question 20 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">20. Polar Form Conversion</h3>
+                        <p>Express the complex number $z = -7 + j7$ in polar form, $r(\cos\theta + j\sin\theta)$.</p>
+                    </div>
+
+                    <!-- Question 21 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">21. Shorthand Polar Form</h3>
+                        <p>Express $z = 5 - j12$ in the shorthand polar form $r\angle\theta$.</p>
+                    </div>
+
+                    <!-- Question 22 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">22. Rectangular Form Conversion</h3>
+                        <p>Convert the complex number $z = 4(\cos(150^\circ) + j\sin(150^\circ))$ from polar form to rectangular form ($a+jb$).</p>
+                    </div>
+
+                    <!-- Question 23 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">23. Shorthand to Rectangular</h3>
+                        <p>A complex number is given in polar form as $8\angle-60^\circ$. Express it in rectangular form.</p>
+                    </div>
+
+                    <!-- Question 24 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">24. Modulus/Argument of a Fraction</h3>
+                        <p>Find the modulus and argument of $z = \frac{1}{-1-j}$.</p>
+                    </div>
+
+                    <!-- Question 25 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">25. Polar Multiplication</h3>
+                        <p>If $z_1 = 10\angle30^\circ$ and $z_2 = 2\angle-45^\circ$, find the product $z_1z_2$ in polar form.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Answers Column -->
+            <div id="answers-container" class="bg-gray-800 rounded-2xl shadow-xl overflow-y-auto">
+                <div class="sticky top-0 bg-gray-800 pt-6 pb-4 z-10 shadow-md">
+                    <h2 class="text-2xl font-bold text-center text-white">Answers</h2>
+                </div>
+                <div class="space-y-8 px-6 pb-6">
+
+                    <!-- Answer 1 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">1. Solution</h3>
+                        <p>$x = \pm j9$</p>
+                    </div>
+
+                    <!-- Answer 2 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">2. Solution</h3>
+                        <p>Real Part: $\frac{3}{4}$, Imaginary Part: $-\sqrt{5}$</p>
+                    </div>
+
+                    <!-- Answer 3 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">3. Solution</h3>
+                        <p>$j^{43} = (j^4)^{10} \cdot j^3 = 1^{10} \cdot (-j) = -j$</p>
+                    </div>
+
+                    <!-- Answer 4 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">4. Solution</h3>
+                        <p>$j^{-18} = (j^{-4})^4 \cdot j^{-2} = 1^4 \cdot (-1) = -1$</p>
+                    </div>
+
+                    <!-- Answer 5 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">5. Solution</h3>
+                        <p>$j^{100} = (j^4)^{25} = 1$. $j^{102} = (j^4)^{25} \cdot j^2 = -1$.</p>
+                        <p>$1 - (-1) = 2$</p>
+                    </div>
+                    
+                    <!-- Answer 6 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">6. Solution</h3>
+                        <p>$(-4+5) + j(7-2) = 1 + j5$</p>
+                    </div>
+
+                    <!-- Answer 7 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">7. Solution</h3>
+                        <p>$(5 - (-4)) + j(-2 - 7) = 9 - j9$</p>
+                    </div>
+
+                    <!-- Answer 8 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">8. Solution</h3>
+                        <p>$(6 - (-20)) + j(8 - 15) = 26 - j7$</p>
+                    </div>
+
+                    <!-- Answer 9 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">9. Solution</h3>
+                        <p>The conjugate is $-8 - j$.</p>
+                    </div>
+
+                    <!-- Answer 10 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">10. Solution</h3>
+                        <p>$(3 - j\sqrt{2})(3 + j\sqrt{2}) = 3^2 + (\sqrt{2})^2 = 9 + 2 = 11$</p>
+                    </div>
+
+                    <!-- Answer 11 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">11. Solution</h3>
+                        <p>$\frac{(2 - j3)(4 - j)}{(4 + j)(4 - j)} = \frac{8 - 2j - 12j + 3j^2}{16 - j^2} = \frac{5 - 14j}{17} = \frac{5}{17} - j\frac{14}{17}$</p>
+                    </div>
+
+                    <!-- Answer 12 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">12. Solution</h3>
+                        <p>$1 + 2j + j^2 = 1 + 2j - 1 = 2j$</p>
+                    </div>
+
+                    <!-- Answer 13 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">13. Solution</h3>
+                        <p>$(2+j)^2 - 2(2+j) + 3 = (4 + 4j - 1) - (4 + 2j) + 3 = (3 + 4j) - 4 - 2j + 3 = 2 + 2j$</p>
+                    </div>
+
+                    <!-- Answer 14 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">14. Solution</h3>
+                        <p>$x = \frac{-5 \pm \sqrt{5^2 - 4(2)(4)}}{2(2)} = \frac{-5 \pm \sqrt{25 - 32}}{4} = -\frac{5}{4} \pm j\frac{\sqrt{7}}{4}$</p>
+                    </div>
+
+                    <!-- Answer 15 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">15. Solution</h3>
+                        <p>$(3x+4y) + j(3y-4x) = 17 - j6$.</p>
+                        <p>$3x+4y=17$ and $3y-4x=-6$. Solving simultaneously gives $x=1, y=2$.</p>
+                    </div>
+
+                    <!-- Answer 16 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">16. Solution</h3>
+                        <p>$(2+j5)^2 = 4 + 20j - 25 = -21 + j20$.</p>
+                        <p>$a+b=-21$ and $a-b=20$. Solving simultaneously gives $a=-0.5, b=-20.5$.</p>
+                    </div>
+
+                    <!-- Answer 17 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">17. Solution</h3>
+                        <p>A point plotted at coordinates (-4, -3) on the complex plane.</p>
+                    </div>
+
+                    <!-- Answer 18 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">18. Solution</h3>
+                        <p>The resulting complex number is $4+j5$. The graph shows vectors from the origin to (3,1) and (1,4), with the resultant vector being the diagonal of the parallelogram ending at (4,5).</p>
+                    </div>
+
+                    <!-- Answer 19 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">19. Solution</h3>
+                        <p>$r = \sqrt{(\sqrt{3})^2 + (-1)^2} = \sqrt{3+1} = 2$.</p>
+                        <p>$\theta = \tan^{-1}(\frac{-1}{\sqrt{3}}) = -30^\circ$ or $330^\circ$.</p>
+                    </div>
+
+                    <!-- Answer 20 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">20. Solution</h3>
+                        <p>$r = \sqrt{(-7)^2 + 7^2} = 7\sqrt{2}$. $\theta = \tan^{-1}(\frac{7}{-7}) = 135^\circ$.</p>
+                        <p>$z = 7\sqrt{2}(\cos(135^\circ) + j\sin(135^\circ))$</p>
+                    </div>
+
+                    <!-- Answer 21 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">21. Solution</h3>
+                        <p>$r = \sqrt{5^2 + (-12)^2} = 13$. $\theta = \tan^{-1}(\frac{-12}{5}) \approx -67.38^\circ$.</p>
+                        <p>$13\angle-67.38^\circ$</p>
+                    </div>
+
+                    <!-- Answer 22 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">22. Solution</h3>
+                        <p>$a = 4\cos(150^\circ) = 4(-\frac{\sqrt{3}}{2}) = -2\sqrt{3}$.</p>
+                        <p>$b = 4\sin(150^\circ) = 4(\frac{1}{2}) = 2$. Result: $-2\sqrt{3} + j2$.</p>
+                    </div>
+
+                    <!-- Answer 23 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">23. Solution</h3>
+                        <p>$a = 8\cos(-60^\circ) = 4$. $b = 8\sin(-60^\circ) = -4\sqrt{3}$.</p>
+                        <p>Result: $4 - j4\sqrt{3}$</p>
+                    </div>
+
+                    <!-- Answer 24 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">24. Solution</h3>
+                        <p>$z = \frac{1}{-1-j} \cdot \frac{-1+j}{-1+j} = \frac{-1+j}{2} = -0.5 + j0.5$.</p>
+                        <p>$r = \sqrt{(-0.5)^2 + 0.5^2} = \frac{\sqrt{2}}{2}$. $\theta = 135^\circ$.</p>
+                    </div>
+
+                    <!-- Answer 25 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">25. Solution</h3>
+                        <p>$r = 10 \times 2 = 20$. $\theta = 30^\circ + (-45^\circ) = -15^\circ$.</p>
+                        <p>Result: $20\angle-15^\circ$</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
