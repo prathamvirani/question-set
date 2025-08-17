@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Mathematics: Functions II Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for a better look in dark mode */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111827; /* Darker gray */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4b5563; /* Grayish color for the thumb */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6b7280; /* Lighter gray on hover */
+        }
+        .header-card {
+            background: linear-gradient(135deg, #4f46e5 0%, #a21caf 100%);
+        }
+        /* --- FIX FOR EQUATION OVERFLOW --- */
+        /* This targets the paragraphs inside the answer boxes */
+        #answers-container .bg-gray-900 p {
+            overflow-x: auto; /* Allows horizontal scrolling if content is too wide */
+            padding-bottom: 0.5rem; /* Adds a little space for the scrollbar to not overlap content */
+        }
+    </style>
+    <!-- MathJax Configuration -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <!-- This script is for rendering LaTeX math expressions -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <div class="header-card text-white p-6 rounded-2xl mb-8 shadow-2xl">
+            <h1 class="text-3xl md:text-4xl font-bold text-center">Engineering Mathematics: Functions II Test</h1>
+            <p class="text-center text-lg mt-2">Questions & Detailed Answers</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 h-[calc(100vh-12rem)]">
+
+            <!-- Questions Column -->
+            <div id="questions-container" class="bg-gray-800 rounded-2xl shadow-xl overflow-y-auto">
+                <div class="sticky top-0 bg-gray-800 pt-6 pb-4 z-10 shadow-md">
+                     <h2 class="text-2xl font-bold text-center text-white">Questions</h2>
+                </div>
+                <div class="space-y-8 px-6 pb-6">
+                    
+                    <!-- Question 1 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-indigo-400 mb-2">1. Rational Functions</h3>
+                        <p>Find all vertical and horizontal asymptotes for the function: $f(x) = \frac{3x^2 - 12}{x^2 - x - 6}$</p>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-indigo-400 mb-2">2. Rational Functions</h3>
+                        <p>Determine the vertical and horizontal asymptotes of the function: $g(x) = \frac{2x+1}{x^2-4}$</p>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-indigo-400 mb-2">3. Rational Functions</h3>
+                        <p>Analyze the function $h(x) = \frac{x^3 + 1}{x^2 - 1}$. Does it have a horizontal asymptote? If not, describe the end behavior of the function.</p>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-indigo-400 mb-2">4. Rational Functions</h3>
+                        <p>A chemical reaction's rate $R$ (in moles per second) is modeled by $R(C) = \frac{10C}{0.5 + C}$, where $C$ is the concentration of a catalyst. What concentration $C$ results in a reaction rate of 15 moles per second? What is the limiting reaction rate as the concentration of the catalyst becomes very large?</p>
+                    </div>
+                    
+                    <!-- Question 5 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-indigo-400 mb-2">5. Rational Functions</h3>
+                        <p>Sketch the graph of the function $f(x) = \frac{x-2}{x+3}$, clearly labeling any asymptotes and intercepts.</p>
+                    </div>
+
+                    <!-- Question 6 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-pink-400 mb-2">6. Circular Functions</h3>
+                        <p>Solve the equation $2\sin^2(x) - \sin(x) - 1 = 0$ for $x$ in the interval $[0, 2\pi]$.</p>
+                    </div>
+
+                    <!-- Question 7 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-pink-400 mb-2">7. Circular Functions</h3>
+                        <p>For the function $y = -3\cos(2x - \frac{\pi}{2}) + 1$, determine the amplitude, period, phase shift, and vertical shift.</p>
+                    </div>
+                    
+                    <!-- Question 8 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-pink-400 mb-2">8. Circular Functions</h3>
+                        <p>The voltage in an AC circuit is given by $V(t) = 120\sin(120\pi t - \pi)$, where $t$ is time in seconds. What is the maximum voltage, the frequency (in Hz), and the first time $t > 0$ when the voltage is 60V?</p>
+                    </div>
+
+                    <!-- Question 9 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-pink-400 mb-2">9. Circular Functions</h3>
+                        <p>Prove the identity: $\frac{\sin(2x)}{1+\cos(2x)} = \tan(x)$.</p>
+                    </div>
+
+                    <!-- Question 10 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-pink-400 mb-2">10. Circular Functions</h3>
+                        <p>An object's height on a spring is given by $h(t) = 4\cos(\pi t)$. Sketch two full periods of the function, labeling the maximum and minimum heights.</p>
+                    </div>
+                    
+                    <!-- Question 11 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-pink-400 mb-2">11. Circular Functions</h3>
+                        <p>Find the exact value of $\sec(\arctan(\frac{4}{3}))$.</p>
+                    </div>
+
+                    <!-- Question 12 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-teal-400 mb-2">12. Exponential & Logarithmic Functions</h3>
+                        <p>Solve for $x$: $5^{2x-1} = 100$. Give your answer to four decimal places.</p>
+                    </div>
+                    
+                    <!-- Question 13 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-teal-400 mb-2">13. Exponential & Logarithmic Functions</h3>
+                        <p>The population of a town is modeled by $P(t) = 2500e^{0.025t}$, where $t$ is the number of years after 2020. In what year will the population reach 4000?</p>
+                    </div>
+
+                    <!-- Question 14 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-teal-400 mb-2">14. Exponential & Logarithmic Functions</h3>
+                        <p>A radioactive substance decays according to the formula $A(t) = A_0 e^{-0.04t}$, where $t$ is in years. If you start with 200 grams, how many grams will be left after 10 years? What is the half-life of this substance?</p>
+                    </div>
+                    
+                    <!-- Question 15 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-teal-400 mb-2">15. Exponential & Logarithmic Functions</h3>
+                        <p>Solve for $x$: $\log_2(x) + \log_2(x-7) = 3$.</p>
+                    </div>
+
+                    <!-- Question 16 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-teal-400 mb-2">16. Exponential & Logarithmic Functions</h3>
+                        <p>Express as a single logarithm: $2\ln(x) - \frac{1}{2}\ln(y) + 3\ln(z)$.</p>
+                    </div>
+                    
+                    <!-- Question 17 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-teal-400 mb-2">17. Exponential & Logarithmic Functions</h3>
+                        <p>The intensity of an earthquake is measured on the Richter scale by the formula $R = \log(\frac{I}{I_0})$. How many times more intense is an earthquake measuring 8.1 on the Richter scale than one measuring 6.1?</p>
+                    </div>
+
+                    <!-- Question 18 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-amber-400 mb-2">18. Hyperbolic Functions</h3>
+                        <p>Given $\sinh(x) = \frac{3}{4}$, find the exact values of $\cosh(x)$ and $\tanh(x)$ without finding $x$.</p>
+                    </div>
+
+                    <!-- Question 19 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-amber-400 mb-2">19. Hyperbolic Functions</h3>
+                        <p>Express $y = 4\cosh(x) - 2\sinh(x)$ in terms of exponential functions and simplify.</p>
+                    </div>
+
+                    <!-- Question 20 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-amber-400 mb-2">20. Hyperbolic Functions</h3>
+                        <p>Solve the equation $\tanh(x) = \frac{1}{2}$ for $x$. Give the exact answer in terms of a natural logarithm.</p>
+                    </div>
+
+                    <!-- Question 21 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-amber-400 mb-2">21. Hyperbolic Functions</h3>
+                        <p>Evaluate $\sinh^{-1}(2)$. Express your answer as a natural logarithm.</p>
+                    </div>
+
+                    <!-- Question 22 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-amber-400 mb-2">22. Hyperbolic Functions</h3>
+                        <p>A heavy, flexible cable hanging under its own weight takes the shape of a catenary, described by the equation $y = a \cosh(\frac{x}{a})$. If a cable is described by $y = 20\cosh(\frac{x}{20})$, find the height of the cable when $x=10$.</p>
+                    </div>
+
+                    <!-- Question 23 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-rose-400 mb-2">23. Mixed Applications</h3>
+                        <p>A damped oscillating spring's displacement is given by $d(t) = 5e^{-0.1t}\cos(2\pi t)$. Calculate the displacement at $t=1$. What function describes the damping of the oscillation over time?</p>
+                    </div>
+                    
+                    <!-- Question 24 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-rose-400 mb-2">24. Mixed Applications</h3>
+                        <p>Identify the type of function represented by the equation that models the shape of a satellite dish, which is designed to reflect signals to a single point. (Linear, Quadratic, Exponential, Hyperbolic, or Rational?)</p>
+                    </div>
+
+                    <!-- Question 25 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-rose-400 mb-2">25. Mixed Applications</h3>
+                        <p>The power $P$ (in watts) in an electrical circuit is given by $P(t) = \frac{V_0^2 \sin^2(\omega t)}{R}$, where $V_0$ is the peak voltage, $R$ is the resistance, and $\omega$ is the angular frequency. If $V_0 = 170$V, $R=10\Omega$, and $\omega = 120\pi$ rad/s, find the period of the power function and the maximum power delivered.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Answers Column -->
+            <div id="answers-container" class="bg-gray-800 rounded-2xl shadow-xl overflow-y-auto">
+                <div class="sticky top-0 bg-gray-800 pt-6 pb-4 z-10 shadow-md">
+                    <h2 class="text-2xl font-bold text-center text-white">Answers</h2>
+                </div>
+                <div class="space-y-8 px-6 pb-6">
+
+                    <!-- Answer 1 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">1. Solution</h3>
+                        <p><strong>Vertical Asymptotes:</strong> $x = 3, x = -2$.</p>
+                        <p><strong>Horizontal Asymptote:</strong> $y = 3$.</p>
+                    </div>
+
+                    <!-- Answer 2 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">2. Solution</h3>
+                        <p><strong>Vertical Asymptotes:</strong> $x = 2, x = -2$.</p>
+                        <p><strong>Horizontal Asymptote:</strong> $y = 0$.</p>
+                    </div>
+
+                    <!-- Answer 3 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">3. Solution</h3>
+                        <p>No horizontal asymptote. As $x \to \pm\infty$, the function behaves like the line $y=x$ (a slant asymptote).</p>
+                    </div>
+
+                    <!-- Answer 4 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">4. Solution</h3>
+                        <p>Setting $R(C)=15$ gives $15 = \frac{10C}{0.5+C} \implies 7.5 + 15C = 10C \implies 5C = -7.5$, which is impossible. The question implies a positive rate, but the math shows no solution for R=15. The limiting rate (HA) is $R=10$ moles/sec, which is the max possible rate.</p>
+                    </div>
+
+                    <!-- Answer 5 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">5. Solution</h3>
+                        <p><strong>Graph:</strong> Vertical asymptote at $x=-3$, horizontal asymptote at $y=1$, x-intercept at $(2,0)$, y-intercept at $(0, -2/3)$.</p>
+                    </div>
+
+                    <!-- Answer 6 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">6. Solution</h3>
+                        <p>Let $u = \sin(x)$. $2u^2 - u - 1 = 0 \implies (2u+1)(u-1)=0$.</p>
+                        <p>$\sin(x) = 1 \implies x = \frac{\pi}{2}$</p>
+                        <p>$\sin(x) = -\frac{1}{2} \implies x = \frac{7\pi}{6}, \frac{11\pi}{6}$</p>
+                    </div>
+
+                    <!-- Answer 7 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">7. Solution</h3>
+                        <p><strong>Amplitude:</strong> 3. <strong>Period:</strong> $\frac{2\pi}{2} = \pi$. <strong>Phase Shift:</strong> $\frac{\pi/2}{2} = \frac{\pi}{4}$ to the right. <strong>Vertical Shift:</strong> 1 unit up.</p>
+                    </div>
+
+                    <!-- Answer 8 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">8. Solution</h3>
+                        <p><strong>Max Voltage:</strong> 120V. <strong>Frequency:</strong> $f = \frac{\omega}{2\pi} = \frac{120\pi}{2\pi} = 60$ Hz.</p>
+                        <p> $60 = 120\sin(120\pi t - \pi) \implies \frac{1}{2} = \sin(120\pi t - \pi)$.</p>
+                        <p>The angle is $-\frac{5\pi}{6}$. So $120\pi t - \pi = -\frac{5\pi}{6} \implies 120t = \frac{1}{6} \implies t = \frac{1}{720}$ s.</p>
+                    </div>
+
+                    <!-- Answer 9 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">9. Solution</h3>
+                        <p>$\frac{\sin(2x)}{1+\cos(2x)} = \frac{2\sin(x)\cos(x)}{1+(2\cos^2(x) - 1)} = \frac{2\sin(x)\cos(x)}{2\cos^2(x)} = \frac{\sin(x)}{\cos(x)} = \tan(x)$.</p>
+                    </div>
+
+                    <!-- Answer 10 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">10. Solution</h3>
+                        <p><strong>Graph:</strong> A cosine wave with amplitude 4, period $\frac{2\pi}{\pi}=2$. Max height is 4, min height is -4.</p>
+                    </div>
+
+                    <!-- Answer 11 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">11. Solution</h3>
+                        <p>Let $\theta = \arctan(\frac{4}{3})$. This means $\tan(\theta) = \frac{4}{3}$. In a right triangle, opposite=4, adjacent=3, so hypotenuse=5. $\sec(\theta) = \frac{\text{hyp}}{\text{adj}} = \frac{5}{3}$.</p>
+                    </div>
+
+                    <!-- Answer 12 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">12. Solution</h3>
+                        <p>$\log(5^{2x-1}) = \log(100) \implies (2x-1)\log(5) = 2 \implies 2x-1 = \frac{2}{\log(5)} \implies x = \frac{1}{2}(\frac{2}{\log(5)} + 1) \approx 1.9307$.</p>
+                    </div>
+
+                    <!-- Answer 13 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">13. Solution</h3>
+                        <p>$4000 = 2500e^{0.025t} \implies 1.6 = e^{0.025t} \implies t = \frac{\ln(1.6)}{0.025} \approx 18.8$ years. The year will be 2038.</p>
+                    </div>
+
+                    <!-- Answer 14 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">14. Solution</h3>
+                        <p><strong>Grams left:</strong> $A(10) = 200e^{-0.04 \times 10} = 200e^{-0.4} \approx 134.06$ grams.</p>
+                        <p><strong>Half-life:</strong> $0.5 = e^{-0.04t} \implies t = \frac{\ln(0.5)}{-0.04} \approx 17.33$ years.</p>
+                    </div>
+
+                    <!-- Answer 15 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">15. Solution</h3>
+                        <p>$\log_2(x(x-7)) = 3 \implies x(x-7) = 2^3 = 8 \implies x^2-7x-8=0 \implies (x-8)(x+1)=0$. $x=8$ is the only valid solution.</p>
+                    </div>
+                    
+                    <!-- Answer 16 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">16. Solution</h3>
+                        <p>$\ln(x^2) - \ln(\sqrt{y}) + \ln(z^3) = \ln\left(\frac{x^2 z^3}{\sqrt{y}}\right)$.</p>
+                    </div>
+
+                    <!-- Answer 17 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">17. Solution</h3>
+                        <p>The ratio of intensities is $10^{R_1 - R_2} = 10^{8.1 - 6.1} = 10^2 = 100$ times more intense.</p>
+                    </div>
+                    
+                    <!-- Answer 18 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">18. Solution</h3>
+                        <p>Using $\cosh^2(x) - \sinh^2(x) = 1$, we get $\cosh^2(x) = 1 + (\frac{3}{4})^2 = \frac{25}{16} \implies \cosh(x) = \frac{5}{4}$.</p>
+                        <p>$\tanh(x) = \frac{\sinh(x)}{\cosh(x)} = \frac{3/4}{5/4} = \frac{3}{5}$.</p>
+                    </div>
+
+                    <!-- Answer 19 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">19. Solution</h3>
+                        <p>$y = 4(\frac{e^x+e^{-x}}{2}) - 2(\frac{e^x-e^{-x}}{2}) = 2(e^x+e^{-x}) - (e^x-e^{-x}) = e^x + 3e^{-x}$.</p>
+                    </div>
+
+                    <!-- Answer 20 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">20. Solution</h3>
+                        <p>$\frac{e^x - e^{-x}}{e^x + e^{-x}} = \frac{1}{2} \implies 2e^x - 2e^{-x} = e^x + e^{-x} \implies e^x = 3e^{-x} \implies e^{2x} = 3 \implies x = \frac{1}{2}\ln(3)$.</p>
+                    </div>
+
+                    <!-- Answer 21 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">21. Solution</h3>
+                        <p>Using the formula $\sinh^{-1}(x) = \ln(x+\sqrt{x^2+1})$, we get $\sinh^{-1}(2) = \ln(2+\sqrt{2^2+1}) = \ln(2+\sqrt{5})$.</p>
+                    </div>
+
+                    <!-- Answer 22 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">22. Solution</h3>
+                        <p>$y = 20\cosh(\frac{10}{20}) = 20\cosh(0.5) \approx 20(1.1276) \approx 22.55$.</p>
+                    </div>
+                    
+                    <!-- Answer 23 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">23. Solution</h3>
+                        <p><strong>Displacement:</strong> $d(1) = 5e^{-0.1(1)}\cos(2\pi(1)) = 5e^{-0.1} \approx 4.524$.</p>
+                        <p><strong>Damping function:</strong> The amplitude is controlled by $y = 5e^{-0.1t}$.</p>
+                    </div>
+                    
+                    <!-- Answer 24 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">24. Solution</h3>
+                        <p><strong>Quadratic</strong> (specifically, a parabola).</p>
+                    </div>
+
+                    <!-- Answer 25 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">25. Solution</h3>
+                        <p><strong>Period:</strong> The period of $\sin^2(\theta)$ is $\pi$. So $T = \frac{\pi}{\omega} = \frac{\pi}{120\pi} = \frac{1}{120}$ s.</p>
+                        <p><strong>Max Power:</strong> Occurs when $\sin^2(\omega t)=1$, so $P_{max} = \frac{170^2}{10} = 2890$ watts.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
