@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Mathematics: Scalar and Vector Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for a better look in dark mode */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1f2937; /* bg-gray-800 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4b5563; /* bg-gray-600 */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6b7280; /* bg-gray-500 */
+        }
+        .header-card {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        }
+    </style>
+    <!-- MathJax Configuration -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <!-- This script is for rendering LaTeX math expressions -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <div class="header-card text-white p-6 rounded-2xl mb-8 shadow-2xl">
+            <h1 class="text-3xl md:text-4xl font-bold text-center">Engineering Mathematics: Scalar and Vector Test</h1>
+            <p class="text-center text-lg mt-2">Questions & Detailed Answers</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 h-[calc(100vh-12rem)]">
+
+            <!-- Questions Column -->
+            <div id="questions-container" class="bg-gray-800 rounded-2xl shadow-xl overflow-y-auto">
+                <div class="sticky top-0 bg-gray-800 pt-6 pb-4 z-10 shadow-md">
+                     <h2 class="text-2xl font-bold text-center text-white">Questions</h2>
+                </div>
+                <div class="space-y-8 px-6 pb-6">
+                    
+                    <!-- Question 1 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">1. Scalar Quantity</h3>
+                        <p>Which of the following is a <strong>scalar</strong> quantity? <br> a) Velocity <br> b) Force <br> c) Temperature <br> d) Acceleration</p>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">2. Equal Vectors</h3>
+                        <p>Two vectors are considered <strong>equal</strong> if they have: <br> a) The same magnitude. <br> b) The same direction. <br> c) The same magnitude and direction. <br> d) The same origin.</p>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">3. Vector Magnitude</h3>
+                        <p>What is the <strong>magnitude</strong> of the vector $\textbf{a} = \langle3, -4\rangle$?</p>
+                    </div>
+                    
+                    <!-- Question 4 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">4. Orthogonal Vectors</h3>
+                        <p>The <strong>scalar product</strong> of two orthogonal (perpendicular) vectors is:</p>
+                    </div>
+
+                    <!-- Question 5 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">5. Parallel Vectors</h3>
+                        <p>The <strong>vector product</strong> of two parallel vectors results in:</p>
+                    </div>
+
+                    <!-- Question 6 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">6. Vector Addition</h3>
+                        <p>If $\textbf{a} = 2\textbf{i} + 3\textbf{j}$ and $\textbf{b} = \textbf{i} - 2\textbf{j}$, what is the resultant vector $\textbf{a} + \textbf{b}$?</p>
+                    </div>
+
+                    <!-- Question 7 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">7. Unit Vector</h3>
+                        <p>By definition, a <strong>unit vector</strong> has a magnitude of:</p>
+                    </div>
+
+                    <!-- Question 8 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">8. Direction Cosines</h3>
+                        <p>The <strong>direction cosines</strong> of a vector are the cosines of the angles the vector makes with the:</p>
+                    </div>
+
+                    <!-- Question 9 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">9. Cross Product Result</h3>
+                        <p>The result of a <strong>vector (cross) product</strong> is always a:</p>
+                    </div>
+
+                    <!-- Question 10 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">10. Polar Form</h3>
+                        <p>How is the vector $\textbf{a} = \langle4, 3\rangle$ represented in <strong>polar form</strong> (magnitude and angle in degrees)?</p>
+                    </div>
+
+                    <!-- Question 11 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">11. Vector Types</h3>
+                        <p>Briefly differentiate between a <strong>position vector</strong> and a <strong>free vector</strong>.</p>
+                    </div>
+
+                    <!-- Question 12 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">12. Resultant Force</h3>
+                        <p>Given vector $\textbf{p}$ represents a force of 40 N acting due east, and vector $\textbf{q}$ represents a force of 30 N acting due north, find the magnitude of the resultant vector $\textbf{r} = \textbf{p} + \textbf{q}$.</p>
+                    </div>
+                    
+                    <!-- Question 13 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">13. Unit Vector Calculation</h3>
+                        <p>Find the <strong>unit vector</strong> in the direction of $\textbf{a} = 3\textbf{i} - 4\textbf{j}$.</p>
+                    </div>
+
+                    <!-- Question 14 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">14. Orthogonality Check</h3>
+                        <p>Determine if the vectors $\textbf{a} = 2\textbf{i} + 2\textbf{j} - \textbf{k}$ and $\textbf{b} = 5\textbf{i} - 4\textbf{j} + 2\textbf{k}$ are orthogonal. Justify your answer with a calculation.</p>
+                    </div>
+
+                    <!-- Question 15 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">15. Dot Product</h3>
+                        <p>Find the <strong>scalar (dot) product</strong> of $\textbf{a} = \langle2, 3\rangle$ and $\textbf{b} = \langle1, 2\rangle$.</p>
+                    </div>
+
+                    <!-- Question 16 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">16. Cross Product</h3>
+                        <p>Given $\textbf{a} = 2\textbf{i} + 2\textbf{j} - \textbf{k}$ and $\textbf{b} = 3\textbf{i} - 6\textbf{j} + 2\textbf{k}$, find the <strong>vector (cross) product</strong> $\textbf{a} \times \textbf{b}$.</p>
+                    </div>
+
+                    <!-- Question 17 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">17. Angle Between Vectors</h3>
+                        <p>Find the <strong>angle</strong> in degrees between the vectors $\textbf{a} = \langle1, -1\rangle$ and $\textbf{b} = \langle3, 2\rangle$.</p>
+                    </div>
+
+                    <!-- Question 18 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">18. Direction Cosines Calculation</h3>
+                        <p>A vector is given by $\vec{OP} = 2\textbf{i} + 3\textbf{j} + 4\textbf{k}$. Find its <strong>direction cosines</strong>.</p>
+                    </div>
+
+                    <!-- Question 19 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">19. Perpendicular Vector</h3>
+                        <p>Find a vector that is <strong>perpendicular</strong> to the plane passing through the points P(1, 4, 6), Q(-2, 5, -1), and R(1, -1, 1).</p>
+                    </div>
+
+                    <!-- Question 20 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">20. Resultant Velocity</h3>
+                        <p>Two velocities are given as $\textbf{v}_1 = 25$ m/s at an angle of 60° and $\textbf{v}_2 = 15$ m/s at an angle of -30°. Calculate the <strong>magnitude and direction</strong> (in degrees) of the resultant velocity $\textbf{v}_1 + \textbf{v}_2$.</p>
+                    </div>
+                    
+                    <!-- Question 21 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">21. Resultant of Two Forces</h3>
+                        <p>A force $\textbf{F}_1$ of 5 N is inclined at an angle of 45° to a second force $\textbf{F}_2$ of 9 N. Both forces act at the same point. Calculate the magnitude of the resultant force and its direction with respect to the 9 N force.</p>
+                    </div>
+
+                    <!-- Question 22 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">22. Geometrical Interpretation</h3>
+                        <p>Explain the geometrical interpretation of the magnitude of the vector product, $|\textbf{a} \times \textbf{b}|$.</p>
+                    </div>
+
+                    <!-- Question 23 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">23. Dot Product Property</h3>
+                        <p>If $\textbf{a} \cdot \textbf{b} = \textbf{a} \cdot \textbf{c}$, does it necessarily follow that $\textbf{b} = \textbf{c}$? Explain your reasoning.</p>
+                    </div>
+
+                    <!-- Question 24 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">24. Direction Ratios vs. Cosines</h3>
+                        <p>What are <strong>direction ratios</strong>, and how do they relate to <strong>direction cosines</strong>?</p>
+                    </div>
+
+                    <!-- Question 25 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">25. Right-Hand Rule</h3>
+                        <p>Describe the <strong>right-hand rule</strong> for determining the direction of the vector product $\textbf{a} \times \textbf{b}$.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Answers Column -->
+            <div id="answers-container" class="bg-gray-800 rounded-2xl shadow-xl overflow-y-auto">
+                <div class="sticky top-0 bg-gray-800 pt-6 pb-4 z-10 shadow-md">
+                    <h2 class="text-2xl font-bold text-center text-white">Answers</h2>
+                </div>
+                <div class="space-y-8 px-6 pb-6">
+
+                    <!-- Answer 1 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">1. Solution</h3>
+                        <p><strong>c) Temperature.</strong> Scalar quantities have only magnitude, not direction.</p>
+                    </div>
+
+                    <!-- Answer 2 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">2. Solution</h3>
+                        <p><strong>c) The same magnitude and direction.</strong> This is the definition of vector equality.</p>
+                    </div>
+                    
+                    <!-- Answer 3 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">3. Solution</h3>
+                        <p>Magnitude = $\sqrt{3^2 + (-4)^2} = \sqrt{9 + 16} = \sqrt{25} = \textbf{5}$.</p>
+                    </div>
+
+                    <!-- Answer 4 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">4. Solution</h3>
+                        <p><strong>0.</strong> The dot product is $|\textbf{a}||\textbf{b}|\cos(\theta)$. If they are orthogonal, $\theta = 90^\circ$, and $\cos(90^\circ) = 0$.</p>
+                    </div>
+
+                    <!-- Answer 5 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">5. Solution</h3>
+                        <p><strong>The zero vector.</strong> The cross product magnitude is $|\textbf{a}||\textbf{b}|\sin(\theta)$. If parallel, $\theta = 0^\circ$, and $\sin(0^\circ) = 0$.</p>
+                    </div>
+
+                    <!-- Answer 6 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">6. Solution</h3>
+                        <p>$(2+1)\textbf{i} + (3-2)\textbf{j} = \textbf{3i + j}$.</p>
+                    </div>
+
+                    <!-- Answer 7 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">7. Solution</h3>
+                        <p><strong>1.</strong> This is by definition.</p>
+                    </div>
+
+                    <!-- Answer 8 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">8. Solution</h3>
+                        <p><strong>The x, y, and z coordinate axes.</strong></p>
+                    </div>
+
+                    <!-- Answer 9 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">9. Solution</h3>
+                        <p><strong>A vector.</strong> The resultant vector is perpendicular to the plane containing the original two vectors.</p>
+                    </div>
+
+                    <!-- Answer 10 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">10. Solution</h3>
+                        <p>Magnitude $r = \sqrt{4^2+3^2} = 5$. <br> Angle $\theta = \tan^{-1}(3/4) \approx 36.87^\circ$. <br> Result: $\textbf{5}\angle\textbf{36.87}^\circ$.</p>
+                    </div>
+                    
+                    <!-- Answer 11 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">11. Solution</h3>
+                        <p>A <strong>position vector</strong> specifies a point's location relative to a fixed origin. A <strong>free vector</strong> is defined only by its magnitude and direction, not its location.</p>
+                    </div>
+
+                    <!-- Answer 12 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">12. Solution</h3>
+                        <p>The vectors are perpendicular, so by Pythagoras' theorem: <br> $|\textbf{r}| = \sqrt{40^2 + 30^2} = \sqrt{1600 + 900} = \sqrt{2500} = \textbf{50 N}$.</p>
+                    </div>
+                    
+                    <!-- Answer 13 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">13. Solution</h3>
+                        <p>Magnitude: $|\textbf{a}| = \sqrt{3^2 + (-4)^2} = 5$. <br> Unit vector $\hat{a} = \textbf{a} / |\textbf{a}| = \textbf{(3/5)i - (4/5)j}$.</p>
+                    </div>
+
+                    <!-- Answer 14 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">14. Solution</h3>
+                        <p>Dot product: $\textbf{a} \cdot \textbf{b} = (2)(5) + (2)(-4) + (-1)(2) = 10 - 8 - 2 = 0$. <br> <strong>Yes, they are orthogonal</strong> because their dot product is zero.</p>
+                    </div>
+
+                    <!-- Answer 15 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">15. Solution</h3>
+                        <p>$\textbf{a} \cdot \textbf{b} = (2)(1) + (3)(2) = 2 + 6 = \textbf{8}$.</p>
+                    </div>
+
+                    <!-- Answer 16 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">16. Solution</h3>
+                        <p>$\textbf{a} \times \textbf{b} = 
+                        \begin{vmatrix} \textbf{i} & \textbf{j} & \textbf{k} \\ 2 & 2 & -1 \\ 3 & -6 & 2 \end{vmatrix} $ <br>
+                        $= \textbf{i}((2)(2) - (-1)(-6)) - \textbf{j}((2)(2) - (-1)(3)) + \textbf{k}((2)(-6) - (2)(3))$ <br>
+                        $= \textbf{i}(4 - 6) - \textbf{j}(4 + 3) + \textbf{k}(-12 - 6)$ <br>
+                        $= \textbf{-2i - 7j - 18k}$</p>
+                    </div>
+
+                    <!-- Answer 17 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">17. Solution</h3>
+                        <p>$\textbf{a} \cdot \textbf{b} = (1)(3) + (-1)(2) = 1$. <br>
+                        $|\textbf{a}| = \sqrt{1^2 + (-1)^2} = \sqrt{2}$. <br>
+                        $|\textbf{b}| = \sqrt{3^2 + 2^2} = \sqrt{13}$. <br>
+                        $\cos(\theta) = \frac{1}{\sqrt{2}\sqrt{13}} \approx 0.196$. <br>
+                        $\theta = \arccos(0.196) \approx \textbf{78.69}^\circ$.</p>
+                    </div>
+                    
+                    <!-- Answer 18 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">18. Solution</h3>
+                        <p>Magnitude $|\vec{OP}| = r = \sqrt{2^2 + 3^2 + 4^2} = \sqrt{29}$. <br>
+                        $\cos(\alpha) = 2/\sqrt{29}$ <br>
+                        $\cos(\beta) = 3/\sqrt{29}$ <br>
+                        $\cos(\gamma) = 4/\sqrt{29}$</p>
+                    </div>
+
+                    <!-- Answer 19 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">19. Solution</h3>
+                        <p>Vectors in the plane: <br>
+                        $\vec{PQ} = \langle-3, 1, -7\rangle$. <br>
+                        $\vec{PR} = \langle0, -5, -5\rangle$. <br>
+                        The cross product is perpendicular: <br>
+                        $\vec{PQ} \times \vec{PR} = \begin{vmatrix} \textbf{i} & \textbf{j} & \textbf{k} \\ -3 & 1 & -7 \\ 0 & -5 & -5 \end{vmatrix}$ <br>
+                        $= \textbf{-40i - 15j + 15k}$</p>
+                    </div>
+
+                    <!-- Answer 20 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">20. Solution</h3>
+                        <p>Components: <br>
+                        $\textbf{v}_1 = \langle12.5, 21.65\rangle$. <br>
+                        $\textbf{v}_2 = \langle12.99, -7.5\rangle$. <br>
+                        Resultant $\textbf{v} = \langle25.49, 14.15\rangle$. <br>
+                        Magnitude $|\textbf{v}| \approx \textbf{29.15 m/s}$. <br>
+                        Direction $\theta = \tan^{-1}(14.15 / 25.49) \approx \textbf{29.04}^\circ$.</p>
+                    </div>
+
+                    <!-- Answer 21 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">21. Solution</h3>
+                        <p>Let $\textbf{F}_2 = \langle9, 0\rangle$. Then $\textbf{F}_1 = \langle5\cos(45^\circ), 5\sin(45^\circ)\rangle = \langle3.536, 3.536\rangle$. <br>
+                        Resultant $\textbf{F} = \langle12.536, 3.536\rangle$. <br>
+                        Magnitude $|\textbf{F}| \approx \textbf{13.03 N}$. <br>
+                        Direction $\theta = \tan^{-1}(3.536 / 12.536) \approx \textbf{15.76}^\circ$ relative to the 9 N force.</p>
+                    </div>
+
+                    <!-- Answer 22 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">22. Solution</h3>
+                        <p>The magnitude $|\textbf{a} \times \textbf{b}|$ represents the <strong>area of the parallelogram</strong> formed by the vectors $\textbf{a}$ and $\textbf{b}$ when placed tail-to-tail.</p>
+                    </div>
+
+                    <!-- Answer 23 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">23. Solution</h3>
+                        <p><strong>No.</strong> The equation $\textbf{a} \cdot (\textbf{b} - \textbf{c}) = 0$ only implies that $\textbf{a}$ is orthogonal to the vector $(\textbf{b} - \textbf{c})$. It does not mean that $(\textbf{b} - \textbf{c})$ must be the zero vector.</p>
+                    </div>
+
+                    <!-- Answer 24 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">24. Solution</h3>
+                        <p><strong>Direction ratios</strong> are the scalar components of a vector (a, b, c). They are proportional to the <strong>direction cosines</strong> (l, m, n). Specifically, $l = a/r, m = b/r, n = c/r$, where r is the vector's magnitude.</p>
+                    </div>
+
+                    <!-- Answer 25 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">25. Solution</h3>
+                        <p>Point the fingers of your right hand in the direction of vector $\textbf{a}$, then curl them toward vector $\textbf{b}$. Your thumb will point in the direction of the resultant vector $\textbf{a} \times \textbf{b}$.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
