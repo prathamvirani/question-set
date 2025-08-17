@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Mathematics: Polynomials Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for a better look in dark mode */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a202c; /* A slightly lighter dark color */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568; /* Grayish color for the thumb */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #718096; /* Lighter gray on hover */
+        }
+        .header-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+    </style>
+    <!-- MathJax Configuration -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <!-- This script is for rendering LaTeX math expressions -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <div class="header-card text-white p-6 rounded-2xl mb-8 shadow-2xl">
+            <h1 class="text-3xl md:text-4xl font-bold text-center">Engineering Mathematics: Polynomials Test</h1>
+            <p class="text-center text-lg mt-2">25 Questions & Detailed Solutions</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 h-[calc(100vh-12rem)]">
+
+            <!-- Questions Column -->
+            <div id="questions-container" class="bg-gray-800 rounded-2xl shadow-xl overflow-y-auto">
+                <div class="sticky top-0 bg-gray-800 pt-6 pb-4 z-10 shadow-md">
+                     <h2 class="text-2xl font-bold text-center text-white">Questions</h2>
+                </div>
+                <div class="space-y-8 px-6 pb-6">
+                    
+                    <!-- Question 1 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">1. Foundational Concepts</h3>
+                        <p>When the polynomial $P(x) = 2x^3 + kx^2 - 8x + 5$ is divided by $(x - 2)$, the remainder is 9. Find the value of $k$.</p>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">2. Foundational Concepts</h3>
+                        <p>Use the Remainder Theorem to find the remainder when $f(x) = x^4 - 3x^3 + 5x^2 - 10x + 6$ is divided by $(x + 1)$.</p>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">3. Foundational Concepts</h3>
+                        <p>Show that $(x - 3)$ is a factor of the polynomial $g(x) = x^3 - 19x + 30$.</p>
+                    </div>
+                    
+                    <!-- Question 4 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">4. Foundational Concepts</h3>
+                        <p>The polynomial $h(x) = x^3 + ax^2 + bx - 6$ is exactly divisible by $(x - 2)$ and leaves a remainder of -24 when divided by $(x + 1)$. Find the values of $a$ and $b$.</p>
+                    </div>
+                    
+                    <!-- Question 5 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">5. Foundational Concepts</h3>
+                        <p>Given that $(x + 4)$ is a factor of $f(x) = 3x^3 + 10x^2 - 11x + k$, find the value of $k$.</p>
+                    </div>
+
+                    <!-- Question 6 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">6. Foundational Concepts</h3>
+                        <p>Without using long division, determine the remainder when $2x^4 - 5x^2 + 4x - 7$ is divided by $(x + 3)$.</p>
+                    </div>
+
+                    <!-- Question 7 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">7. Foundational Concepts</h3>
+                        <p>The expression $x^3 + px^2 + qx + r$ leaves the same remainder when divided by $(x - 1)$ or $(x + 2)$. Find a relationship between $p$ and $q$.</p>
+                    </div>
+
+                    <!-- Question 8 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">8. Foundational Concepts</h3>
+                        <p>Given the polynomial $P(x) = 4x^4 - 4x^3 - 35x^2 + 45x + 18$, use the Factor Theorem to determine if $(2x + 1)$ is a factor.</p>
+                    </div>
+
+                    <!-- Question 9 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">9. Factorization & Solving Equations</h3>
+                        <p>Factorize the cubic polynomial $f(x) = x^3 - 2x^2 - 5x + 6$ completely.</p>
+                    </div>
+
+                    <!-- Question 10 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">10. Factorization & Solving Equations</h3>
+                        <p>Solve the equation $2x^3 - 7x^2 + 2x + 3 = 0$.</p>
+                    </div>
+
+                    <!-- Question 11 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">11. Factorization & Solving Equations</h3>
+                        <p>Factorize the quartic polynomial $g(x) = x^4 - x^3 - 7x^2 + x + 6$ completely.</p>
+                    </div>
+
+                    <!-- Question 12 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">12. Factorization & Solving Equations</h3>
+                        <p>Solve the equation $x^4 - 15x^2 + 10x + 24 = 0$.</p>
+                    </div>
+
+                    <!-- Question 13 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">13. Factorization & Solving Equations</h3>
+                        <p>Find all the roots of the equation $3x^3 - 5x^2 - 5x - 1 = 0$.</p>
+                    </div>
+
+                    <!-- Question 14 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">14. Factorization & Solving Equations</h3>
+                        <p>Factorize $f(x) = 2x^4 + x^3 - 14x^2 - 19x - 6$ into a product of linear factors.</p>
+                    </div>
+
+                    <!-- Question 15 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">15. Factorization & Solving Equations</h3>
+                        <p>One root of the equation $x^3 - 4x^2 - 3x + 18 = 0$ is a repeated root. Solve the equation.</p>
+                    </div>
+
+                    <!-- Question 16 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">16. Factorization & Solving Equations</h3>
+                        <p>Solve the quadratic equation $5x^2 - 9x - 3 = 0$, giving your answers correct to 3 decimal places.</p>
+                    </div>
+
+                    <!-- Question 17 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">17. Factorization & Solving Equations</h3>
+                        <p>Find the exact solutions to the equation $x^3 - 6x^2 + 11x - 6 = 0$.</p>
+                    </div>
+
+                    <!-- Question 18 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">18. Factorization & Solving Equations</h3>
+                        <p>Solve the quartic equation $x^4 + 2x^3 - 13x^2 - 14x + 24 = 0$.</p>
+                    </div>
+
+                    <!-- Question 19 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">19. Factorization & Solving Equations</h3>
+                        <p>The polynomial $f(x) = x^3 - 2x^2 + kx + 6$ has a factor of $(x - 3)$. Find $k$ and solve the equation $f(x) = 0$.</p>
+                    </div>
+
+                    <!-- Question 20 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">20. Factorization & Solving Equations</h3>
+                        <p>Given that $x=1$ and $x=-2$ are roots of the equation $x^4 + ax^3 + bx^2 - 8x - 8 = 0$, find the values of $a$ and $b$ and the other two roots.</p>
+                    </div>
+
+                    <!-- Question 21 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">21. Application Problems</h3>
+                        <p>The power $P$ (in watts) in an electrical circuit is given by the formula $P = V I - I^2 R$, where $V$ is the voltage, $I$ is the current, and $R$ is the resistance. If the voltage is 24 volts and the resistance is 9 ohms, what current is required for the circuit to produce 15 watts of power?</p>
+                    </div>
+
+                    <!-- Question 22 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">22. Application Problems</h3>
+                        <p>An open box is to be made from a square piece of cardboard, 18 cm by 18 cm, by cutting out equal squares from each corner and turning up the sides. If the volume of the box is to be 400 cm³, what is the size of the square that should be cut out?</p>
+                    </div>
+
+                    <!-- Question 23 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">23. Application Problems</h3>
+                        <p>A chemical reaction's rate, $R(x)$, is modeled by the equation $R(x) = 2x^3 - 11x^2 + 12x$, where $x$ is the concentration of a reagent. Determine the concentrations for which the reaction rate is zero.</p>
+                    </div>
+
+                    <!-- Question 24 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">24. Application Problems</h3>
+                        <p>The deflection $y$ of a beam at a distance $x$ from one end is given by $y = \frac{1}{1000}(x^4 - 16x^3 + 60x^2)$. Find the distances $x$ where the deflection is zero.</p>
+                    </div>
+
+                    <!-- Question 25 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">25. Application Problems</h3>
+                        <p>The profit $P(n)$ from producing $n$ units of a product is given by $P(n) = n^3 - 30n^2 + 200n + 1000$. The company breaks even when the profit is zero. A financial analysis shows that the company breaks even at $n=10$. Find any other break-even points.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Answers Column -->
+            <div id="answers-container" class="bg-gray-800 rounded-2xl shadow-xl overflow-y-auto">
+                <div class="sticky top-0 bg-gray-800 pt-6 pb-4 z-10 shadow-md">
+                    <h2 class="text-2xl font-bold text-center text-white">Solutions</h2>
+                </div>
+                <div class="space-y-8 px-6 pb-6">
+
+                    <!-- Answer 1 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">1. Solution</h3>
+                        <p>$P(2) = 2(2)^3 + k(2)^2 - 8(2) + 5 = 9$</p>
+                        <p>$16 + 4k - 16 + 5 = 9 \implies 4k = 4 \implies \mathbf{k = 1}$</p>
+                    </div>
+
+                    <!-- Answer 2 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">2. Solution</h3>
+                        <p>$f(-1) = (-1)^4 - 3(-1)^3 + 5(-1)^2 - 10(-1) + 6$</p>
+                        <p>$= 1 + 3 + 5 + 10 + 6 = \mathbf{25}$</p>
+                    </div>
+
+                    <!-- Answer 3 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">3. Solution</h3>
+                        <p>$g(3) = (3)^3 - 19(3) + 30 = 27 - 57 + 30 = \mathbf{0}$.</p>
+                        <p>Since the remainder is 0, $(x - 3)$ is a factor.</p>
+                    </div>
+                    
+                    <!-- Answer 4 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">4. Solution</h3>
+                        <p>$h(2) = 8 + 4a + 2b - 6 = 0 \implies 2a + b = -1$ (Eq 1)</p>
+                        <p>$h(-1) = -1 + a - b - 6 = -24 \implies a - b = -17$ (Eq 2)</p>
+                        <p>Adding (1) and (2): $3a = -18 \implies \mathbf{a = -6}$.</p>
+                        <p>Substituting into (2): $-6 - b = -17 \implies \mathbf{b = 11}$.</p>
+                    </div>
+
+                    <!-- Answer 5 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">5. Solution</h3>
+                        <p>$f(-4) = 3(-4)^3 + 10(-4)^2 - 11(-4) + k = 0$</p>
+                        <p>$-192 + 160 + 44 + k = 0 \implies 12 + k = 0 \implies \mathbf{k = -12}$.</p>
+                    </div>
+                    
+                    <!-- Answer 6 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">6. Solution</h3>
+                        <p>Remainder is $f(-3) = 2(-3)^4 - 5(-3)^2 + 4(-3) - 7$</p>
+                        <p>$= 162 - 45 - 12 - 7 = \mathbf{98}$.</p>
+                    </div>
+                    
+                    <!-- Answer 7 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">7. Solution</h3>
+                        <p>$P(1) = 1 + p + q + r$. $P(-2) = -8 + 4p - 2q + r$.</p>
+                        <p>$1 + p + q + r = -8 + 4p - 2q + r \implies 9 = 3p - 3q \implies \mathbf{p - q = 3}$.</p>
+                    </div>
+
+                    <!-- Answer 8 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">8. Solution</h3>
+                        <p>Test $x = -1/2$. $P(-1/2) = 4(1/16) - 4(-1/8) - 35(1/4) + 45(-1/2) + 18$</p>
+                        <p>$= 1/4 + 1/2 - 35/4 - 45/2 + 18 = -8.5 - 22 + 18 = -12.5 \neq 0$.</p>
+                        <p>So, $(2x+1)$ is <strong>not a factor</strong>.</p>
+                    </div>
+
+                    <!-- Answer 9 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">9. Solution</h3>
+                        <p>$f(1) = 0$, so $(x-1)$ is a factor.</p>
+                        <p>$f(x) = (x-1)(x^2 - x - 6) = \mathbf{(x-1)(x-3)(x+2)}$.</p>
+                    </div>
+
+                    <!-- Answer 10 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">10. Solution</h3>
+                        <p>$f(1) = 0$, so $(x-1)$ is a factor.</p>
+                        <p>$f(x) = (x-1)(2x^2 - 5x - 3) = (x-1)(2x+1)(x-3) = 0$.</p>
+                        <p>Roots are $\mathbf{x=1, x=3, x=-1/2}$.</p>
+                    </div>
+
+                    <!-- Answer 11 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">11. Solution</h3>
+                        <p>$g(1)=0, g(-1)=0$, so $(x-1)$ and $(x+1)$ are factors.</p>
+                        <p>$g(x) = (x^2-1)(x^2 - x - 6) = \mathbf{(x-1)(x+1)(x-3)(x+2)}$.</p>
+                    </div>
+
+                    <!-- Answer 12 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">12. Solution</h3>
+                        <p>$f(-1)=0, f(2)=0$, so $(x+1)$ and $(x-2)$ are factors.</p>
+                        <p>$f(x) = (x+1)(x-2)(x^2+x-12) = (x+1)(x-2)(x+4)(x-3)=0$.</p>
+                        <p>Roots are $\mathbf{x=-1, x=2, x=3, x=-4}$.</p>
+                    </div>
+
+                    <!-- Answer 13 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">13. Solution</h3>
+                        <p>$f(-1/3) = 0$, so $(3x+1)$ is a factor.</p>
+                        <p>$f(x) = (3x+1)(x^2 - 2x - 1) = 0$.</p>
+                        <p>Using quadratic formula: $x = 1 \pm \sqrt{2}$. Roots are $\mathbf{x=-1/3, x=1+\sqrt{2}, x=1-\sqrt{2}}$.</p>
+                    </div>
+
+                    <!-- Answer 14 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">14. Solution</h3>
+                        <p>$f(-1)=0, f(-2)=0$, so $(x+1)$ and $(x+2)$ are factors.</p>
+                        <p>$f(x) = (x+1)(x+2)(2x^2 - 5x - 3) = \mathbf{(x+1)(x+2)(2x+1)(x-3)}$.</p>
+                    </div>
+
+                    <!-- Answer 15 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">15. Solution</h3>
+                        <p>$f(3) = 0$, so $(x-3)$ is a factor.</p>
+                        <p>$f(x) = (x-3)(x^2 - x - 6) = (x-3)(x-3)(x+2)$.</p>
+                        <p>The roots are $\mathbf{x=3}$ (repeated) and $\mathbf{x=-2}$.</p>
+                    </div>
+
+                    <!-- Answer 16 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">16. Solution</h3>
+                        <p>$x = \frac{9 \pm \sqrt{81 + 60}}{10} = \frac{9 \pm \sqrt{141}}{10}$.</p>
+                        <p>$x \approx \mathbf{2.087}$ or $\mathbf{-0.287}$.</p>
+                    </div>
+
+                    <!-- Answer 17 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">17. Solution</h3>
+                        <p>$f(1)=0$, so $(x-1)$ is a factor.</p>
+                        <p>$f(x) = (x-1)(x-2)(x-3)=0$.</p>
+                        <p>Roots are $\mathbf{x=1, x=2, x=3}$.</p>
+                    </div>
+
+                    <!-- Answer 18 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">18. Solution</h3>
+                        <p>$f(1)=0, f(3)=0$, so $(x-1)$ and $(x-3)$ are factors.</p>
+                        <p>$f(x) = (x-1)(x-3)(x+2)(x+4)=0$.</p>
+                        <p>Roots are $\mathbf{x=1, x=3, x=-2, x=-4}$.</p>
+                    </div>
+
+                    <!-- Answer 19 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">19. Solution</h3>
+                        <p>$f(3) = 0 \implies 15 + 3k = 0 \implies \mathbf{k=-5}$.</p>
+                        <p>$f(x) = (x-3)(x+2)(x-1)=0$.</p>
+                        <p>Roots are $\mathbf{x=3, x=1, x=-2}$.</p>
+                    </div>
+
+                    <!-- Answer 20 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">20. Solution</h3>
+                        <p>$a+b=15$ and $-2a+b=-6$. Solving gives $\mathbf{a=7, b=8}$.</p>
+                        <p>$f(x) = (x-1)(x+2)(x^2+6x+4)=0$.</p>
+                        <p>Other roots are $\mathbf{x = -3 \pm \sqrt{5}}$.</p>
+                    </div>
+
+                    <!-- Answer 21 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">21. Solution</h3>
+                        <p>$9I^2 - 24I + 15 = 0 \implies 3I^2 - 8I + 5 = 0$.</p>
+                        <p>$(3I-5)(I-1)=0$. Current is $\mathbf{1}$ A or $\mathbf{5/3}$ A.</p>
+                    </div>
+
+                    <!-- Answer 22 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">22. Solution</h3>
+                        <p>$V(x) = x(18-2x)^2 = 400 \implies x^3 - 18x^2 + 81x - 100 = 0$.</p>
+                        <p>Testing integer values, $f(4) = 0$.</p>
+                        <p>The size of the square is $\mathbf{4}$ cm.</p>
+                    </div>
+
+                    <!-- Answer 23 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">23. Solution</h3>
+                        <p>$R(x) = x(2x-3)(x-4) = 0$.</p>
+                        <p>Concentrations are $\mathbf{x=0}$, $\mathbf{x=1.5}$, and $\mathbf{x=4}$.</p>
+                    </div>
+
+                    <!-- Answer 24 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">24. Solution</h3>
+                        <p>$y = \frac{x^2}{1000}(x-6)(x-10) = 0$.</p>
+                        <p>Deflection is zero at $\mathbf{x=0}$, $\mathbf{x=6}$, and $\mathbf{x=10}$.</p>
+                    </div>
+
+                    <!-- Answer 25 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">25. Solution</h3>
+                        <p>Given $(n-10)$ is a factor. Dividing gives $n^2 - 20n - 100$.</p>
+                        <p>Solving $n^2 - 20n - 100 = 0$ gives $n = 10 \pm 10\sqrt{2}$.</p>
+                        <p>The other positive break-even point is $\mathbf{n \approx 24.14}$ units.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
