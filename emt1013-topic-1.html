@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Mathematics: Algebra Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for a better look in dark mode */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a202c; /* A slightly lighter dark color */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568; /* Grayish color for the thumb */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #718096; /* Lighter gray on hover */
+        }
+        .header-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+    </style>
+    <!-- MathJax Configuration -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <!-- This script is for rendering LaTeX math expressions -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <div class="header-card text-white p-6 rounded-2xl mb-8 shadow-2xl">
+            <h1 class="text-3xl md:text-4xl font-bold text-center">Engineering Mathematics: Algebra Test</h1>
+            <p class="text-center text-lg mt-2">Questions & Detailed Answers</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 h-[calc(100vh-12rem)]">
+
+            <!-- Questions Column -->
+            <div id="questions-container" class="bg-gray-800 rounded-2xl shadow-xl overflow-y-auto">
+                <div class="sticky top-0 bg-gray-800 pt-6 pb-4 z-10 shadow-md">
+                     <h2 class="text-2xl font-bold text-center text-white">Questions</h2>
+                </div>
+                <div class="space-y-8 px-6 pb-6">
+                    
+                    <!-- Question 1 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">1. Algebraic Properties</h3>
+                        <p>Explain the difference between the <strong>associative</strong> and <strong>distributive</strong> properties of algebra, providing a unique numerical example for each that demonstrates why subtraction is not associative and why division does not distribute from the left.</p>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">2. Order of Operations</h3>
+                        <p>Simplify the following expression by strictly adhering to the <strong>BODMAS/PEMDAS</strong> rule: $12 + (8^2 - 4 \times (5+2)) \div 6 - \sqrt{9}$</p>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">3. Proportionality</h3>
+                        <p>The electrical resistance `R` of a wire is directly proportional to its length `L` and inversely proportional to the square of its diameter `d`. If a wire 50 meters long with a diameter of 2 mm has a resistance of 0.5 ohms, what is the resistance of a wire made of the same material that is 30 meters long with a diameter of 1.5 mm?</p>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">4. Nested Brackets</h3>
+                        <p>Simplify the expression by first removing the innermost brackets and combining like terms: $3x^2 - [2y - \{4x(x - 3y) - (x^2 - 8xy)\}]$</p>
+                    </div>
+
+                    <!-- Question 5 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">5. Indices Simplification</h3>
+                        <p>Given the expression $(6a^3b^{-2}c)^2 \times (a^{-1}b^3c^{-2})^{1/2} \div [9(a^4b^2c^2)^{-1/2}]$, simplify it completely, leaving your answer with positive indices only.</p>
+                    </div>
+
+                    <!-- Question 6 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">6. Evaluating Powers</h3>
+                        <p>Without using a calculator, evaluate: $(\frac{81}{16})^{-3/4} \times (\frac{25}{9})^{-1/2}$</p>
+                    </div>
+
+                    <!-- Question 7 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">7. Exponential Equations</h3>
+                        <p>Solve for `x` in the equation: $4^{2x-1} = 5^{x+2}$. Give your answer correct to 4 significant figures.</p>
+                    </div>
+
+                    <!-- Question 8 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">8. Logarithm Properties</h3>
+                        <p>Given that $log_a 2 = p$ and $log_a 3 = q$, express $log_a( \frac{9\sqrt{a}}{4})$ in terms of `p` and `q`.</p>
+                    </div>
+
+                    <!-- Question 9 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">9. Logarithmic Equations</h3>
+                        <p>Solve the logarithmic equation for `y` in terms of `x`: $3 \log_b(y) - \log_b(x+1) = 2 \log_b(y) + \log_b(x^2)$</p>
+                    </div>
+
+                    <!-- Question 10 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">10. Radioactive Decay</h3>
+                        <p>The radioactive decay of an isotope is given by the formula $N(t) = N_0 e^{-\lambda t}$. If the substance has a half-life of 120 years, what percentage of the original substance will remain after 200 years?</p>
+                    </div>
+
+                    <!-- Question 11 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">11. Equations with 'e'</h3>
+                        <p>Find the value of `x` in the equation: $e^{2x} - 5e^x + 6 = 0$.</p>
+                    </div>
+
+                    <!-- Question 12 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">12. Polynomial Multiplication</h3>
+                        <p>Perform the polynomial multiplication and simplify the result: $(3x^2 - 2x + 5)(2x^2 + x - 4)$</p>
+                    </div>
+
+                    <!-- Question 13 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">13. Polynomial Long Division</h3>
+                        <p>Use long division to find the quotient and remainder when $(6x^4 - 5x^3 + 8x^2 - 7x + 1)$ is divided by $(2x - 1)$.</p>
+                    </div>
+
+                    <!-- Question 14 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">14. Factor Theorem</h3>
+                        <p>If $(x-2)$ is a factor of the polynomial $P(x) = x^3 + kx^2 - 3x - 6$, find the value of `k` and then find the other factors of the polynomial.</p>
+                    </div>
+
+                    <!-- Question 15 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">15. Simplifying Algebraic Fractions</h3>
+                        <p>Simplify the following algebraic fraction: $\frac{x+2}{x^2-4} - \frac{x-1}{x^2+x-2}$</p>
+                    </div>
+
+                    <!-- Question 16 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">16. Partial Fractions</h3>
+                        <p>Resolve the following expression into its partial fractions: $\frac{5x-4}{x^2 - x - 2}$</p>
+                    </div>
+
+                    <!-- Question 17 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">17. Partial Fractions (Repeated Factor)</h3>
+                        <p>Resolve the following expression with a repeated linear factor into partial fractions: $\frac{x^2 + 9x + 8}{(x-3)(x+2)^2}$</p>
+                    </div>
+
+                    <!-- Question 18 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">18. Partial Fractions (Quadratic Factor)</h3>
+                        <p>Resolve the expression with an irreducible quadratic factor into partial fractions: $\frac{3x^2 - 4x + 5}{(x-1)(x^2+2)}$</p>
+                    </div>
+
+                    <!-- Question 19 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">19. Combining Fractions</h3>
+                        <p>Combine the fractions and simplify: $\frac{3}{a-2} + \frac{2}{a+2} - \frac{4a}{a^2-4}$</p>
+                    </div>
+
+                    <!-- Question 20 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">20. Factorization by Grouping</h3>
+                        <p>Factorize the expression completely by grouping: $6ax - 15ay - 8bx + 20by$</p>
+                    </div>
+
+                    <!-- Question 21 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">21. Difference of Two Squares</h3>
+                        <p>Factorize the "difference of two squares": $81x^4 - 16y^8$.</p>
+                    </div>
+
+                    <!-- Question 22 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">22. Difference of Two Cubes</h3>
+                        <p>Factorize the cubic expression: $x^3 - 27y^3$.</p>
+                    </div>
+
+                    <!-- Question 23 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">23. Ideal Gas Law Application</h3>
+                        <p>The pressure `P`, volume `V`, and temperature `T` of a gas are related by the formula $PV = nRT$. Make `T` the subject of the formula. If the pressure is increased by 10% and the volume is decreased by 15%, what is the percentage change in the temperature?</p>
+                    </div>
+
+                    <!-- Question 24 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">24. Impedance Formula Rearrangement</h3>
+                        <p>The total impedance `Z` in an AC circuit is given by $Z = \sqrt{R^2 + (X_L - X_C)^2}$. Rearrange the formula to make $X_L$ the subject.</p>
+                    </div>
+
+                    <!-- Question 25 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">25. Chemical Reaction Application</h3>
+                        <p>A chemical reaction follows the law $C = 25e^{-0.05t}$, where `C` is the concentration in $cm^3$ after `t` minutes. a) What is the initial concentration? b) How long will it take for the concentration to decrease to one-third of its initial value?</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Answers Column -->
+            <div id="answers-container" class="bg-gray-800 rounded-2xl shadow-xl overflow-y-auto">
+                <div class="sticky top-0 bg-gray-800 pt-6 pb-4 z-10 shadow-md">
+                    <h2 class="text-2xl font-bold text-center text-white">Answers</h2>
+                </div>
+                <div class="space-y-8 px-6 pb-6">
+
+                    <!-- Answer 1 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">1. Solution</h3>
+                        <p><strong>Associative:</strong> Deals with grouping. $(10 - 5) - 2 = 3$, but $10 - (5 - 2) = 7$. Since $3 \neq 7$, subtraction is not associative.</p>
+                        <p><strong>Distributive:</strong> Links multiplication and addition. $12 \div (4 + 2) = 2$, but $(12 \div 4) + (12 \div 2) = 9$. Since $2 \neq 9$, division does not distribute from the left.</p>
+                    </div>
+
+                    <!-- Answer 2 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">2. Solution</h3>
+                        <p>$12 + (64 - 4 \times 7) \div 6 - 3$</p>
+                        <p>$12 + (64 - 28) \div 6 - 3$</p>
+                        <p>$12 + 36 \div 6 - 3$</p>
+                        <p>$12 + 6 - 3 = 15$</p>
+                    </div>
+
+                    <!-- Answer 3 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">3. Solution</h3>
+                        <p>$R = k \frac{L}{d^2} \implies 0.5 = k \frac{50}{2^2} \implies k = 0.04$.</p>
+                        <p>New Resistance: $R = 0.04 \frac{30}{1.5^2} = \frac{1.2}{2.25} \approx 0.533$ ohms.</p>
+                    </div>
+
+                    <!-- Answer 4 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">4. Solution</h3>
+                        <p>$3x^2 - [2y - \{4x^2 - 12xy - x^2 + 8xy\}]$</p>
+                        <p>$3x^2 - [2y - \{3x^2 - 4xy\}]$</p>
+                        <p>$3x^2 - [2y - 3x^2 + 4xy]$</p>
+                        <p>$3x^2 - 2y + 3x^2 - 4xy = 6x^2 - 4xy - 2y$</p>
+                    </div>
+
+                    <!-- Answer 5 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">5. Solution</h3>
+                        <p>$\frac{(36a^6b^{-4}c^2)(a^{-1/2}b^{3/2}c^{-1})}{9a^{-2}b^{-1}c^{-1}} = 4a^{6-0.5+2}b^{-4+1.5+1}c^{2-1+1} = 4a^{7.5}b^{-1.5}c^2 = \frac{4a^{15/2}c^2}{b^{3/2}}$</p>
+                    </div>
+
+                    <!-- Answer 6 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">6. Solution</h3>
+                        <p>$(\frac{16}{81})^{3/4} \times (\frac{9}{25})^{1/2} = (\frac{2}{3})^3 \times \frac{3}{5} = \frac{8}{27} \times \frac{3}{5} = \frac{8}{45}$</p>
+                    </div>
+
+                    <!-- Answer 7 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">7. Solution</h3>
+                        <p>$(2x-1)\log(4) = (x+2)\log(5)$</p>
+                        <p>$x(2\log(4) - \log(5)) = 2\log(5) + \log(4)$</p>
+                        <p>$x = \frac{\log(25 \times 4)}{\log(16/5)} = \frac{\log(100)}{\log(3.2)} = \frac{2}{\log(3.2)} \approx 3.959$</p>
+                    </div>
+
+                    <!-- Answer 8 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">8. Solution</h3>
+                        <p>$log_a(9) + log_a(a^{1/2}) - log_a(4) = 2\log_a(3) + \frac{1}{2}\log_a(a) - 2\log_a(2) = 2q + \frac{1}{2} - 2p$</p>
+                    </div>
+
+                    <!-- Answer 9 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">9. Solution</h3>
+                        <p>$\log_b(y) = \log_b(x^2) + \log_b(x+1) = \log_b(x^2(x+1))$</p>
+                        <p>$y = x^2(x+1) = x^3 + x^2$</p>
+                    </div>
+
+                    <!-- Answer 10 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">10. Solution</h3>
+                        <p>$\lambda = \frac{\ln(2)}{120} \approx 0.005776$.</p>
+                        <p>$\frac{N(200)}{N_0} = e^{-0.005776 \times 200} \approx 0.315$. So, <strong>31.5%</strong> remains.</p>
+                    </div>
+
+                    <!-- Answer 11 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">11. Solution</h3>
+                        <p>Let $u = e^x$. $u^2 - 5u + 6 = 0 \implies (u-2)(u-3)=0$.</p>
+                        <p>$u=2 \implies e^x=2 \implies x = \ln(2)$</p>
+                        <p>$u=3 \implies e^x=3 \implies x = \ln(3)$</p>
+                    </div>
+
+                    <!-- Answer 12 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">12. Solution</h3>
+                        <p>$6x^4 - x^3 - 4x^2 + 13x - 20$</p>
+                    </div>
+
+                    <!-- Answer 13 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">13. Solution</h3>
+                        <p><strong>Quotient:</strong> $3x^3 - x^2 + 3.5x - 1.75$</p>
+                        <p><strong>Remainder:</strong> $-0.75$</p>
+                    </div>
+
+                    <!-- Answer 14 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">14. Solution</h3>
+                        <p>$P(2)=0 \implies 8 + 4k - 6 - 6 = 0 \implies k=1$.</p>
+                        <p>Dividing $x^3 + x^2 - 3x - 6$ by $(x-2)$ gives $x^2 + 3x + 3$.</p>
+                        <p><strong>Other factor:</strong> $(x^2 + 3x + 3)$</p>
+                    </div>
+
+                    <!-- Answer 15 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">15. Solution</h3>
+                        <p>$\frac{1}{x-2} - \frac{1}{x+2} = \frac{(x+2) - (x-2)}{(x-2)(x+2)} = \frac{4}{x^2-4}$</p>
+                    </div>
+
+                    <!-- Answer 16 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">16. Solution</h3>
+                        <p>$\frac{2}{x-2} + \frac{3}{x+1}$</p>
+                    </div>
+
+                    <!-- Answer 17 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">17. Solution</h3>
+                        <p>$\frac{44}{25(x-3)} - \frac{19}{25(x+2)} + \frac{6}{5(x+2)^2}$</p>
+                    </div>
+
+                    <!-- Answer 18 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">18. Solution</h3>
+                        <p>$\frac{4}{3(x-1)} + \frac{5x-7}{3(x^2+2)}$</p>
+                    </div>
+
+                    <!-- Answer 19 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">19. Solution</h3>
+                        <p>$\frac{3(a+2) + 2(a-2) - 4a}{a^2-4} = \frac{a+2}{a^2-4} = \frac{1}{a-2}$</p>
+                    </div>
+
+                    <!-- Answer 20 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">20. Solution</h3>
+                        <p>$3a(2x - 5y) - 4b(2x - 5y) = (3a - 4b)(2x - 5y)$</p>
+                    </div>
+
+                    <!-- Answer 21 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">21. Solution</h3>
+                        <p>$(9x^2 - 4y^4)(9x^2 + 4y^4) = (3x - 2y^2)(3x + 2y^2)(9x^2 + 4y^4)$</p>
+                    </div>
+
+                    <!-- Answer 22 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">22. Solution</h3>
+                        <p>$(x - 3y)(x^2 + 3xy + 9y^2)$</p>
+                    </div>
+
+                    <!-- Answer 23 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">23. Solution</h3>
+                        <p>$T = \frac{PV}{nR}$. $T_2 = \frac{(1.1 P)(0.85 V)}{nR} = 0.935 T$. This is a <strong>6.5% decrease</strong>.</p>
+                    </div>
+
+                    <!-- Answer 24 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">24. Solution</h3>
+                        <p>$Z^2 - R^2 = (X_L - X_C)^2 \implies X_L = X_C + \sqrt{Z^2 - R^2}$</p>
+                    </div>
+
+                    <!-- Answer 25 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">25. Solution</h3>
+                        <p>a) Initial concentration (t=0): $C = 25e^0 = 25$ cm³.</p>
+                        <p>b) $\frac{25}{3} = 25e^{-0.05t} \implies \ln(\frac{1}{3}) = -0.05t \implies t = \frac{\ln(3)}{0.05} \approx 21.97$ minutes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
