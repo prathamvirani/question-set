@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Mathematics: Functions Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for a better look in dark mode */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a202c; /* A slightly lighter dark color */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568; /* Grayish color for the thumb */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #718096; /* Lighter gray on hover */
+        }
+        .header-card {
+            background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+        }
+    </style>
+    <!-- MathJax Configuration -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <!-- This script is for rendering LaTeX math expressions -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <div class="header-card text-white p-6 rounded-2xl mb-8 shadow-2xl">
+            <h1 class="text-3xl md:text-4xl font-bold text-center">Engineering Mathematics: Functions Test</h1>
+            <p class="text-center text-lg mt-2">Questions & Detailed Answers</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 h-[calc(100vh-12rem)]">
+
+            <!-- Questions Column -->
+            <div id="questions-container" class="bg-gray-800 rounded-2xl shadow-xl overflow-y-auto">
+                <div class="sticky top-0 bg-gray-800 pt-6 pb-4 z-10 shadow-md">
+                     <h2 class="text-2xl font-bold text-center text-white">Questions 📝</h2>
+                </div>
+                <div class="space-y-8 px-6 pb-6">
+                    
+                    <!-- Question 1 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">1. Basic Definitions</h3>
+                        <p>In your own words, what is the mathematical definition of a function? Why is the "vertical line test" a useful tool for identifying functions from a graph?</p>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">2. Domain and Range</h3>
+                        <p>Determine the domain and range for the function $y = \sqrt{x^2 - 9}$. Express your answers in interval notation.</p>
+                    </div>
+                    
+                    <!-- Question 3 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">3. Identifying Functions</h3>
+                        <p>Which of the following equations represents a function? Justify your answer for each. <br> a) $y^2 = 3x + 1$ <br> b) $y = |x - 4|$ <br> c) $x^2 + y^2 = 25$</p>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">4. Rational Functions</h3>
+                        <p>Given the function $f(x) = \frac{2x+1}{x-3}$, find the domain and range.</p>
+                    </div>
+
+                    <!-- Question 5 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">5. Evaluating Functions</h3>
+                        <p>If $f(x) = 3x^2 - 2x + 5$, evaluate $f(a+1)$.</p>
+                    </div>
+
+                    <!-- Question 6 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">6. Domain of Radical Functions</h3>
+                        <p>Determine the domain of the function $y = \frac{1}{\sqrt{4-x}}$.</p>
+                    </div>
+
+                    <!-- Question 7 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">7. Range with Restricted Domain</h3>
+                        <p>A function is defined as $f(x) = x^3$ for the domain $-3 \le x \le 3$. What is the range of this function?</p>
+                    </div>
+                    
+                    <!-- Question 8 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">8. Arithmetic Operations</h3>
+                        <p>Given $f(x) = 3x + 2$ and $g(x) = x^2 - 1$, find: <br> a) $(f+g)(x)$ <br> b) $(fg)(x)$ <br> c) $(\frac{f}{g})(x)$ and state its domain.</p>
+                    </div>
+
+                    <!-- Question 9 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">9. Inverse Functions</h3>
+                        <p>If $f(x) = 2x - 5$, find the inverse function, $f^{-1}(x)$.</p>
+                    </div>
+
+                    <!-- Question 10 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">10. Composite Functions</h3>
+                        <p>Given $f(x) = \sqrt{x+1}$ and $g(x) = x^2$, find: <br> a) $(f \circ g)(x)$ <br> b) $(g \circ f)(x)$</p>
+                    </div>
+
+                    <!-- Question 11 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">11. Inverse of Rational Functions</h3>
+                        <p>Find the inverse of the function $f(x) = \frac{2x+3}{x-1}$.</p>
+                    </div>
+
+                    <!-- Question 12 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">12. Nested Composite Functions</h3>
+                        <p>Given $a(x) = 2x$, $b(x) = x^2$, $c(x) = x+3$, and $d(x) = \sqrt{x}$, find $f(x) = a[b(c[d(x)])]$.</p>
+                    </div>
+
+                    <!-- Question 13 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">13. Decomposing Functions</h3>
+                        <p>If $h(x) = (2x+1)^3$, find two functions $f(x)$ and $g(x)$ such that $h(x) = (f \circ g)(x)$.</p>
+                    </div>
+
+                    <!-- Question 14 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">14. Verifying Inverses</h3>
+                        <p>Given $f(x) = 5x-3$ and $g(x) = \frac{x+3}{5}$, show that $f(x)$ and $g(x)$ are inverses of each other.</p>
+                    </div>
+
+                    <!-- Question 15 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">15. Linear Cost Function</h3>
+                        <p>A factory's production cost is modeled by a linear function. The fixed cost is RM 12,000, and the variable cost per unit is RM 85. Write a function $C(x)$ that represents the total cost of producing $x$ units.</p>
+                    </div>
+
+                    <!-- Question 16 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">16. Analyzing Quadratic Functions</h3>
+                        <p>For the quadratic function $f(x) = -2x^2 + 8x - 6$, find: <br> a) The vertex. <br> b) The axis of symmetry. <br> c) The y-intercept. <br> d) The x-intercepts.</p>
+                    </div>
+
+                    <!-- Question 17 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">17. Projectile Motion</h3>
+                        <p>The height (in meters) of a rocket launched from the ground is given by the function $h(t) = -4.9t^2 + 196t$, where $t$ is the time in seconds. What is the maximum height the rocket reaches, and how long does it take to get there?</p>
+                    </div>
+
+                    <!-- Question 18 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">18. Graphing Quadratic Functions</h3>
+                        <p>Sketch the graph of the function $y = (x+3)^2 - 4$. Label the vertex and any intercepts.</p>
+                    </div>
+                    
+                    <!-- Question 19 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">19. Maximizing Profit</h3>
+                        <p>The daily profit, $P(x)$, from the sale of $x$ units of a product is given by $P(x) = -0.01x^2 + 40x - 15000$. How many units must be sold to maximize the daily profit? What is the maximum profit?</p>
+                    </div>
+
+                    <!-- Question 20 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">20. Equation of a Parabola</h3>
+                        <p>Find the equation of the parabola that has a vertex at $(1, -2)$ and passes through the point $(3, 6)$.</p>
+                    </div>
+
+                    <!-- Question 21 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">21. Identifying Polynomials</h3>
+                        <p>Which of the following are polynomial functions? For those that are, state the degree. <br> a) $f(x) = 5x^4 - \frac{2}{x} + 1$ <br> b) $g(t) = \sqrt{3}t^3 - 2t^2 + 7$ <br> c) $h(x) = 9 - x^6$</p>
+                    </div>
+
+                    <!-- Question 22 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">22. Chemical Engineering Application</h3>
+                        <p>The concentration of a substance is given by $C(t) = C_0 e^{-kt}$, where $C_0 = 5$ mol/L and $k = 0.25 \text{ hr}^{-1}$. <br> a) What is the concentration after 4 hours? <br> b) How long until the concentration is 1 mol/L?</p>
+                    </div>
+
+                    <!-- Question 23 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">23. Electrical Engineering Application</h3>
+                        <p>Power is $P(V) = \frac{V^2}{R}$ with $R=50 \Omega$. Voltage is $V(t) = 120e^{-0.1t}$. <br> a) Find the composite function $P(V(t))$. <br> b) What is the power at $t=10$ seconds?</p>
+                    </div>
+
+                    <!-- Question 24 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">24. Mechanical Engineering Application</h3>
+                        <p>A component cools according to $T(t) = T_{env} + (T_0 - T_{env})e^{-kt}$. Given $T_0 = 150^\circ\text{C}$, $T_{env} = 20^\circ\text{C}$, and $k = 0.05 \text{ min}^{-1}$. <br> a) Find the temperature after 30 minutes. <br> b) How long to cool to $30^\circ\text{C}$?</p>
+                    </div>
+
+                    <!-- Question 25 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2">25. Civil Engineering Application</h3>
+                        <p>Beam deflection is $D(x) = 0.0005x^4 - 0.01x^3 + 0.05x^2$. What is the degree of this polynomial, and what is the physical meaning of $D(0)$?</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Answers Column -->
+            <div id="answers-container" class="bg-gray-800 rounded-2xl shadow-xl overflow-y-auto">
+                <div class="sticky top-0 bg-gray-800 pt-6 pb-4 z-10 shadow-md">
+                    <h2 class="text-2xl font-bold text-center text-white">Solutions 💡</h2>
+                </div>
+                <div class="space-y-8 px-6 pb-6">
+
+                    <!-- Answer 1 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">1. Solution</h3>
+                        <p>A <strong>function</strong> is a rule assigning each input value exactly one unique output value. The <strong>vertical line test</strong> is a graphical check; if any vertical line crosses the graph more than once, it fails the test because one input (x-value) corresponds to multiple outputs (y-values).</p>
+                    </div>
+
+                    <!-- Answer 2 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">2. Solution</h3>
+                        <p>For the domain, we need $x^2 - 9 \ge 0 \implies x^2 \ge 9$. This holds for $x \le -3$ or $x \ge 3$.<br><strong>Domain:</strong> $(-\infty, -3] \cup [3, \infty)$</p>
+                        <p>The square root function produces non-negative values.<br><strong>Range:</strong> $[0, \infty)$</p>
+                    </div>
+
+                    <!-- Answer 3 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">3. Solution</h3>
+                        <p>a) <strong>Not a function.</strong> For $x > -1/3$, one x-value gives two y-values (e.g., if $x=1$, $y^2=4$, so $y=\pm 2$).</p>
+                        <p>b) <strong>Is a function.</strong> Each x-value gives a unique y-value.</p>
+                        <p>c) <strong>Not a function.</strong> This is the equation of a circle, which fails the vertical line test.</p>
+                    </div>
+                    
+                    <!-- Answer 4 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">4. Solution</h3>
+                        <p><strong>Domain:</strong> The denominator cannot be zero, so $x-3 \ne 0 \implies x \ne 3$. Domain is $(-\infty, 3) \cup (3, \infty)$.</p>
+                        <p><strong>Range:</strong> The function represents a hyperbola with a horizontal asymptote at $y=2$. Range is $(-\infty, 2) \cup (2, \infty)$.</p>
+                    </div>
+
+                    <!-- Answer 5 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">5. Solution</h3>
+                        <p>$f(a+1) = 3(a+1)^2 - 2(a+1) + 5$</p>
+                        <p>$= 3(a^2+2a+1) - 2a - 2 + 5$</p>
+                        <p>$= 3a^2 + 6a + 3 - 2a + 3 = \mathbf{3a^2 + 4a + 6}$</p>
+                    </div>
+
+                    <!-- Answer 6 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">6. Solution</h3>
+                        <p>The expression under the square root must be strictly positive (since it's in the denominator). $4-x > 0 \implies 4 > x$. <br><strong>Domain:</strong> $(-\infty, 4)$</p>
+                    </div>
+
+                    <!-- Answer 7 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">7. Solution</h3>
+                        <p>Since $f(x)=x^3$ is an increasing function, the range is found by evaluating the endpoints of the domain. $f(-3)=(-3)^3=-27$ and $f(3)=3^3=27$. <br><strong>Range:</strong> $[-27, 27]$</p>
+                    </div>
+
+                    <!-- Answer 8 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">8. Solution</h3>
+                        <p>a) $(f+g)(x) = (3x+2) + (x^2-1) = \mathbf{x^2 + 3x + 1}$</p>
+                        <p>b) $(fg)(x) = (3x+2)(x^2-1) = \mathbf{3x^3 + 2x^2 - 3x - 2}$</p>
+                        <p>c) $(\frac{f}{g})(x) = \mathbf{\frac{3x+2}{x^2-1}}$. Domain requires $x^2-1 \ne 0$, so $x \ne \pm 1$. Domain: $(-\infty, -1) \cup (-1, 1) \cup (1, \infty)$</p>
+                    </div>
+
+                    <!-- Answer 9 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">9. Solution</h3>
+                        <p>Let $y = 2x-5$. Swap variables: $x = 2y-5$. Solve for y: $x+5=2y \implies y = \frac{x+5}{2}$. <br>$\mathbf{f^{-1}(x) = \frac{x+5}{2}}$</p>
+                    </div>
+
+                    <!-- Answer 10 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">10. Solution</h3>
+                        <p>a) $(f \circ g)(x) = f(g(x)) = f(x^2) = \mathbf{\sqrt{x^2+1}}$</p>
+                        <p>b) $(g \circ f)(x) = g(f(x)) = g(\sqrt{x+1}) = (\sqrt{x+1})^2 = \mathbf{x+1}$</p>
+                    </div>
+
+                    <!-- Answer 11 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">11. Solution</h3>
+                        <p>Let $y = \frac{2x+3}{x-1}$. Swap variables: $x = \frac{2y+3}{y-1}$.</p>
+                        <p>$x(y-1) = 2y+3 \implies xy-x = 2y+3 \implies xy-2y = x+3$</p>
+                        <p>$y(x-2) = x+3 \implies \mathbf{f^{-1}(x) = \frac{x+3}{x-2}}$</p>
+                    </div>
+
+                    <!-- Answer 12 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">12. Solution</h3>
+                        <p>$f(x) = a[b(c[\sqrt{x}])] = a[b(\sqrt{x}+3)] = a[(\sqrt{x}+3)^2]$</p>
+                        <p>$= 2(\sqrt{x}+3)^2 = 2(x+6\sqrt{x}+9) = \mathbf{2x + 12\sqrt{x} + 18}$</p>
+                    </div>
+
+                    <!-- Answer 13 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">13. Solution</h3>
+                        <p>One possible answer: The "inside" function is $g(x)=2x+1$ and the "outside" function is $f(x)=x^3$.</p>
+                    </div>
+
+                    <!-- Answer 14 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">14. Solution</h3>
+                        <p>$(f \circ g)(x) = 5(\frac{x+3}{5}) - 3 = (x+3)-3 = x$.</p>
+                        <p>$(g \circ f)(x) = \frac{(5x-3)+3}{5} = \frac{5x}{5} = x$.</p>
+                        <p>Since both compositions equal $x$, they are inverses.</p>
+                    </div>
+
+                    <!-- Answer 15 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">15. Solution</h3>
+                        <p>The total cost $C(x)$ is the sum of the variable cost and the fixed cost. <br>$\mathbf{C(x) = 85x + 12000}$</p>
+                    </div>
+
+                    <!-- Answer 16 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">16. Solution</h3>
+                        <p>a) <strong>Vertex:</strong> $(2, 2)$</p>
+                        <p>b) <strong>Axis of symmetry:</strong> $x=2$</p>
+                        <p>c) <strong>y-intercept:</strong> $(0, -6)$</p>
+                        <p>d) <strong>x-intercepts:</strong> $(1, 0)$ and $(3, 0)$</p>
+                    </div>
+
+                    <!-- Answer 17 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">17. Solution</h3>
+                        <p><strong>Time to max height:</strong> $t = -\frac{b}{2a} = -\frac{196}{2(-4.9)} = \mathbf{20}$ seconds.</p>
+                        <p><strong>Maximum height:</strong> $h(20) = -4.9(20)^2 + 196(20) = \mathbf{1960}$ meters.</p>
+                    </div>
+
+                    <!-- Answer 18 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">18. Solution</h3>
+                        <p><strong>Vertex:</strong> $(-3, -4)$. <strong>y-intercept:</strong> $(0, 5)$. <strong>x-intercepts:</strong> $(-5, 0)$ and $(-1, 0)$. The graph is an upward-opening parabola.</p>
+                    </div>
+
+                    <!-- Answer 19 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">19. Solution</h3>
+                        <p><strong>Units to maximize profit:</strong> $x = -\frac{40}{2(-0.01)} = \mathbf{2000}$ units.</p>
+                        <p><strong>Maximum profit:</strong> $P(2000) = \mathbf{RM 25,000}$.</p>
+                    </div>
+
+                    <!-- Answer 20 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">20. Solution</h3>
+                        <p>Using vertex form $y = a(x-h)^2+k$: $6 = a(3-1)^2 - 2 \implies 8 = 4a \implies a=2$. <br>Equation: $\mathbf{y = 2(x-1)^2 - 2}$</p>
+                    </div>
+
+                    <!-- Answer 21 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">21. Solution</h3>
+                        <p>a) <strong>Not a polynomial</strong> (due to $\frac{2}{x}$).</p>
+                        <p>b) <strong>Is a polynomial.</strong> Degree: 3.</p>
+                        <p>c) <strong>Is a polynomial.</strong> Degree: 6.</p>
+                    </div>
+
+                    <!-- Answer 22 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">22. Solution</h3>
+                        <p>a) $C(4) = 5e^{-0.25(4)} = 5e^{-1} \approx \mathbf{1.84}$ mol/L.</p>
+                        <p>b) $1 = 5e^{-0.25t} \implies t = \frac{\ln(1/5)}{-0.25} \approx \mathbf{6.44}$ hours.</p>
+                    </div>
+
+                    <!-- Answer 23 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">23. Solution</h3>
+                        <p>a) $P(V(t)) = \frac{(120e^{-0.1t})^2}{50} = \mathbf{288e^{-0.2t}}$.</p>
+                        <p>b) $P(10) = 288e^{-2} \approx \mathbf{38.97}$ Watts.</p>
+                    </div>
+
+                    <!-- Answer 24 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">24. Solution</h3>
+                        <p>a) $T(30) = 20 + 130e^{-0.05(30)} \approx \mathbf{49.03^\circ C}$.</p>
+                        <p>b) $30 = 20 + 130e^{-0.05t} \implies t = \frac{\ln(10/130)}{-0.05} \approx \mathbf{51.3}$ minutes.</p>
+                    </div>
+
+                    <!-- Answer 25 -->
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-400 mb-2">25. Solution</h3>
+                        <p><strong>Degree:</strong> 4.</p>
+                        <p><strong>Physical meaning of D(0):</strong> It represents the deflection of the beam at its starting point ($x=0$), which is typically zero for a supported beam.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
