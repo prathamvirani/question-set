@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Mathematics: Complex Numbers Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for a better look in dark mode */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a202c; /* A slightly lighter dark color */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568; /* Grayish color for the thumb */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #718096; /* Lighter gray on hover */
+        }
+        .header-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+    </style>
+    <!-- MathJax Configuration -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <!-- This script is for rendering LaTeX math expressions -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <div class="header-card text-white p-6 rounded-2xl mb-8 shadow-2xl">
+            <h1 class="text-3xl md:text-4xl font-bold text-center">Engineering Mathematics: Complex Numbers Test</h1>
+            <p class="text-center text-lg mt-2">Questions & Detailed Answers</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 h-[calc(100vh-12rem)]">
+
+            <!-- Questions Column -->
+            <div id="questions-container" class="bg-gray-800 rounded-2xl shadow-xl overflow-y-auto">
+                <div class="sticky top-0 bg-gray-800 pt-6 pb-4 z-10 shadow-md">
+                     <h2 class="text-2xl font-bold text-center text-white">Questions</h2>
+                </div>
+                <div class="space-y-8 px-6 pb-6">
+                    
+                    <!-- Section A -->
+                    <h3 class="font-bold text-xl text-center text-purple-400 mt-6">Section A: Polar Form Calculations</h3>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-blue-400 mb-2">1.</h4>
+                        <p>Given $z_1 = 5(\cos{45^\circ} + j\sin{45^\circ})$ and $z_2 = 2(\cos{15^\circ} + j\sin{15^\circ})$, calculate the product $z_1z_2$ and express it in Cartesian form ($a+jb$).</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-blue-400 mb-2">2.</h4>
+                        <p>Given $z_1 = 10(\cos{120^\circ} + j\sin{120^\circ})$ and $z_2 = 2(\cos{30^\circ} + j\sin{30^\circ})$, calculate the quotient $\frac{z_1}{z_2}$ and express it in Cartesian form.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-blue-400 mb-2">3.</h4>
+                        <p>Evaluate the following expression and leave the answer in polar form:
+                        $$ \frac{4(\cos{80^\circ} + j\sin{80^\circ}) \times 3(\cos{20^\circ} + j\sin{20^\circ})}{6(\cos{50^\circ} + j\sin{50^\circ})} $$</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-blue-400 mb-2">4.</h4>
+                        <p>Use De Moivre's Theorem to find $[2(\cos{25^\circ} + j\sin{25^\circ})]^4$.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-blue-400 mb-2">5.</h4>
+                        <p>Find the principal square root of $9(\cos{100^\circ} + j\sin{100^\circ})$.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-blue-400 mb-2">6.</h4>
+                        <p>Convert $z_1 = 1 + j\sqrt{3}$ and $z_2 = \sqrt{3} - j$ to polar form. Then, find their product $z_1z_2$ in polar form and convert the result back to Cartesian form.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-blue-400 mb-2">7.</h4>
+                        <p>Convert $z_1 = -2 + 2j$ and $z_2 = 3j$ to polar form. Then, find the quotient $\frac{z_1}{z_2}$ and express the result in Cartesian form.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-blue-400 mb-2">8.</h4>
+                        <p>Evaluate the expression $\frac{(1+j)^3}{(\sqrt{3}-j)^2}$ by first converting the numerator and denominator to polar form. Leave your answer in polar form.</p>
+                    </div>
+
+                    <!-- Section B -->
+                    <h3 class="font-bold text-xl text-center text-purple-400 mt-6">Section B: Roots of Complex Numbers</h3>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-blue-400 mb-2">9.</h4>
+                        <p>Find all three cube roots of $z = 27(\cos{180^\circ} + j\sin{180^\circ})$.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-blue-400 mb-2">10.</h4>
+                        <p>Find all four fourth roots of $z = 16$.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-blue-400 mb-2">11.</h4>
+                        <p>Find the five fifth roots of $z = -32j$. State which of the roots is the principal root.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-blue-400 mb-2">12.</h4>
+                        <p>Find the three cube roots of the complex number $z = -4\sqrt{2} + j4\sqrt{2}$.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-blue-400 mb-2">13.</h4>
+                        <p>The cube roots of a complex number $z$ are plotted on an Argand diagram. If one root is $2(\cos{75^\circ} + j\sin{75^\circ})$, determine the other two roots.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-blue-400 mb-2">14.</h4>
+                        <p>Find all the fourth roots of $z = 81(\cos{240^\circ} + j\sin{240^\circ})$ and identify the principal root.</p>
+                    </div>
+
+                    <!-- Section C -->
+                    <h3 class="font-bold text-xl text-center text-purple-400 mt-6">Section C: Expansions</h3>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-blue-400 mb-2">15.</h4>
+                        <p>Use De Moivre's theorem to express $\cos(5\theta)$ in terms of powers of $\cos\theta$.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-blue-400 mb-2">16.</h4>
+                        <p>Use De Moivre's theorem to express $\sin(4\theta)$ in terms of powers of $\sin\theta$ and $\cos\theta$.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-blue-400 mb-2">17.</h4>
+                        <p>Express $\cos^4\theta$ in terms of cosines of multiples of $\theta$.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-blue-400 mb-2">18.</h4>
+                        <p>Express $\sin^5\theta$ in terms of sines of multiples of $\theta$.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-blue-400 mb-2">19.</h4>
+                        <p>Express $\cos^2\theta \sin^3\theta$ in terms of sines of multiples of $\theta$.</p>
+                    </div>
+
+                    <!-- Section D -->
+                    <h3 class="font-bold text-xl text-center text-purple-400 mt-6">Section D: Loci Problems</h3>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-blue-400 mb-2">20.</h4>
+                        <p>If $z = x + jy$, find the Cartesian equation of the locus defined by $|z - 3| = 4$. Describe the geometric shape of the locus.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-blue-400 mb-2">21.</h4>
+                        <p>If $z = x + jy$, find the Cartesian equation of the locus defined by $\text{arg}(z) = \frac{2\pi}{3}$. Describe the locus.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-blue-400 mb-2">22.</h4>
+                        <p>Find the Cartesian equation of the locus of a point $z$ such that $|z - 2j| = |z + 4|$.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-blue-400 mb-2">23.</h4>
+                        <p>If $z = x + jy$, show that the locus defined by $|\frac{z - 1}{z + 1}| = 3$ is a circle. Find the coordinates of its center and the value of its radius.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-blue-400 mb-2">24.</h4>
+                        <p>Find the equation of the locus of $z$ if $\text{arg}(\frac{z-1}{z+j}) = \frac{\pi}{2}$.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-blue-400 mb-2">25.</h4>
+                        <p>A point $z$ moves such that its distance from the point $(2,1)$ is equal to its distance from the point $(4,-3)$ in the Argand diagram. Find the Cartesian equation of the locus of $z$ and describe it geometrically.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Answers Column -->
+            <div id="answers-container" class="bg-gray-800 rounded-2xl shadow-xl overflow-y-auto">
+                <div class="sticky top-0 bg-gray-800 pt-6 pb-4 z-10 shadow-md">
+                    <h2 class="text-2xl font-bold text-center text-white">Answers</h2>
+                </div>
+                <div class="space-y-8 px-6 pb-6">
+
+                    <!-- Section A Answers -->
+                    <h3 class="font-bold text-xl text-center text-purple-400 mt-6">Section A: Solutions</h3>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-green-400 mb-2">1. Solution</h4>
+                        <p>$10(\cos{60^\circ} + j\sin{60^\circ}) = 5 + j5\sqrt{3}$</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-green-400 mb-2">2. Solution</h4>
+                        <p>$5(\cos{90^\circ} + j\sin{90^\circ}) = 5j$</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-green-400 mb-2">3. Solution</h4>
+                        <p>$2(\cos{50^\circ} + j\sin{50^\circ})$</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-green-400 mb-2">4. Solution</h4>
+                        <p>$16(\cos{100^\circ} + j\sin{100^\circ})$</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-green-400 mb-2">5. Solution</h4>
+                        <p>$3(\cos{50^\circ} + j\sin{50^\circ})$</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-green-400 mb-2">6. Solution</h4>
+                        <p>$z_1 = 2(\cos{60^\circ} + j\sin{60^\circ})$, $z_2 = 2(\cos{-30^\circ} + j\sin{-30^\circ})$. Product: $4(\cos{30^\circ} + j\sin{30^\circ}) = 2\sqrt{3} + 2j$.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-green-400 mb-2">7. Solution</h4>
+                        <p>$z_1 = 2\sqrt{2}(\cos{135^\circ} + j\sin{135^\circ})$, $z_2 = 3(\cos{90^\circ} + j\sin{90^\circ})$. Quotient: $\frac{2\sqrt{2}}{3}(\cos{45^\circ} + j\sin{45^\circ}) = \frac{2}{3} + \frac{2}{3}j$.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-green-400 mb-2">8. Solution</h4>
+                        <p>$\frac{2\sqrt{2}(\cos{135^\circ})}{4(\cos{-60^\circ})} = \frac{\sqrt{2}}{2}(\cos{195^\circ} + j\sin{195^\circ})$</p>
+                    </div>
+
+                    <!-- Section B Answers -->
+                    <h3 class="font-bold text-xl text-center text-purple-400 mt-6">Section B: Solutions</h3>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-green-400 mb-2">9. Solution</h4>
+                        <p>$z_1 = 3(\cos{60^\circ} + j\sin{60^\circ})$, $z_2 = 3(\cos{180^\circ} + j\sin{180^\circ})$, $z_3 = 3(\cos{300^\circ} + j\sin{300^\circ})$</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-green-400 mb-2">10. Solution</h4>
+                        <p>$z_1 = 2(\cos{0^\circ} + j\sin{0^\circ}) = 2$, $z_2 = 2(\cos{90^\circ} + j\sin{90^\circ}) = 2j$, $z_3 = 2(\cos{180^\circ} + j\sin{180^\circ}) = -2$, $z_4 = 2(\cos{270^\circ} + j\sin{270^\circ}) = -2j$</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-green-400 mb-2">11. Solution</h4>
+                        <p>$z = 32(\cos{270^\circ} + j\sin{270^\circ})$. The roots are $2(\cos{(54+72k)^\circ} + j\sin{(54+72k)^\circ})$ for $k=0,1,2,3,4$. The principal root is $z_4 = 2(\cos{342^\circ} + j\sin{342^\circ})$.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-green-400 mb-2">12. Solution</h4>
+                        <p>$z = 8(\cos{135^\circ} + j\sin{135^\circ})$. The roots are $2(\cos{(45+120k)^\circ} + j\sin{(45+120k)^\circ})$ for $k=0,1,2$.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-green-400 mb-2">13. Solution</h4>
+                        <p>The roots are separated by $\frac{360^\circ}{3}=120^\circ$. The other two roots are $2(\cos{195^\circ} + j\sin{195^\circ})$ and $2(\cos{315^\circ} + j\sin{315^\circ})$.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-green-400 mb-2">14. Solution</h4>
+                        <p>The roots are $3(\cos{(60+90k)^\circ} + j\sin{(60+90k)^\circ})$ for $k=0,1,2,3$. The roots are $3\angle60^\circ, 3\angle150^\circ, 3\angle240^\circ, 3\angle330^\circ$. The principal root is $3\angle330^\circ$ as its angle ($-30^\circ$) is closest to the positive x-axis.</p>
+                    </div>
+
+                    <!-- Section C Answers -->
+                    <h3 class="font-bold text-xl text-center text-purple-400 mt-6">Section C: Solutions</h3>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-green-400 mb-2">15. Solution</h4>
+                        <p>$\cos(5\theta) = 16\cos^5\theta - 20\cos^3\theta + 5\cos\theta$</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-green-400 mb-2">16. Solution</h4>
+                        <p>$\sin(4\theta) = 4\cos^3\theta\sin\theta - 4\cos\theta\sin^3\theta$</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-green-400 mb-2">17. Solution</h4>
+                        <p>$\cos^4\theta = \frac{1}{8}(\cos(4\theta) + 4\cos(2\theta) + 3)$</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-green-400 mb-2">18. Solution</h4>
+                        <p>$\sin^5\theta = \frac{1}{16}(\sin(5\theta) - 5\sin(3\theta) + 10\sin\theta)$</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-green-400 mb-2">19. Solution</h4>
+                        <p>$\cos^2\theta \sin^3\theta = \frac{1}{16}(2\sin\theta + \sin(3\theta) - \sin(5\theta))$</p>
+                    </div>
+
+                    <!-- Section D Answers -->
+                    <h3 class="font-bold text-xl text-center text-purple-400 mt-6">Section D: Solutions</h3>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-green-400 mb-2">20. Solution</h4>
+                        <p>$(x-3)^2 + y^2 = 16$. This is a circle with center (3, 0) and radius 4.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-green-400 mb-2">21. Solution</h4>
+                        <p>$y = -\sqrt{3}x$ for $x < 0$. This is a straight line (a ray) through the origin in the second quadrant.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-green-400 mb-2">22. Solution</h4>
+                        <p>$y = -2x - 3$. This is the perpendicular bisector of the line segment joining the points $(0, 2)$ and $(-4, 0)$.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-green-400 mb-2">23. Solution</h4>
+                        <p>The locus is $8x^2 + 20x + 8y^2 + 8 = 0$, which simplifies to $(x + \frac{5}{4})^2 + y^2 = (\frac{3}{4})^2$. This is a circle with center $(-\frac{5}{4}, 0)$ and radius $\frac{3}{4}$.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-green-400 mb-2">24. Solution</h4>
+                        <p>The locus is the part of the circle $(x-\frac{1}{2})^2 + (y+\frac{1}{2})^2 = \frac{1}{2}$ that lies on the arc between the points $(1,0)$ and $(0,-1)$.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg text-green-400 mb-2">25. Solution</h4>
+                        <p>The locus is the perpendicular bisector of the line segment joining $(2,1)$ and $(4,-3)$. The equation is $x - 2y - 5 = 0$.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
