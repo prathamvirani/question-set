@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Mathematics: Sequences Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for a better look in dark mode */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111827; /* Darker background for the track */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4b5563; /* Grayish color for the thumb */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6b7280; /* Lighter gray on hover */
+        }
+        .header-card {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+        }
+    </style>
+    <!-- MathJax Configuration -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <!-- This script is for rendering LaTeX math expressions -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="bg-gray-900 text-gray-300">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <div class="header-card text-white p-6 rounded-2xl mb-8 shadow-2xl">
+            <h1 class="text-3xl md:text-4xl font-bold text-center">ENG1013: Sequences Examination</h1>
+            <p class="text-center text-lg mt-2">Questions & Detailed Answers</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8" style="height: calc(100vh - 14rem);">
+
+            <!-- Questions Column -->
+            <div id="questions-container" class="bg-gray-800 rounded-2xl shadow-xl overflow-y-auto">
+                <div class="sticky top-0 bg-gray-800 pt-6 pb-4 z-10 shadow-md">
+                     <h2 class="text-2xl font-bold text-center text-white">Questions</h2>
+                </div>
+                <div class="space-y-6 px-6 pb-6 pt-4">
+                    
+                    <!-- Section A -->
+                    <h3 class="text-xl font-semibold text-indigo-400 border-b border-gray-700 pb-2">Section A: Arithmetic Sequences</h3>
+                    <div class="bg-gray-900 p-4 rounded-lg"><p><strong>1.</strong> The 7th term of an arithmetic sequence is 31 and the 15th term is 63. Determine the first term and the common difference.</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><p><strong>2.</strong> Find the sum of the first 25 terms of the arithmetic sequence: -5, -1, 3, 7, ...</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><p><strong>3.</strong> A civil engineer is designing a staircase with 40 steps. The first step requires 2 meters of material, and each subsequent step requires 0.15 meters more material than the previous one. Calculate the total length of material required for the entire staircase.</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><p><strong>4.</strong> The sum of three consecutive terms in an arithmetic progression is 36, and their product is 1428. Find the three terms.</p></div>
+
+                    <!-- Section B -->
+                    <h3 class="text-xl font-semibold text-indigo-400 border-b border-gray-700 pb-2 mt-6">Section B: Geometric Sequences</h3>
+                    <div class="bg-gray-900 p-4 rounded-lg"><p><strong>5.</strong> Determine the 10th term of the geometric sequence: 1/16, 1/8, 1/4, 1/2, ...</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><p><strong>6.</strong> The 4th term of a geometric sequence is 24 and the 7th term is 192. Find the common ratio and the first term.</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><p><strong>7.</strong> Find the sum of the first 9 terms of the sequence: 128, 64, 32, 16, ...</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><p><strong>8.</strong> A high-performance pump removes 20% of the remaining air from a container with each stroke. What percentage of the original air is left in the container after 6 strokes?</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><p><strong>9.</strong> Calculate the sum to infinity of the sequence: 9, -3, 1, -1/3, ...</p></div>
+
+                    <!-- Section C -->
+                    <h3 class="text-xl font-semibold text-indigo-400 border-b border-gray-700 pb-2 mt-6">Section C: Other Sequence Types & Recursion</h3>
+                    <div class="bg-gray-900 p-4 rounded-lg"><p><strong>10.</strong> The 3rd and 7th terms of a harmonic sequence are 1/11 and 1/23 respectively. What is the 10th term of this sequence?</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><p><strong>11.</strong> A sequence is defined by the recursive formula $f(n+1) = f(n) + 9$, with the initial condition $f(1) = 5$. Find the explicit formula for $f(n)$.</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><p><strong>12.</strong> Given the sequence $f(n) = 5 \cdot (1/2)^n$ for $n \ge 1$, derive its recursive prescription.</p></div>
+
+                    <!-- Section D -->
+                    <h3 class="text-xl font-semibold text-indigo-400 border-b border-gray-700 pb-2 mt-6">Section D: Convergence and Divergence</h3>
+                    <div class="bg-gray-900 p-4 rounded-lg"><p><strong>13.</strong> Determine if the sequence $f(n) = \frac{4n^2 - 3n}{2n^2 + 5}$ is convergent or divergent. If it is convergent, find its limit.</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><p><strong>14.</strong> Find the limit of the sequence $f(n) = \frac{n^3 + 2n - 1}{8n^3 - 5n^2}$.</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><p><strong>15.</strong> Analyze the sequence $f(n) = n \cdot \sin(\frac{1}{n})$. Is it convergent or divergent? If convergent, what is its limit?</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><p><strong>16.</strong> Evaluate the limit: $\lim_{n\to\infty} (\sqrt{n^2 + 6n} - n)$.</p></div>
+
+                    <!-- Section E -->
+                    <h3 class="text-xl font-semibold text-indigo-400 border-b border-gray-700 pb-2 mt-6">Section E: Applications and Mixed Problems</h3>
+                    <div class="bg-gray-900 p-4 rounded-lg"><p><strong>17.</strong> The first three terms of a sequence are 4, y, 36. Find all possible values of y if the sequence is (a) arithmetic and (b) geometric.</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><p><strong>18.</strong> A radioactive isotope has a half-life of 10 years. If you start with a 200g sample, how much of the substance will remain after 50 years?</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><p><strong>19.</strong> An employee starts with an annual salary of RM 45,000. They receive a raise of RM 3,000 at the end of each year. How much total money will they have earned after working for 10 years?</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><p><strong>20.</strong> The sum of the first n terms of a sequence is given by the formula $S_n = 2n^2 + 5n$. Prove that this sequence is an arithmetic progression and find its common difference.</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><p><strong>21.</strong> Explain why a harmonic sequence in which all terms are positive must be convergent. What is its limit?</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><p><strong>22.</strong> Under what condition on the common ratio 'r' is a geometric sequence convergent? What is the limit in this case?</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><p><strong>23.</strong> Three numbers form a geometric progression. If the second term is increased by 8, the resulting numbers form an arithmetic progression. If the last term of this new progression is increased by 64, the numbers again form a geometric progression. Find the original three numbers.</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><p><strong>24.</strong> A loan of RM 10,000 is repaid in yearly installments of RM 1,000, with an interest rate of 5% per annum on the outstanding balance. How many years will it take to repay the loan?</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><p><strong>25.</strong> Compare and contrast the behavior of the sequences $f(n) = n^2$ and $g(n) = 2^n$ as n approaches infinity. Which one grows faster?</p></div>
+                </div>
+            </div>
+
+            <!-- Answers Column -->
+            <div id="answers-container" class="bg-gray-800 rounded-2xl shadow-xl overflow-y-auto">
+                <div class="sticky top-0 bg-gray-800 pt-6 pb-4 z-10 shadow-md">
+                    <h2 class="text-2xl font-bold text-center text-white">Answers</h2>
+                </div>
+                <div class="space-y-6 px-6 pb-6 pt-4">
+
+                    <!-- Answers A -->
+                    <div class="bg-gray-900 p-4 rounded-lg"><h4 class="font-bold text-lg text-green-400 mb-2">1. Solution</h4><p>$a_7 = a + 6d = 31$; $a_{15} = a + 14d = 63$. Subtracting gives $8d = 32 \implies d = 4$. Substituting back: $a + 6(4) = 31 \implies a = 7$. <strong>First term is 7, common difference is 4.</strong></p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><h4 class="font-bold text-lg text-green-400 mb-2">2. Solution</h4><p>$a = -5, d = 4, n = 25$. $S_{25} = \frac{25}{2}[2(-5) + (24)4] = 12.5[-10 + 96] = 12.5(86) = \textbf{1075}$.</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><h4 class="font-bold text-lg text-green-400 mb-2">3. Solution</h4><p>$a = 2, d = 0.15, n = 40$. $S_{40} = \frac{40}{2}[2(2) + (39)0.15] = 20[4 + 5.85] = 20(9.85) = \textbf{197 meters}$.</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><h4 class="font-bold text-lg text-green-400 mb-2">4. Solution</h4><p>Let the terms be $x-d, x, x+d$. Sum: $3x = 36 \implies x = 12$. Product: $(12-d)(12)(12+d) = 1428 \implies 144 - d^2 = 119 \implies d^2 = 25 \implies d = \pm 5$. The terms are <strong>7, 12, 17</strong>.</p></div>
+
+                    <!-- Answers B -->
+                    <div class="bg-gray-900 p-4 rounded-lg mt-12"><h4 class="font-bold text-lg text-green-400 mb-2">5. Solution</h4><p>$a = 1/16, r = 2, n = 10$. $a_{10} = (\frac{1}{16})(2)^{9} = 2^{-4} \cdot 2^9 = 2^5 = \textbf{32}$.</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><h4 class="font-bold text-lg text-green-400 mb-2">6. Solution</h4><p>$a_4 = ar^3 = 24$; $a_7 = ar^6 = 192$. Dividing gives $r^3 = 8 \implies r = 2$. Substituting back: $a(2)^3 = 24 \implies 8a = 24 \implies a = 3$. <strong>Common ratio is 2, first term is 3.</strong></p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><h4 class="font-bold text-lg text-green-400 mb-2">7. Solution</h4><p>$a = 128, r = 1/2, n = 9$. $S_9 = \frac{128(1 - (1/2)^9)}{1 - 1/2} = 256(1 - 1/512) = 256(\frac{511}{512}) = \textbf{255.5}$.</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><h4 class="font-bold text-lg text-green-400 mb-2">8. Solution</h4><p>If 20% is removed, 80% (or 0.8) remains. After 6 strokes, the amount remaining is $100 \times (0.8)^6 \approx \textbf{26.21%}$.</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><h4 class="font-bold text-lg text-green-400 mb-2">9. Solution</h4><p>$a = 9, r = -1/3$. $S_\infty = \frac{a}{1-r} = \frac{9}{1 - (-1/3)} = \frac{9}{4/3} = \textbf{6.75}$.</p></div>
+
+                    <!-- Answers C -->
+                    <div class="bg-gray-900 p-4 rounded-lg mt-12"><h4 class="font-bold text-lg text-green-400 mb-2">10. Solution</h4><p>Arithmetic sequence terms: $a_3 = 11, a_7 = 23$. $a+2d=11, a+6d=23 \implies 4d=12 \implies d=3$. $a=5$. $a_{10} = 5 + 9(3) = 32$. Harmonic term is <strong>1/32</strong>.</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><h4 class="font-bold text-lg text-green-400 mb-2">11. Solution</h4><p>This is an arithmetic sequence with $a=5, d=9$. $f(n) = a + (n-1)d = 5 + (n-1)9 = \textbf{9n - 4}$.</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><h4 class="font-bold text-lg text-green-400 mb-2">12. Solution</h4><p>$f(n+1) = 5 \cdot (1/2)^{n+1} = (5 \cdot (1/2)^n) \cdot (1/2) = \frac{1}{2}f(n)$. Recursive prescription: <strong>$f(n+1) = \frac{1}{2}f(n)$ with $f(1) = 5/2$</strong>.</p></div>
+
+                    <!-- Answers D -->
+                    <div class="bg-gray-900 p-4 rounded-lg mt-12"><h4 class="font-bold text-lg text-green-400 mb-2">13. Solution</h4><p>Divide by $n^2$: $\lim_{n\to\infty} \frac{4 - 3/n}{2 + 5/n^2} = \frac{4}{2} = 2$. <strong>Convergent, limit is 2.</strong></p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><h4 class="font-bold text-lg text-green-400 mb-2">14. Solution</h4><p>Divide by $n^3$: $\lim_{n\to\infty} \frac{1 + 2/n^2 - 1/n^3}{8 - 5/n} = \textbf{1/8}$.</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><h4 class="font-bold text-lg text-green-400 mb-2">15. Solution</h4><p>As $n \to \infty$, $1/n \to 0$. For small $x$, $\sin(x) \approx x$. So, $\lim_{n\to\infty} n \cdot (\frac{1}{n}) = 1$. <strong>Convergent, limit is 1.</strong></p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><h4 class="font-bold text-lg text-green-400 mb-2">16. Solution</h4><p>Multiply by conjugate: $\lim_{n\to\infty} \frac{(n^2+6n) - n^2}{\sqrt{n^2+6n} + n} = \lim_{n\to\infty} \frac{6n}{n\sqrt{1+6/n} + n} = \lim_{n\to\infty} \frac{6}{\sqrt{1+6/n} + 1} = \frac{6}{2} = \textbf{3}$.</p></div>
+
+                    <!-- Answers E -->
+                    <div class="bg-gray-900 p-4 rounded-lg mt-12"><h4 class="font-bold text-lg text-green-400 mb-2">17. Solution</h4><p>(a) Arithmetic: $y - 4 = 36 - y \implies 2y = 40 \implies y = 20$. (b) Geometric: $y/4 = 36/y \implies y^2 = 144 \implies y = \pm 12$.</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><h4 class="font-bold text-lg text-green-400 mb-2">18. Solution</h4><p>50 years is 5 half-lives. We need the 6th term of $a_n = 200(1/2)^{n-1}$. $a_6 = 200(1/2)^5 = 200/32 = \textbf{6.25g}$.</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><h4 class="font-bold text-lg text-green-400 mb-2">19. Solution</h4><p>$a=45000, d=3000, n=10$. $S_{10} = \frac{10}{2}[2(45000) + 9(3000)] = 5[90000 + 27000] = \textbf{RM 585,000}$.</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><h4 class="font-bold text-lg text-green-400 mb-2">20. Solution</h4><p>$a_n = S_n - S_{n-1} = (2n^2+5n) - (2(n-1)^2+5(n-1)) = 4n+3$. $a_{n+1} - a_n = (4(n+1)+3) - (4n+3) = 4$. It is an <strong>AP with common difference 4</strong>.</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><h4 class="font-bold text-lg text-green-400 mb-2">21. Solution</h4><p>The reciprocals form an arithmetic sequence. If all terms are positive, the AP must be increasing. As its terms approach $\infty$, the harmonic terms approach <strong>0</strong>. It is <strong>convergent</strong>.</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><h4 class="font-bold text-lg text-green-400 mb-2">22. Solution</h4><p>Convergent if $|r| < 1$, where the limit is <strong>0</strong>. It also converges if $r=1$, where the limit is the first term 'a'.</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><h4 class="font-bold text-lg text-green-400 mb-2">23. Solution</h4><p>Let numbers be $a, ar, ar^2$. Solving the system of equations from the problem statement yields the numbers <strong>4, 12, 36</strong>.</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><h4 class="font-bold text-lg text-green-400 mb-2">24. Solution</h4><p>This requires setting up a recurrence relation. The answer is approximately <strong>14.2 years</strong>.</p></div>
+                    <div class="bg-gray-900 p-4 rounded-lg"><h4 class="font-bold text-lg text-green-400 mb-2">25. Solution</h4><p><strong>$g(n) = 2^n$ grows faster.</strong> Exponential growth will always eventually overtake polynomial growth.</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
