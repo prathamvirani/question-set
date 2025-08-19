@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Chapter 8: The Role of Ethics and Civilisation in Driving Social Responsibility</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF8;
+            color: #4A4A4A;
+        }
+        .nav-link {
+            transition: color 0.3s, border-bottom-color 0.3s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #C0843E;
+            border-bottom-color: #C0843E;
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .accordion-button.active {
+            background-color: #C0843E;
+            color: #FFFFFF;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-[#C0843E]">Chapter 8: Social Responsibility</h1>
+            <div class="hidden md:flex space-x-8">
+                <a href="#definitions" class="nav-link font-semibold border-b-2 border-transparent pb-1">Definitions</a>
+                <a href="#characteristics" class="nav-link font-semibold border-b-2 border-transparent pb-1">Characteristics</a>
+                <a href="#awareness" class="nav-link font-semibold border-b-2 border-transparent pb-1">Awareness</a>
+                <a href="#volunteerism" class="nav-link font-semibold border-b-2 border-transparent pb-1">Volunteerism</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#definitions" class="block py-2 nav-link">Definitions</a>
+            <a href="#characteristics" class="block py-2 nav-link">Characteristics</a>
+            <a href="#awareness" class="block py-2 nav-link">Awareness</a>
+            <a href="#volunteerism" class="block py-2 nav-link">Volunteerism</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-6xl font-bold text-gray-800 leading-tight">Driving Social Responsibility</h2>
+                <p class="text-lg md:text-xl text-gray-600 mt-4 max-w-3xl mx-auto">Explore how ethics and civilisation cultivate a culture of responsibility, ensuring stability and progress in Malaysia through interactive concepts.</p>
+            </div>
+        </section>
+
+        <section id="definitions" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">Understanding Social Reality</h3>
+                    <p class="text-gray-600 mt-2">Our social reality is shaped by two distinct frameworks. Click to explore each definition.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="p-8 bg-white rounded-lg shadow-lg card-hover cursor-pointer interactive-card" data-target="authority-content">
+                        <div class="text-5xl mb-4">🏛️</div>
+                        <h4 class="text-2xl font-bold text-gray-800">Authority Definition</h4>
+                        <p class="text-gray-600 mt-2">The formal, structured realities determined by official bodies and institutions (Top-Down).</p>
+                    </div>
+                    <div class="p-8 bg-white rounded-lg shadow-lg card-hover cursor-pointer interactive-card" data-target="daily-content">
+                        <div class="text-5xl mb-4">🤝</div>
+                        <h4 class="text-2xl font-bold text-gray-800">Daily Definition</h4>
+                        <p class="text-gray-600 mt-2">The informal, organic realities created by people in their everyday lives and interactions (Bottom-Up).</p>
+                    </div>
+                </div>
+                <!-- Hidden content divs -->
+                <div id="authority-content" class="hidden mt-8 p-6 bg-gray-50 rounded-lg">
+                    <h5 class="text-xl font-semibold text-[#C0843E] mb-2">Details: Authority Definition</h5>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>Source:</strong> Determined by an authority like the government.</li>
+                        <li><strong>Nature:</strong> Based on written rules, laws, protocols, and constitutions.</li>
+                        <li><strong>Formality:</strong> Highly formal, with strict, detailed protocols.</li>
+                        <li><strong>Example in Malaysia:</strong> The Federal Constitution is the supreme law of the land.</li>
+                    </ul>
+                </div>
+                <div id="daily-content" class="hidden mt-8 p-6 bg-gray-50 rounded-lg">
+                    <h5 class="text-xl font-semibold text-[#C0843E] mb-2">Details: Daily Definition</h5>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>Source:</strong> Determined by individuals, families, and communities.</li>
+                        <li><strong>Nature:</strong> Not based on written rules; guided by manners, respect, and shared norms.</li>
+                        <li><strong>Formality:</strong> Flexible and based on everyday experiences.</li>
+                        <li><strong>Example in Malaysia:</strong> Cultural marriage ceremonies (`adat resam`) or neighbours helping each other.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="characteristics" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">Characteristics of a Socially Responsible Individual</h3>
+                    <p class="text-gray-600 mt-2">A high standard of civilisation fosters key traits that encourage responsible actions.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="p-6 bg-white rounded-lg shadow-md card-hover">
+                        <h4 class="text-xl font-semibold text-[#C0843E] mb-2">1. Self-Confidence</h4>
+                        <p>Believing in one's abilities and judgment to act in line with societal expectations.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-lg shadow-md card-hover">
+                        <h4 class="text-xl font-semibold text-[#C0843E] mb-2">2. Respect</h4>
+                        <p>Appreciating and showing consideration for other individuals, communities, and institutions.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-lg shadow-md card-hover">
+                        <h4 class="text-xl font-semibold text-[#C0843E] mb-2">3. Social Communication</h4>
+                        <p>Engaging in effective interactions to foster relationships and collaborate towards common goals.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-lg shadow-md card-hover">
+                        <h4 class="text-xl font-semibold text-[#C0843E] mb-2">4. Self-Awareness</h4>
+                        <p>Being conscious of one's own ethical conduct and maintaining emotional control in social situations.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-lg shadow-md card-hover md:col-span-2 lg:col-span-1 lg:col-start-2">
+                        <h4 class="text-xl font-semibold text-[#C0843E] mb-2">5. Responsibility</h4>
+                        <p>Taking appropriate actions and participating actively in societal and welfare activities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="awareness" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">Cultivating National Awareness</h3>
+                    <p class="text-gray-600 mt-2">National awareness is a collective consciousness that drives citizens to act for the greater good. It can be nurtured through these deliberate steps.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-white rounded-lg shadow-md">
+                        <button class="accordion-button w-full p-6 text-left font-semibold text-lg flex justify-between items-center transition duration-300">
+                            <span>🤝 Bear Responsibility Together</span>
+                            <span class="transform transition-transform duration-300">+</span>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="py-4 text-gray-700">Community success depends on teamwork, commitment, and sacrifice from all members, whether through time, ideas, or financial support.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md">
+                        <button class="accordion-button w-full p-6 text-left font-semibold text-lg flex justify-between items-center transition duration-300">
+                            <span>🏘️ Know Each Other & Be Friendly</span>
+                            <span class="transform transition-transform duration-300">+</span>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="py-4 text-gray-700">Building friendly relationships with neighbours is the foundation of a strong community and national unity.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md">
+                        <button class="accordion-button w-full p-6 text-left font-semibold text-lg flex justify-between items-center transition duration-300">
+                            <span>❤️ Cultivate a Caring Attitude</span>
+                            <span class="transform transition-transform duration-300">+</span>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="py-4 text-gray-700">Being observant and aware of the welfare of others, and taking action to help, is the mark of a caring and responsible citizen.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md">
+                        <button class="accordion-button w-full p-6 text-left font-semibold text-lg flex justify-between items-center transition duration-300">
+                            <span>🌟 Maintain Positivity & Sincerity</span>
+                            <span class="transform transition-transform duration-300">+</span>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="py-4 text-gray-700">Participating in community activities with a positive and sincere attitude ensures that relationships are genuine and contributions are meaningful.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="volunteerism" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">Fostering a Culture of Volunteerism</h3>
+                    <p class="text-gray-600 mt-2">Volunteerism is social responsibility in action. Here are five ways to instill this vital culture.</p>
+                </div>
+                <div class="p-8 bg-white rounded-lg shadow-lg border-l-4 border-[#C0843E]">
+                    <ol class="list-decimal list-inside space-y-4 text-gray-700">
+                        <li><strong>Produce Volunteerism Leaders:</strong> Identify and promote volunteer leaders as role models to inspire others.</li>
+                        <li><strong>Diversify Volunteerism Programs:</strong> Create high-impact programs based on specific areas of expertise to attract a wide range of volunteers.</li>
+                        <li><strong>Empower the Culture of Volunteerism:</strong> Increase promotion and provide recognition for significant contributions.</li>
+                        <li><strong>Strengthen Strategic Relationships:</strong> Enhance collaboration with agencies and NGOs to create a robust network of opportunities.</li>
+                        <li><strong>Empower Volunteerism Training:</strong> Provide volunteers with proper training and resources to ensure they are effective in their missions.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 APEC Chapter 8: Social Responsibility.</p>
+            <p class="text-sm text-gray-400 mt-2">Interactive document for educational purposes.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Smooth Scrolling for Nav Links
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - document.getElementById('header').offsetHeight,
+                            behavior: 'smooth'
+                        });
+                    }
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+
+            // Active Nav Link on Scroll
+            const sections = document.querySelectorAll('main section');
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - document.getElementById('header').offsetHeight - 50;
+                    if (pageYOffset >= sectionTop) {
+                        current = '#' + section.getAttribute('id');
+                    }
+                });
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            // Interactive Cards for Definitions
+            const interactiveCards = document.querySelectorAll('.interactive-card');
+            interactiveCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const targetId = card.dataset.target;
+                    const allContent = document.querySelectorAll('#definitions .hidden');
+                    
+                    allContent.forEach(content => {
+                        if (content.id !== targetId) {
+                           content.classList.add('hidden');
+                        }
+                    });
+
+                    const targetContent = document.getElementById(targetId);
+                    if (targetContent) {
+                        targetContent.classList.toggle('hidden');
+                    }
+                });
+            });
+
+            // Accordion for Awareness Section
+            const accordionButtons = document.querySelectorAll('.accordion-button');
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    const icon = button.querySelector('span:last-child');
+
+                    // Close other accordions
+                    accordionButtons.forEach(otherButton => {
+                        if (otherButton !== button) {
+                            otherButton.classList.remove('active');
+                            otherButton.nextElementSibling.style.maxHeight = null;
+                            otherButton.nextElementSibling.style.paddingTop = '0';
+                            otherButton.nextElementSibling.style.paddingBottom = '0';
+                            otherButton.querySelector('span:last-child').classList.remove('rotate-45');
+                        }
+                    });
+
+                    button.classList.toggle('active');
+                    icon.classList.toggle('rotate-45');
+                    
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        content.style.paddingTop = '0';
+                        content.style.paddingBottom = '0';
+                    } else {
+                        content.style.paddingTop = '1rem';
+                        content.style.paddingBottom = '1rem';
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
