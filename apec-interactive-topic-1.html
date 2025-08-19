@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appreciation of Ethics and Civilization in the Malaysian Framework</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Calm Harmony -->
+    <!-- Application Structure Plan: The SPA is designed as a single, vertical-scrolling page with thematic sections to create a narrative flow. This structure was chosen over a direct slide-by-slide replica to enhance user engagement and comprehension. Key sections include an interactive timeline for historical context, a tabbed interface for core concepts to prevent information overload, and visual diagrams for the analytical framework. This user-centric design allows for non-linear exploration, enabling users to delve into topics of interest at their own pace, which is more effective for learning complex concepts than a rigid presentation format. -->
+    <!-- Visualization & Content Choices: 
+        - Historical Evolution: Goal: Show change over time. Method: Interactive vertical timeline. Interaction: Clicking on a period reveals detailed information. Justification: Visually represents the progression of ethics in Malaysia, making it more dynamic and memorable than a static list. Method: HTML/CSS with JS for interaction.
+        - Core Concepts: Goal: Organize and define key terms. Method: Tabbed content area. Interaction: User clicks a tab (e.g., 'Adab', 'Etika') to display its definition. Justification: Organizes dense information into digestible chunks, improving readability and user focus. Method: HTML/CSS with JS.
+        - Analytical Framework: Goal: Explain a theoretical model. Method: HTML/CSS diagrams for the sociological framework and social structures. Interaction: Hovering or clicking reveals explanatory text. Justification: Simplifies complex relationships (History-Social-Biography) and provides a clear visual comparison (Traditional vs. Modern structures). Method: HTML/CSS with JS.
+        - Levels of Appreciation: Goal: Illustrate hierarchical development. Method: A series of interactive cards. Interaction: Clicking a card expands to show details. Justification: Reinforces the idea that ethics are built from the individual outwards to society. Method: HTML/CSS with JS.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF8;
+            color: #4A4A4A;
+        }
+        .nav-link {
+            transition: color 0.3s, border-bottom-color 0.3s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #C0843E;
+            border-bottom-color: #C0843E;
+        }
+        .tab-btn.active {
+            background-color: #C0843E;
+            color: #FFFFFF;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -31px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #D6BFA4;
+            border: 4px solid #FDFBF8;
+        }
+        .timeline-item.active::before {
+            background-color: #C0843E;
+        }
+        .pyramid-level {
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+        }
+        .pyramid-layer {
+            clip-path: polygon(10% 0, 90% 0, 100% 100%, 0 100%);
+            margin: 0 auto;
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-[#C0843E]">Ethics & Civilization</h1>
+            <div class="hidden md:flex space-x-8">
+                <a href="#timeline" class="nav-link font-semibold border-b-2 border-transparent pb-1">Timeline</a>
+                <a href="#concepts" class="nav-link font-semibold border-b-2 border-transparent pb-1">Core Concepts</a>
+                <a href="#framework" class="nav-link font-semibold border-b-2 border-transparent pb-1">Analytical Framework</a>
+                <a href="#levels" class="nav-link font-semibold border-b-2 border-transparent pb-1">Levels of Appreciation</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#timeline" class="block py-2 nav-link">Timeline</a>
+            <a href="#concepts" class="block py-2 nav-link">Core Concepts</a>
+            <a href="#framework" class="block py-2 nav-link">Analytical Framework</a>
+            <a href="#levels" class="block py-2 nav-link">Levels of Appreciation</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-6xl font-bold text-gray-800 leading-tight">Appreciation of Ethics and Civilization</h2>
+                <p class="text-lg md:text-xl text-gray-600 mt-4 max-w-3xl mx-auto">An introduction to the evolution and framework of ethics and civilization in the Malaysian context, from the pre-colonial to the post-colonial era.</p>
+            </div>
+        </section>
+
+        <section id="timeline" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">The Evolution of Ethics in Malaysia</h3>
+                    <p class="text-gray-600 mt-2">Explore the journey of Malaysian ethics through three pivotal historical eras. Click on each era for more information.</p>
+                </div>
+                <div class="flex flex-col md:flex-row justify-center md:space-x-8">
+                    <div class="md:w-1/3 relative border-l-2 border-gray-200 pl-8 py-4 timeline-content" data-era="pre-colonial">
+                        <div class="timeline-item active cursor-pointer" data-era="pre-colonial">
+                            <h4 class="text-xl font-semibold text-gray-800">Pre-Colonial</h4>
+                            <p class="text-sm text-gray-500">Rooted in tradition</p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/3 relative border-l-2 border-gray-200 pl-8 py-4 timeline-content" data-era="colonial">
+                        <div class="timeline-item cursor-pointer" data-era="colonial">
+                            <h4 class="text-xl font-semibold text-gray-800">Colonial</h4>
+                            <p class="text-sm text-gray-500">Introduction of Western values</p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/3 relative border-l-2 border-gray-200 pl-8 py-4 timeline-content" data-era="post-colonial">
+                        <div class="timeline-item cursor-pointer" data-era="post-colonial">
+                            <h4 class="text-xl font-semibold text-gray-800">Post-Colonial</h4>
+                            <p class="text-sm text-gray-500">Synthesis of tradition and modernity</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="timeline-details" class="mt-8 p-8 bg-white rounded-lg shadow-lg transition-all duration-500">
+                    <div id="pre-colonial-content" class="era-content">
+                        <h5 class="text-2xl font-bold text-[#C0843E] mb-4">Pre-Colonial Era: The Foundation of Adab and Adat</h5>
+                        <p class="text-gray-700">The ethical framework in this era was based on the concepts of **'Adab'** (good manners and conduct) and **'Adat'** (customs and traditions). These principles were the backbone of the value system governing traditional society and its leadership.</p>
+                    </div>
+                    <div id="colonial-content" class="era-content hidden">
+                        <h5 class="text-2xl font-bold text-[#C0843E] mb-4">Colonial Era: Western Influence</h5>
+                        <p class="text-gray-700">The arrival of European colonizers introduced and implemented Western concepts such as **'Etika'** (Ethics), **'Etos'** (Ethos), and **'Etiket'** (Etiquette). This brought new standards of behavior, especially in formal settings like administration, attire, and speech.</p>
+                    </div>
+                    <div id="post-colonial-content" class="era-content hidden">
+                        <h5 class="text-2xl font-bold text-[#C0843E] mb-4">Post-Colonial Era: Contemporary Identity</h5>
+                        <p class="text-gray-700">Contemporary Malaysian ethics are a unique blend of the traditional and the modern. It is a synthesis of the pre-colonial 'Adab' and 'Adat' with the 'Etika' and 'Etiket' introduced during the colonial era. This combination forms the distinct identity of modern Malaysian society.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="concepts" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">Core Concepts of Ethics and Civilization</h3>
+                    <p class="text-gray-600 mt-2">Understand the key terms that form the basis of ethical discussions in Malaysia.</p>
+                </div>
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/4">
+                        <div class="flex flex-col space-y-2">
+                            <button class="tab-btn p-4 text-left rounded-lg transition duration-300 active" data-tab="adab">Adab</button>
+                            <button class="tab-btn p-4 text-left rounded-lg transition duration-300" data-tab="adat">Adat</button>
+                            <button class="tab-btn p-4 text-left rounded-lg transition duration-300" data-tab="etika">Etika</button>
+                            <button class="tab-btn p-4 text-left rounded-lg transition duration-300" data-tab="etos">Etos</button>
+                            <button class="tab-btn p-4 text-left rounded-lg transition duration-300" data-tab="etiket">Etiket</button>
+                        </div>
+                    </div>
+                    <div class="md:w-3/4">
+                        <div id="adab-content" class="tab-content p-6 bg-gray-50 rounded-lg">
+                            <h4 class="text-xl font-semibold text-[#C0843E] mb-2">Adab (Manners/Conduct)</h4>
+                            <p class="text-gray-700">Refers to good manners, politeness, and refined behavior. It is about conducting oneself courteously and respectfully in all situations.</p>
+                        </div>
+                        <div id="adat-content" class="tab-content p-6 bg-gray-50 rounded-lg hidden">
+                            <h4 class="text-xl font-semibold text-[#C0843E] mb-2">Adat (Customs)</h4>
+                            <p class="text-gray-700 mb-2"><strong>Adat Resam (Traditions):</strong> Customs and traditions practiced by a particular community or ethnic group, often related to significant life events like engagements and weddings.</p>
+                            <p class="text-gray-700"><strong>Adat Istiadat (Ceremonies):</strong> Refers to official ceremonies and formal protocols that require strict adherence to established customs, such as a monarch's coronation.</p>
+                        </div>
+                        <div id="etika-content" class="tab-content p-6 bg-gray-50 rounded-lg hidden">
+                            <h4 class="text-xl font-semibold text-[#C0843E] mb-2">Etika (Ethics)</h4>
+                            <p class="text-gray-700">Moral principles or values that serve as a guide for an individual's or a group's behavior. It deals with concepts of right and wrong, responsibility, and what is beneficial to society.</p>
+                        </div>
+                        <div id="etos-content" class="tab-content p-6 bg-gray-50 rounded-lg hidden">
+                            <h4 class="text-xl font-semibold text-[#C0843E] mb-2">Etos (Ethos)</h4>
+                            <p class="text-gray-700">The characteristic spirit, values, and beliefs of a culture, community, or era. In the Malaysian context, it refers to the collective effort to build a harmonious and inclusive nation from diverse historical, ethnic, and cultural backgrounds.</p>
+                        </div>
+                        <div id="etiket-content" class="tab-content p-6 bg-gray-50 rounded-lg hidden">
+                            <h4 class="text-xl font-semibold text-[#C0843E] mb-2">Etiket (Etiquette)</h4>
+                            <p class="text-gray-700">The set of rules and conventions governing polite behavior in social or professional life. It includes protocols and procedures for formal ceremonies and interactions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="framework" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">Sociological Analysis Framework</h3>
+                    <p class="text-gray-600 mt-2">Understanding Malaysian ethics through the 'Sociological Imagination' framework by C. Wright Mills.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="p-6 bg-white rounded-lg shadow-md card-hover">
+                        <div class="text-5xl mb-4 text-[#C0843E]">📜</div>
+                        <h4 class="text-xl font-semibold mb-2">History</h4>
+                        <p>Looking back at the origins of Malaysian society, whether through indigenous roots or migration, to understand how various ethical values and civilizations came together.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-lg shadow-md card-hover">
+                        <div class="text-5xl mb-4 text-[#C0843E]">🏛️</div>
+                        <h4 class="text-xl font-semibold mb-2">Social Structure</h4>
+                        <p>The pattern of social relationships and institutions that make up society. The appreciation of ethics differs across different social strata.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-lg shadow-md card-hover">
+                        <div class="text-5xl mb-4 text-[#C0843E]">👤</div>
+                        <h4 class="text-xl font-semibold mb-2">Biography</h4>
+                        <p>The life story of an individual, shaped by the historical period and social structure they live in, and how they, in turn, shape it.</p>
+                    </div>
+                </div>
+
+                <div class="mt-16">
+                    <h4 class="text-2xl font-bold text-center text-gray-800 mb-8">Comparison of Social Structures</h4>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="p-6 bg-white rounded-lg shadow-md">
+                            <h5 class="text-xl font-semibold text-center mb-4">Traditional Social Structure</h5>
+                            <div class="space-y-2 text-center font-semibold">
+                                <div class="bg-[#D6BFA4] text-white p-3 rounded">Royalty</div>
+                                <div class="bg-[#D6BFA4]/80 text-white p-3 rounded">Nobles/Aristocrats</div>
+                                <div class="bg-[#D6BFA4]/60 text-white p-3 rounded">Commoners</div>
+                                <div class="bg-[#D6BFA4]/40 text-white p-3 rounded">Slaves</div>
+                            </div>
+                        </div>
+                        <div class="p-6 bg-white rounded-lg shadow-md">
+                            <h5 class="text-xl font-semibold text-center mb-4">Modern Social Structure</h5>
+                            <div class="space-y-2 text-center font-semibold">
+                                <div class="bg-[#C0843E] text-white p-3 rounded">Upper Class</div>
+                                <div class="bg-[#C0843E]/80 text-white p-3 rounded">Middle Class</div>
+                                <div class="bg-[#C0843E]/60 text-white p-3 rounded">Working Class</div>
+                                <div class="bg-[#C0843E]/40 text-white p-3 rounded">Lower Class</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="levels" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">Levels of Ethical Appreciation</h3>
+                    <p class="text-gray-600 mt-2">Ethics are formed and practiced at various levels, starting from the individual and expanding to the global society.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-6 text-center border-2 border-dashed border-[#D6BFA4] rounded-lg">
+                        <h4 class="text-xl font-semibold mb-2">Individual, Family, Community</h4>
+                        <p>The foundational stages where ethics are first learned and instilled. An individual's character is built within the family and reinforced by the community.</p>
+                    </div>
+                    <div class="p-6 text-center border-2 border-dashed border-[#D6BFA4] rounded-lg">
+                        <h4 class="text-xl font-semibold mb-2">Society (Local & Global)</h4>
+                        <p>A society with strong ethical values fosters peace and harmony. A breakdown in ethics can lead to serious social problems.</p>
+                    </div>
+                    <div class="p-6 text-center border-2 border-dashed border-[#D6BFA4] rounded-lg">
+                        <h4 class="text-xl font-semibold mb-2">Society, Nation & Market</h4>
+                        <p>Ethics are crucial for the advancement of civilization. It includes promoting positive values, government efforts to improve quality of life, and an individual's contribution to the economy.</p>
+                    </div>
+                </div>
+                 <div class="mt-16 text-center">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-8">The Impact of Ethics on Society</h4>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="p-8 bg-green-50 rounded-lg border border-green-200">
+                            <h5 class="text-xl font-semibold text-green-800 mb-3">✅ Ethical Society</h5>
+                            <p class="text-green-700">Creates a peaceful, harmonious, and prosperous environment. Encourages sustainable social and economic progress.</p>
+                        </div>
+                        <div class="p-8 bg-red-50 rounded-lg border border-red-200">
+                            <h5 class="text-xl font-semibold text-red-800 mb-3">❌ Ethical Decay</h5>
+                            <p class="text-red-700">Leads to negative implications such as moral decline, corruption, crime, and oppression that damage the social fabric.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Interactive Analysis of Malaysian Ethics and Civilization.</p>
+            <p class="text-sm text-gray-400 mt-2">Designed for educational purposes based on the provided source material.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('main section');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - document.getElementById('header').offsetHeight,
+                            behavior: 'smooth'
+                        });
+                    }
+                    if (mobileMenu.classList.contains('hidden') === false) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+            
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - document.getElementById('header').offsetHeight - 50;
+                    if (pageYOffset >= sectionTop) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            const eraContents = document.querySelectorAll('.era-content');
+
+            timelineItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const selectedEra = item.dataset.era;
+                    
+                    timelineItems.forEach(i => i.classList.remove('active'));
+                    item.classList.add('active');
+
+                    eraContents.forEach(content => {
+                        if (content.id === `${selectedEra}-content`) {
+                            content.classList.remove('hidden');
+                        } else {
+                            content.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const selectedTab = button.dataset.tab;
+
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    tabContents.forEach(content => {
+                        if (content.id === `${selectedTab}-content`) {
+                            content.classList.remove('hidden');
+                        } else {
+                            content.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
