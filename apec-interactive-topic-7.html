@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7: ICT as a Driver for National Unity (Interactive)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF8;
+            color: #4A4A4A;
+        }
+        .nav-link {
+            transition: color 0.3s, border-bottom-color 0.3s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #C0843E;
+            border-bottom-color: #C0843E;
+        }
+        .timeline-btn.active {
+            background-color: #C0843E;
+            color: #FFFFFF;
+            transform: scale(1.05);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .quiz-option {
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .quiz-option:hover {
+            background-color: #fef3c7;
+            border-color: #C0843E;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-[#C0843E]">Chapter 7: ICT & Unity</h1>
+            <div class="hidden md:flex space-x-8">
+                <a href="#evolution" class="nav-link font-semibold border-b-2 border-transparent pb-1">Evolution</a>
+                <a href="#relationship" class="nav-link font-semibold border-b-2 border-transparent pb-1">Relationship</a>
+                <a href="#ethics" class="nav-link font-semibold border-b-2 border-transparent pb-1">Ethics</a>
+                <a href="#unity" class="nav-link font-semibold border-b-2 border-transparent pb-1">Unity</a>
+                <a href="#issues" class="nav-link font-semibold border-b-2 border-transparent pb-1">Issues</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#evolution" class="block py-2 nav-link">Evolution</a>
+            <a href="#relationship" class="block py-2 nav-link">Relationship</a>
+            <a href="#ethics" class="block py-2 nav-link">Ethics</a>
+            <a href="#unity" class="block py-2 nav-link">Unity</a>
+            <a href="#issues" class="block py-2 nav-link">Issues</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-6xl font-bold text-gray-800 leading-tight">ICT as a Driver for National Unity</h2>
+                <p class="text-lg md:text-xl text-gray-600 mt-4 max-w-3xl mx-auto">Explore the dual nature of Information and Communication Technology as both a unifying tool and a potential source of division in Malaysia.</p>
+            </div>
+        </section>
+
+        <section id="evolution" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">The Evolution of ICT in Malaysia</h3>
+                    <p class="text-gray-600 mt-2">Click through the decades to see key milestones in Malaysia's technological journey.</p>
+                </div>
+                <div class="flex justify-center flex-wrap gap-4 mb-8">
+                    <button class="timeline-btn px-6 py-2 rounded-full font-semibold shadow-sm transition active" data-timeline="70s">1970s</button>
+                    <button class="timeline-btn px-6 py-2 rounded-full font-semibold shadow-sm transition" data-timeline="80s">1980s</button>
+                    <button class="timeline-btn px-6 py-2 rounded-full font-semibold shadow-sm transition" data-timeline="90s">1990s</button>
+                    <button class="timeline-btn px-6 py-2 rounded-full font-semibold shadow-sm transition" data-timeline="00s">2000s</button>
+                </div>
+                <div id="timeline-details" class="p-8 bg-white rounded-lg shadow-lg transition-all duration-500 min-h-[150px]">
+                    <div id="70s-content" class="timeline-content">
+                        <h5 class="text-2xl font-bold text-[#C0843E] mb-4">The Dawn of Information Technology</h5>
+                        <p class="text-gray-700">The term "information technology" comes into use. The first commercial computer, UNIVAC 1, is developed, marking the beginning of the digital age.</p>
+                    </div>
+                    <div id="80s-content" class="timeline-content hidden">
+                        <h5 class="text-2xl font-bold text-[#C0843E] mb-4">Connecting Malaysia to the World</h5>
+                        <p class="text-gray-700">Dr. Mohamed Awang Lah pioneers the concept of connecting Malaysia to the global internet. In 1984, the first connection is established at MIMOS, and the Malaysian Computer Network (RangKoM) is set up in 1989.</p>
+                    </div>
+                    <div id="90s-content" class="timeline-content hidden">
+                        <h5 class="text-2xl font-bold text-[#C0843E] mb-4">Building National Infrastructure</h5>
+                        <p class="text-gray-700">The JARING project is launched in 1991 to create a national communication network. By 1997, the government is actively developing ICT infrastructure, including LAN, email, and web capabilities for wider use.</p>
+                    </div>
+                    <div id="00s-content" class="timeline-content hidden">
+                        <h5 class="text-2xl font-bold text-[#C0843E] mb-4">The Rise of the Digital Economy</h5>
+                        <p class="text-gray-700">The focus shifts to optimizing internet access for all. This decade sees the rapid rise of e-commerce, e-learning, and e-government, integrating ICT into the daily lives of Malaysians.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="relationship" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">The Human-Technology Relationship</h3>
+                    <p class="text-gray-600 mt-2">Technology is a double-edged sword. It offers incredible benefits but also presents significant challenges to society.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="p-8 bg-green-50 rounded-lg border border-green-200 card-hover">
+                        <h4 class="text-2xl font-semibold text-green-800 mb-4">✅ The Importance of ICT</h4>
+                        <ul class="list-disc list-inside text-green-700 space-y-2">
+                            <li><strong>Information Access:</strong> Provides instant access to a world of knowledge.</li>
+                            <li><strong>Global Awareness:</strong> Delivers real-time news and connects global communities.</li>
+                            <li><strong>Efficiency:</strong> Streamlines daily tasks from banking to government services.</li>
+                            <li><strong>Business Expansion:</strong> Opens up vast opportunities for online entrepreneurship.</li>
+                        </ul>
+                    </div>
+                    <div class="p-8 bg-red-50 rounded-lg border border-red-200 card-hover">
+                        <h4 class="text-2xl font-semibold text-red-800 mb-4">❌ ICT as a Burden</h4>
+                        <ul class="list-disc list-inside text-red-700 space-y-2">
+                            <li><strong>Work Demands:</strong> Creates a culture of 24/7 availability and pressure.</li>
+                            <li><strong>Digital Divide:</strong> Excludes those who are not proficient with new technologies.</li>
+                            <li><strong>New Social Problems:</strong> Fuels issues like cyberbullying, scams, and digital addiction.</li>
+                            <li><strong>Negative Terminology:</strong> The prefix "cyber-" often highlights the dark side (e.g., cyber-crime).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ethics" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">Ethics and Civilization in the Use of ICT</h3>
+                    <p class="text-gray-600 mt-2">Practicing digital ethics is crucial for maintaining social harmony. Here are key guidelines for responsible ICT interaction.</p>
+                </div>
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <div class="space-y-4">
+                            <details class="group">
+                                <summary class="flex justify-between items-center font-semibold cursor-pointer p-4 rounded-lg hover:bg-gray-100">
+                                    <span>🗣️ Responsible Speech</span>
+                                    <svg class="w-5 h-5 transform group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </summary>
+                                <p class="text-gray-600 mt-2 px-4 pb-2">Use formal, clear, and organized language in all digital communications to avoid misunderstandings and convey respect.</p>
+                            </details>
+                            <details class="group">
+                                <summary class="flex justify-between items-center font-semibold cursor-pointer p-4 rounded-lg hover:bg-gray-100">
+                                    <span>📤 Mindful Sharing</span>
+                                    <svg class="w-5 h-5 transform group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </summary>
+                                <p class="text-gray-600 mt-2 px-4 pb-2">Always consider the legal and social implications before sharing content. Take responsibility for the information you disseminate and verify its accuracy.</p>
+                            </details>
+                            <details class="group">
+                                <summary class="flex justify-between items-center font-semibold cursor-pointer p-4 rounded-lg hover:bg-gray-100">
+                                    <span>🤝 Constructive Advice</span>
+                                    <svg class="w-5 h-5 transform group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </summary>
+                                <p class="text-gray-600 mt-2 px-4 pb-2">When offering advice, be wise and courteous. A positive tone ensures your message is received effectively and respectfully.</p>
+                            </details>
+                             <details class="group">
+                                <summary class="flex justify-between items-center font-semibold cursor-pointer p-4 rounded-lg hover:bg-gray-100">
+                                    <span>⚖️ Respectful Debate</span>
+                                    <svg class="w-5 h-5 transform group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </summary>
+                                <p class="text-gray-600 mt-2 px-4 pb-2">Base arguments on facts and aim for consensus. Engage in discussions with the goal of mutual understanding, not just winning.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="unity" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">ICT as a Driver for National Unity</h3>
+                    <p class="text-gray-600 mt-2">ICT can be a powerful tool for fostering social cohesion by connecting diverse communities and promoting shared values.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="p-8 bg-white rounded-lg shadow-md card-hover">
+                        <h4 class="text-xl font-semibold text-[#C0843E] mb-2">ADAM Application</h4>
+                        <p class="text-gray-700">An innovative application from Universiti Malaysia Pahang (UMP) that uses gamification to teach engineering students about ethnic relations, patriotism, and national identity, making learning about unity engaging.</p>
+                    </div>
+                    <div class="p-8 bg-white rounded-lg shadow-md card-hover">
+                        <h4 class="text-xl font-semibold text-[#C0843E] mb-2">MCMC & CMA 1998</h4>
+                        <p class="text-gray-700">The Malaysian Communications and Multimedia Commission (MCMC), established under the Communications and Multimedia Act 1998, regulates the industry to ensure it operates with transparency, fairness, and protects national interests.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="issues" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">Current Issues in ICT</h3>
+                    <p class="text-gray-600 mt-2">The misuse of ICT presents significant challenges. Understanding these issues is the first step to mitigating their impact.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="p-6 bg-white rounded-lg shadow-md">Moral Decay & Cyberbullying</div>
+                    <div class="p-6 bg-white rounded-lg shadow-md">Technostress & Technophobia</div>
+                    <div class="p-6 bg-white rounded-lg shadow-md">Online Fraud & Scams</div>
+                    <div class="p-6 bg-white rounded-lg shadow-md">Invasion of Privacy</div>
+                    <div class="p-6 bg-white rounded-lg shadow-md">New Forms of Warfare</div>
+                    <div class="p-6 bg-white rounded-lg shadow-md">Fake News & Deepfakes</div>
+                </div>
+                
+                <div id="quiz-container" class="mt-16 max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                    <h4 class="text-xl font-bold text-center mb-4">Test Your Knowledge!</h4>
+                    <p id="quiz-question" class="text-center text-gray-700 mb-6">Which of the following refers to manipulated media created using AI to spread misinformation?</p>
+                    <div id="quiz-options" class="flex flex-col space-y-3">
+                        <button class="quiz-option border-2 border-gray-200 p-3 rounded-lg w-full text-left" data-correct="false">Cyberbullying</button>
+                        <button class="quiz-option border-2 border-gray-200 p-3 rounded-lg w-full text-left" data-correct="false">Technostress</button>
+                        <button class="quiz-option border-2 border-gray-200 p-3 rounded-lg w-full text-left" data-correct="true">Deepfakes</button>
+                        <button class="quiz-option border-2 border-gray-200 p-3 rounded-lg w-full text-left" data-correct="false">Online Fraud</button>
+                    </div>
+                    <p id="quiz-feedback" class="mt-4 text-center font-semibold"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 APEC Course Notes (Interactive).</p>
+            <p class="text-sm text-gray-400 mt-2">Generated for educational purposes.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Smooth Scrolling & Active Nav Link
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('main section');
+            const header = document.getElementById('header');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - header.offsetHeight,
+                            behavior: 'smooth'
+                        });
+                    }
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+            
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - header.offsetHeight - 50;
+                    if (pageYOffset >= sectionTop) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            // Interactive Timeline
+            const timelineButtons = document.querySelectorAll('.timeline-btn');
+            const timelineContents = document.querySelectorAll('.timeline-content');
+
+            timelineButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const selectedTimeline = button.dataset.timeline;
+                    
+                    timelineButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    timelineContents.forEach(content => {
+                        if (content.id === `${selectedTimeline}-content`) {
+                            content.classList.remove('hidden');
+                        } else {
+                            content.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+
+            // Quiz Interaction
+            const quizOptions = document.querySelectorAll('.quiz-option');
+            const quizFeedback = document.getElementById('quiz-feedback');
+
+            quizOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    quizOptions.forEach(opt => {
+                        opt.disabled = true;
+                        opt.classList.remove('bg-green-200', 'border-green-500', 'bg-red-200', 'border-red-500');
+                    });
+
+                    if (option.dataset.correct === 'true') {
+                        option.classList.add('bg-green-200', 'border-green-500');
+                        quizFeedback.textContent = 'Correct! Deepfakes use AI to create convincing but fake media.';
+                        quizFeedback.style.color = '#16a34a';
+                    } else {
+                        option.classList.add('bg-red-200', 'border-red-500');
+                        quizFeedback.textContent = 'Not quite. Try again!';
+                        quizFeedback.style.color = '#dc2626';
+                        // Highlight the correct answer
+                        document.querySelector('.quiz-option[data-correct="true"]').classList.add('bg-green-200', 'border-green-500');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
