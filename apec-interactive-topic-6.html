@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 6: The Constitution as a Foundation of Integration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF8;
+            color: #4A4A4A;
+        }
+        .nav-link {
+            transition: color 0.3s, border-bottom-color 0.3s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #C0843E;
+            border-bottom-color: #C0843E;
+        }
+        .tab-btn.active {
+            background-color: #C0843E;
+            color: #FFFFFF;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -31px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #D6BFA4;
+            border: 4px solid #FDFBF8;
+        }
+        .timeline-item.active::before {
+            background-color: #C0843E;
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-[#C0843E]">Chapter 6: The Constitution</h1>
+            <div class="hidden md:flex space-x-8">
+                <a href="#history" class="nav-link font-semibold border-b-2 border-transparent pb-1">History</a>
+                <a href="#concepts" class="nav-link font-semibold border-b-2 border-transparent pb-1">Heritage Elements</a>
+                <a href="#integration" class="nav-link font-semibold border-b-2 border-transparent pb-1">Integration Site</a>
+                <a href="#challenges" class="nav-link font-semibold border-b-2 border-transparent pb-1">Challenges</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#history" class="block py-2 nav-link">History</a>
+            <a href="#concepts" class="block py-2 nav-link">Heritage Elements</a>
+            <a href="#integration" class="block py-2 nav-link">Integration Site</a>
+            <a href="#challenges" class="block py-2 nav-link">Challenges</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-6xl font-bold text-gray-800 leading-tight">The Constitution as a Social Contract</h2>
+                <p class="text-lg md:text-xl text-gray-600 mt-4 max-w-3xl mx-auto">Explore the Federal Constitution's role as the supreme law of Malaysia and the foundational agreement that unites its diverse communities.</p>
+            </div>
+        </section>
+
+        <section id="history" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">Historical Journey to the Constitution</h3>
+                    <p class="text-gray-600 mt-2">The Federal Constitution is a product of a long historical process. Click on each stage to learn more.</p>
+                </div>
+                <div class="relative">
+                    <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-200 hidden md:block"></div>
+                    <div class="space-y-12">
+                        <!-- Timeline Item 1 -->
+                        <div class="md:flex items-center md:space-x-8 timeline-block" data-era="pre-colonial">
+                            <div class="md:w-1/2"></div>
+                            <div class="relative md:w-1/2 p-6 bg-white rounded-lg shadow-md card-hover cursor-pointer">
+                                <div class="absolute w-4 h-4 bg-[#C0843E] rounded-full -left-2 top-1/2 transform -translate-y-1/2 border-4 border-white"></div>
+                                <h4 class="text-xl font-bold text-[#C0843E]">Pre-Colonial Laws</h4>
+                                <p class="text-gray-600 mt-2">Sophisticated legal systems like the *Hukum Kanun Melaka* existed long before colonization.</p>
+                            </div>
+                        </div>
+                        <!-- Timeline Item 2 -->
+                        <div class="md:flex flex-row-reverse items-center md:space-x-8 md:space-x-reverse timeline-block" data-era="malayan-union">
+                            <div class="md:w-1/2"></div>
+                            <div class="relative md:w-1/2 p-6 bg-white rounded-lg shadow-md card-hover cursor-pointer">
+                                <div class="absolute w-4 h-4 bg-[#C0843E] rounded-full -right-2 top-1/2 transform -translate-y-1/2 border-4 border-white"></div>
+                                <h4 class="text-xl font-bold text-[#C0843E]">Malayan Union (1946)</h4>
+                                <p class="text-gray-600 mt-2">A British proposal that was rejected for diminishing the Malay Rulers' sovereignty and its liberal citizenship terms.</p>
+                            </div>
+                        </div>
+                        <!-- Timeline Item 3 -->
+                        <div class="md:flex items-center md:space-x-8 timeline-block" data-era="federation">
+                            <div class="md:w-1/2"></div>
+                            <div class="relative md:w-1/2 p-6 bg-white rounded-lg shadow-md card-hover cursor-pointer">
+                                <div class="absolute w-4 h-4 bg-[#C0843E] rounded-full -left-2 top-1/2 transform -translate-y-1/2 border-4 border-white"></div>
+                                <h4 class="text-xl font-bold text-[#C0843E]">Federation of Malaya (1948)</h4>
+                                <p class="text-gray-600 mt-2">Restored the Rulers' positions and tightened citizenship, creating a more acceptable foundation for the nation.</p>
+                            </div>
+                        </div>
+                         <!-- Timeline Item 4 -->
+                        <div class="md:flex flex-row-reverse items-center md:space-x-8 md:space-x-reverse timeline-block" data-era="clc">
+                            <div class="md:w-1/2"></div>
+                            <div class="relative md:w-1/2 p-6 bg-white rounded-lg shadow-md card-hover cursor-pointer">
+                                <div class="absolute w-4 h-4 bg-[#C0843E] rounded-full -right-2 top-1/2 transform -translate-y-1/2 border-4 border-white"></div>
+                                <h4 class="text-xl font-bold text-[#C0843E]">Ethnic Cooperation & CLC (1949)</h4>
+                                <p class="text-gray-600 mt-2">The Communities Liaison Committee fostered inter-ethnic cooperation by negotiating key issues like citizenship and special rights.</p>
+                            </div>
+                        </div>
+                        <!-- Timeline Item 5 -->
+                        <div class="md:flex items-center md:space-x-8 timeline-block" data-era="election">
+                            <div class="md:w-1/2"></div>
+                            <div class="relative md:w-1/2 p-6 bg-white rounded-lg shadow-md card-hover cursor-pointer">
+                                <div class="absolute w-4 h-4 bg-[#C0843E] rounded-full -left-2 top-1/2 transform -translate-y-1/2 border-4 border-white"></div>
+                                <h4 class="text-xl font-bold text-[#C0843E]">General Election (1955)</h4>
+                                <p class="text-gray-600 mt-2">The Alliance Party's victory demonstrated the viability of a multi-ethnic political partnership and inclusive governance.</p>
+                            </div>
+                        </div>
+                        <!-- Timeline Item 6 -->
+                        <div class="md:flex flex-row-reverse items-center md:space-x-8 md:space-x-reverse timeline-block" data-era="reid">
+                            <div class="md:w-1/2"></div>
+                            <div class="relative md:w-1/2 p-6 bg-white rounded-lg shadow-md card-hover cursor-pointer">
+                                <div class="absolute w-4 h-4 bg-[#C0843E] rounded-full -right-2 top-1/2 transform -translate-y-1/2 border-4 border-white"></div>
+                                <h4 class="text-xl font-bold text-[#C0843E]">Reid Commission (1956)</h4>
+                                <p class="text-gray-600 mt-2">An independent commission of legal experts drafted the Constitution after extensive consultation with over 131 groups.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="concepts" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">"Elemen Warisan" (Heritage Elements)</h3>
+                    <p class="text-gray-600 mt-2">These are the traditional elements preserved in the Constitution that reflect the nation's identity and form the bedrock of the social contract.</p>
+                </div>
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/4">
+                        <div class="flex flex-col space-y-2">
+                            <button class="tab-btn p-4 text-left rounded-lg transition duration-300 active" data-tab="monarchy">Monarchy</button>
+                            <button class="tab-btn p-4 text-left rounded-lg transition duration-300" data-tab="islam">Islam</button>
+                            <button class="tab-btn p-4 text-left rounded-lg transition duration-300" data-tab="bumiputera">Bumiputera Position</button>
+                            <button class="tab-btn p-4 text-left rounded-lg transition duration-300" data-tab="language">National Language</button>
+                        </div>
+                    </div>
+                    <div class="md:w-3/4">
+                        <div id="monarchy-content" class="tab-content p-6 bg-gray-50 rounded-lg">
+                            <h4 class="text-xl font-semibold text-[#C0843E] mb-2">The Institution of Monarchy</h4>
+                            <p class="text-gray-700">Upholds the position of the Malay Rulers and the Yang di-Pertuan Agong, symbolizing unity, tradition, and continuity.</p>
+                        </div>
+                        <div id="islam-content" class="tab-content p-6 bg-gray-50 rounded-lg hidden">
+                            <h4 class="text-xl font-semibold text-[#C0843E] mb-2">Islam as the Religion of the Federation</h4>
+                            <p class="text-gray-700">Article 3 establishes Islam as the official religion while guaranteeing the freedom for people of other faiths to practice their religions in peace and harmony.</p>
+                        </div>
+                        <div id="bumiputera-content" class="tab-content p-6 bg-gray-50 rounded-lg hidden">
+                            <h4 class="text-xl font-semibold text-[#C0843E] mb-2">Special Position of Bumiputera</h4>
+                            <p class="text-gray-700">Article 153 protects the special position of the Malays and natives of Sabah and Sarawak, while also safeguarding the legitimate interests of all other communities.</p>
+                        </div>
+                        <div id="language-content" class="tab-content p-6 bg-gray-50 rounded-lg hidden">
+                            <h4 class="text-xl font-semibold text-[#C0843E] mb-2">Malay as the National Language</h4>
+                            <p class="text-gray-700">Article 152 establishes the Malay language as the national language to foster unity, while protecting the right to use and learn other languages.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="integration" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">The Concept of the "Integration Site"</h3>
+                    <p class="text-gray-600 mt-2">An "integration site" is any space where diverse groups interact to find common ground, occurring at multiple levels of society.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="p-6 bg-white rounded-lg shadow-md card-hover">
+                        <div class="text-5xl mb-4 text-[#C0843E]">🏛️</div>
+                        <h4 class="text-xl font-semibold mb-2">Macro Level (Top-Down)</h4>
+                        <p>This includes the Constitution and the Federal System. These formal structures and laws are designed by the state to manage diversity and ensure stability.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-lg shadow-md card-hover">
+                        <div class="text-5xl mb-4 text-[#C0843E]">🤝</div>
+                        <h4 class="text-xl font-semibold mb-2">Meso Level (Bottom-Up)</h4>
+                        <p>Driven by NGOs, community associations, and civil society groups. These organizations act as crucial intermediaries, representing community interests and fostering collaboration.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-lg shadow-md card-hover">
+                        <div class="text-5xl mb-4 text-[#C0843E]">☕</div>
+                        <h4 class="text-xl font-semibold mb-2">Micro Level (Grassroots)</h4>
+                        <p>This is the level of daily life. Interactions at *mamak* stalls, open houses, and cross-cultural weddings are powerful, informal sites of integration that build genuine harmony.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="challenges" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                     <h3 class="text-3xl font-bold text-gray-800">Challenges and Conclusion</h3>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="p-8 bg-yellow-50 rounded-lg border border-yellow-200 card-hover">
+                        <h5 class="text-xl font-semibold text-yellow-800 mb-3">⚠️ Contemporary Challenges</h5>
+                        <p class="text-yellow-700">The Constitution faces ongoing challenges from varying interpretations of its provisions. Maintaining national security while upholding fundamental liberties requires a continuous, balanced approach that respects the original spirit of the social contract.</p>
+                    </div>
+                    <div class="p-8 bg-blue-50 rounded-lg border border-blue-200 card-hover">
+                        <h5 class="text-xl font-semibold text-blue-800 mb-3">📜 The Enduring Foundation</h5>
+                        <p class="text-blue-700">The Federal Constitution is the bedrock of national integration. It is a testament to the wisdom of the nation's founders. Upholding its principles is essential for ensuring Malaysia's continued peace, stability, and prosperity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Interactive Analysis of Malaysian Ethics and Civilization.</p>
+            <p class="text-sm text-gray-400 mt-2">Designed for educational purposes based on the provided source material.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Smooth scrolling for navigation links
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - document.getElementById('header').offsetHeight,
+                            behavior: 'smooth'
+                        });
+                    }
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+
+            // Active nav link on scroll
+            const sections = document.querySelectorAll('main section');
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - document.getElementById('header').offsetHeight - 50;
+                    if (pageYOffset >= sectionTop) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            // Tab functionality for Core Concepts
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const selectedTab = button.dataset.tab;
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    tabContents.forEach(content => {
+                        content.classList.toggle('hidden', content.id !== `${selectedTab}-content`);
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
