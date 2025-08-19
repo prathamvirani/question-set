@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Guide: Ethics and Civilization in a Diverse Society</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF8;
+            color: #4A4A4A;
+        }
+        .nav-link {
+            transition: color 0.3s, border-bottom-color 0.3s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #C0843E;
+            border-bottom-color: #C0843E;
+        }
+        .tab-btn {
+            background-color: #fff;
+            color: #4A4A4A;
+            border: 1px solid #e2e8f0;
+        }
+        .tab-btn.active {
+            background-color: #C0843E;
+            color: #FFFFFF;
+            border-color: #C0843E;
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem;
+        }
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #C0843E;
+            margin-bottom: 0.75rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-[#C0843E]">Chapter 3: Diverse Society</h1>
+            <div class="hidden md:flex space-x-8">
+                <a href="#formation" class="nav-link font-semibold border-b-2 border-transparent pb-1">Formation</a>
+                <a href="#components" class="nav-link font-semibold border-b-2 border-transparent pb-1">Components</a>
+                <a href="#ethnic-relations" class="nav-link font-semibold border-b-2 border-transparent pb-1">Ethnic Relations</a>
+                <a href="#straits-of-malacca" class="nav-link font-semibold border-b-2 border-transparent pb-1">Straits of Malacca</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#formation" class="block py-2 nav-link">Formation</a>
+            <a href="#components" class="block py-2 nav-link">Components</a>
+            <a href="#ethnic-relations" class="block py-2 nav-link">Ethnic Relations</a>
+            <a href="#straits-of-malacca" class="block py-2 nav-link">Straits of Malacca</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-6xl font-bold text-gray-800 leading-tight">Migration and Diversity in Malaysia</h2>
+                <p class="text-lg md:text-xl text-gray-600 mt-4 max-w-3xl mx-auto">From ancient trade routes to modern globalization, explore how a complex "superdiverse" society has emerged, constantly shaping the nation's ethics and civilization.</p>
+            </div>
+        </section>
+
+        <section id="formation" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">The Formation of Ethics and Civilization</h3>
+                    <p class="text-gray-600 mt-2">A diverse society's unique character is built upon several key pillars of progress and maturity.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card card-hover">
+                        <h4 class="card-title">🏛️ System of Beliefs & Religion</h4>
+                        <p>Societies evolve from early animistic beliefs to complex religious and philosophical systems that guide their moral compass.</p>
+                    </div>
+                    <div class="card card-hover">
+                        <h4 class="card-title">✍️ Language and Writing</h4>
+                        <p>A common language is crucial for communication, documentation, and passing down knowledge and culture through generations.</p>
+                    </div>
+                    <div class="card card-hover">
+                        <h4 class="card-title">🏙️ Settlement and Urbanization</h4>
+                        <p>The move from nomadic life to permanent settlements and cities signifies a major step in civilizational development.</p>
+                    </div>
+                    <div class="card card-hover">
+                        <h4 class="card-title">⚖️ System of Laws and Morals</h4>
+                        <p>Organized legal and moral frameworks are essential for regulating behavior, ensuring justice, and maintaining social order.</p>
+                    </div>
+                    <div class="card card-hover">
+                        <h4 class="card-title">❤️ Improved Quality of Life</h4>
+                        <p>A primary goal of civilization is to enhance the well-being of its people, leading to longer, healthier, and more stable lives.</p>
+                    </div>
+                    <div class="card card-hover">
+                        <h4 class="card-title">💡 Creativity & Innovation</h4>
+                        <p>The development of new technologies, art, and literature demonstrates a society's creative and intellectual vitality.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="components" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">Components of a Diverse Society</h3>
+                    <p class="text-gray-600 mt-2">The formation of Malaysia's diverse society can be analyzed through four interconnected components.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="card card-hover">
+                        <h4 class="card-title">🌍 1. Geo-Physical Environment</h4>
+                        <p>Malaysia's strategic location along the Straits of Malacca made it a natural hub for trade and cultural exchange, fostering interaction between great civilizations.</p>
+                    </div>
+                    <div class="card card-hover">
+                        <h4 class="card-title">👨‍👩‍👧‍👦 2. Society and Demographics</h4>
+                        <p>A mosaic of ethnic groups, each with its own culture, language, and traditions. Their continuous interaction has created a dynamic and pluralistic society.</p>
+                    </div>
+                    <div class="card card-hover">
+                        <h4 class="card-title">📈 3. Economy and Market</h4>
+                        <p>Economic forces, from pre-colonial subsistence to modern industry, have profoundly shaped Malaysia's social structure, migration, and inter-ethnic relations.</p>
+                    </div>
+                    <div class="card card-hover">
+                        <h4 class="card-title">🧠 4. Philosophy and Thought</h4>
+                        <p>The nation's ethics are influenced by a blend of traditional worldviews and modern secular perspectives that emphasize reason, individualism, and progress.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ethnic-relations" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">Key Concepts in Ethnic Relations</h3>
+                    <p class="text-gray-600 mt-2">Explore the different ways ethnic groups interact within a diverse society. Click on a concept to learn more.</p>
+                </div>
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/4">
+                        <div class="flex flex-col space-y-2">
+                            <button class="tab-btn p-4 text-left rounded-lg transition duration-300 active" data-tab="segregation">Segregation</button>
+                            <button class="tab-btn p-4 text-left rounded-lg transition duration-300" data-tab="accommodation">Accommodation</button>
+                            <button class="tab-btn p-4 text-left rounded-lg transition duration-300" data-tab="acculturation">Acculturation</button>
+                            <button class="tab-btn p-4 text-left rounded-lg transition duration-300" data-tab="assimilation">Assimilation</button>
+                            <button class="tab-btn p-4 text-left rounded-lg transition duration-300" data-tab="amalgamation">Amalgamation</button>
+                        </div>
+                    </div>
+                    <div class="md:w-3/4">
+                        <div id="segregation-content" class="tab-content p-6 bg-white rounded-lg shadow-md">
+                            <h4 class="card-title">Segregation</h4>
+                            <p class="text-gray-700">The enforced separation of different ethnic groups in a country, community, or institution, either physically or socially.</p>
+                        </div>
+                        <div id="accommodation-content" class="tab-content p-6 bg-white rounded-lg shadow-md hidden">
+                            <h4 class="card-title">Accommodation</h4>
+                            <p class="text-gray-700">A process where different ethnic groups accept and respect each other's cultures, allowing them to coexist peacefully without losing their distinct identities.</p>
+                        </div>
+                        <div id="acculturation-content" class="tab-content p-6 bg-white rounded-lg shadow-md hidden">
+                            <h4 class="card-title">Acculturation</h4>
+                            <p class="text-gray-700">The process of borrowing and adapting cultural elements from other ethnic groups, leading to a blend of traditions while maintaining core identities.</p>
+                        </div>
+                        <div id="assimilation-content" class="tab-content p-6 bg-white rounded-lg shadow-md hidden">
+                            <h4 class="card-title">Assimilation</h4>
+                            <p class="text-gray-700">A process where a minority group or culture comes to resemble a society's majority group by taking on its values, behaviors, and beliefs.</p>
+                        </div>
+                        <div id="amalgamation-content" class="tab-content p-6 bg-white rounded-lg shadow-md hidden">
+                            <h4 class="card-title">Amalgamation</h4>
+                            <p class="text-gray-700">The biological merging of distinct ethnic groups through intermarriage, creating a new, blended culture and society over time.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="straits-of-malacca" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">The Straits of Malacca: A Court of Diversity</h3>
+                    <p class="text-gray-700 mb-6">Historically, the Straits of Malacca was more than a trade route; it was a vibrant hub where civilizations met. This "court of diversity" brought together Malays, Chinese, Indians, Arabs, and Europeans, creating a unique melting pot. The Malacca Sultanate, in particular, stands as a testament to a thriving multicultural society where different races and religions coexisted in harmony.</p>
+                </div>
+                <div>
+                    <img src="https://placehold.co/600x400/D6BFA4/FFFFFF?text=Straits+of+Malacca" alt="An old map showing the Straits of Malacca" class="rounded-lg shadow-lg">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Sunway University APEC Course Notes.</p>
+            <p class="text-sm text-gray-400 mt-2">This interactive document was generated for educational purposes.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('main section');
+
+            // Mobile menu toggle
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Smooth scrolling for navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - document.getElementById('header').offsetHeight,
+                            behavior: 'smooth'
+                        });
+                    }
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+            
+            // Active nav link highlighting on scroll
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - document.getElementById('header').offsetHeight - 50;
+                    if (pageYOffset >= sectionTop) {
+                        current = '#' + section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            // Tab functionality for Ethnic Relations section
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const selectedTab = button.dataset.tab;
+
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    tabContents.forEach(content => {
+                        if (content.id === `${selectedTab}-content`) {
+                            content.classList.remove('hidden');
+                        } else {
+                            content.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
