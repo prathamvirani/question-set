@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Guide: Concept of Ethics and Civilization</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF8;
+            color: #4A4A4A;
+        }
+        .nav-link {
+            transition: color 0.3s, border-bottom-color 0.3s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #C0843E;
+            border-bottom-color: #C0843E;
+        }
+        .accordion-button.active {
+            background-color: #C0843E;
+            color: #FFFFFF;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+            padding: 0 1.5rem;
+        }
+        .accordion-content.open {
+            max-height: 1000px; /* Adjust as needed */
+            padding: 1.5rem;
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .plus-minus-icon::after {
+            content: '+';
+            float: right;
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        .accordion-button.active .plus-minus-icon::after {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-[#C0843E]">Chapter 2: Interactive</h1>
+            <div class="hidden md:flex space-x-8">
+                <a href="#influences" class="nav-link font-semibold border-b-2 border-transparent pb-1">Influences</a>
+                <a href="#ethics" class="nav-link font-semibold border-b-2 border-transparent pb-1">Concept of Ethics</a>
+                <a href="#civilization" class="nav-link font-semibold border-b-2 border-transparent pb-1">Concept of Civilization</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#influences" class="block py-2 nav-link">Influences</a>
+            <a href="#ethics" class="block py-2 nav-link">Concept of Ethics</a>
+            <a href="#civilization" class="block py-2 nav-link">Concept of Civilization</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-6xl font-bold text-gray-800 leading-tight">Concept of Ethics and Civilization</h2>
+                <p class="text-lg md:text-xl text-gray-600 mt-4 max-w-3xl mx-auto">An interactive exploration of the historical movements and core ideas that define ethics and civilization in Malaysia's pluralistic society.</p>
+            </div>
+        </section>
+
+        <section id="influences" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">Tracing the Movement of Ideas and Practices</h3>
+                    <p class="text-gray-600 mt-2">Malaysia's identity is a rich blend of diverse historical influences. Click on each section to expand and explore the key civilizational threads.</p>
+                </div>
+                <div class="space-y-4">
+                    <!-- Accordion Item 1 -->
+                    <div class="bg-white rounded-lg shadow-md">
+                        <button class="accordion-button w-full p-6 text-left text-xl font-semibold flex justify-between items-center transition duration-300">
+                            <span>The Malay World Civilization</span>
+                            <span class="plus-minus-icon"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="text-gray-700">The journey began in the **Pre-Historic Era** with nomadic settlements, evolving through the **Proto-Historical Period** with kingdoms like Srivijaya. The **Malacca Sultanate** was a pivotal moment, becoming a trade hub that fostered a pluralistic civilization. The arrival of European powers during the **Modern History** period introduced new dynamics and influences.</p>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 2 -->
+                    <div class="bg-white rounded-lg shadow-md">
+                        <button class="accordion-button w-full p-6 text-left text-xl font-semibold flex justify-between items-center transition duration-300">
+                            <span>Influence of Other Civilizations</span>
+                            <span class="plus-minus-icon"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div><h4 class="font-semibold text-lg mb-1 text-[#C0843E]">Indian Civilization</h4><p>Spread Hinduism and Buddhism, influencing governance, law, language (Sanskrit), and architecture.</p></div>
+                                <div><h4 class="font-semibold text-lg mb-1 text-[#C0843E]">Chinese Civilization</h4><p>Established trade relations and influenced administration, philosophy, and culture, leading to the Baba Nyonya community.</p></div>
+                                <div><h4 class="font-semibold text-lg mb-1 text-[#C0843E]">Middle Eastern Civilization</h4><p>The spread of Islam transformed religious beliefs, governance, and social structures from the 7th century onwards.</p></div>
+                                <div><h4 class="font-semibold text-lg mb-1 text-[#C0843E]">Western Civilization</h4><p>British influence was most profound, impacting government systems, science, and introducing ideologies like secularism.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 3 -->
+                    <div class="bg-white rounded-lg shadow-md">
+                        <button class="accordion-button w-full p-6 text-left text-xl font-semibold flex justify-between items-center transition duration-300">
+                            <span>The Globalization Era</span>
+                            <span class="plus-minus-icon"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="text-gray-700">The modern "borderless world," driven by ICT and social media, has created a **hybrid global civilization**. This ongoing process continues to blend diverse influences from both the East and the West, constantly shaping and reshaping Malaysian identity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ethics" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">The Concept of Ethics</h3>
+                    <p class="text-gray-600 mt-2">Ethics in Malaysia is a blend of European thought, religious perspectives, and the colonial experience.</p>
+                </div>
+                
+                <h4 class="text-2xl font-bold text-center text-gray-800 mb-8">History of European Thought</h4>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-6 bg-gray-50 rounded-lg card-hover">
+                        <h5 class="text-xl font-semibold text-[#C0843E] mb-2">Before Enlightenment</h5>
+                        <p>The **Dark Ages** were dominated by church control, which gave way to the **Renaissance**, a "rebirth" of intellectual inquiry focused on human reason.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-lg card-hover">
+                        <h5 class="text-xl font-semibold text-[#C0843E] mb-2">During Enlightenment</h5>
+                        <p>Known as the **Age of Reason**, this period emphasized knowledge through experience and observation, leading to the rise of **secularism**.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-lg card-hover">
+                        <h5 class="text-xl font-semibold text-[#C0843E] mb-2">After Enlightenment</h5>
+                        <p>The **French and Industrial Revolutions** cemented concepts like individualism, human rights, democracy, and capitalism as central tenets of Western ethics.</p>
+                    </div>
+                </div>
+
+                <h4 class="text-2xl font-bold text-center text-gray-800 mt-16 mb-8">Perspectives on Religion and Beliefs</h4>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-6 bg-gray-50 rounded-lg card-hover">
+                        <h5 class="text-xl font-semibold text-[#C0843E] mb-2">🕉️ Hinduism</h5>
+                        <p>Brought by the Indian community, it remains a significant part of Malaysia's religious fabric.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-lg card-hover">
+                        <h5 class="text-xl font-semibold text-[#C0843E] mb-2">☸️ Buddhism</h5>
+                        <p>One of the earliest religions in the region, based on the Four Noble Truths and the Eightfold Path.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-lg card-hover">
+                        <h5 class="text-xl font-semibold text-[#C0843E] mb-2">☪️ Islam</h5>
+                        <p>Introduced in the 12th century, it provides a comprehensive guide to life based on the Quran and Hadith.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="civilization" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">The Concept of Civilization</h3>
+                    <p class="text-gray-600 mt-2">Civilization is shaped by historical forces, cultural values, and religious beliefs. In Malaysia, it's defined by the legacy of colonialism and the East-West dynamic.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-6 bg-white rounded-lg shadow-md card-hover">
+                        <h4 class="text-xl font-semibold mb-2">Colonialism & Post-Colonialism</h4>
+                        <p>British colonialism introduced a **secularist framework** and ideologies like materialism. This has resulted in a layered, **hybrid civilization** in post-colonial Malaysia, blending diverse influences with global trends.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-lg shadow-md card-hover">
+                        <h4 class="text-xl font-semibold mb-2">East and West</h4>
+                        <p>**Eastern civilization** is largely built on religious and spiritual foundations. In contrast, **Western civilization** is rooted in rationalism, secularism, and scientific advancement, especially after the Enlightenment.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-lg shadow-md card-hover">
+                        <h4 class="text-xl font-semibold mb-2">Role of Religion and Beliefs</h4>
+                        <p>Religion is a cornerstone of civilization. It provides a foundation for moral values, guides societal development, reflects cultural heritage, and serves as a powerful symbol of unity and national spirit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Interactive Analysis of Malaysian Ethics and Civilization.</p>
+            <p class="text-sm text-gray-400 mt-2">Designed for educational purposes based on the provided source material.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Smooth scrolling for navigation links
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - document.getElementById('header').offsetHeight,
+                            behavior: 'smooth'
+                        });
+                    }
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+
+            // Scroll spy for active navigation link
+            const sections = document.querySelectorAll('main section');
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - document.getElementById('header').offsetHeight - 50;
+                    if (pageYOffset >= sectionTop) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            // Accordion functionality
+            const accordionButtons = document.querySelectorAll('.accordion-button');
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    const wasActive = button.classList.contains('active');
+
+                    // Close all accordions
+                    accordionButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.nextElementSibling.classList.remove('open');
+                    });
+
+                    // Open the clicked one if it wasn't already open
+                    if (!wasActive) {
+                        button.classList.add('active');
+                        content.classList.add('open');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
