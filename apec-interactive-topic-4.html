@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Guide: Strengthening National Integration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF8;
+            color: #4A4A4A;
+            scroll-behavior: smooth;
+        }
+        .nav-link {
+            transition: color 0.3s, border-bottom-color 0.3s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #C0843E;
+            border-bottom-color: #C0843E;
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .tab-btn.active {
+            background-color: #C0843E;
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header id="header" class="bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-[#C0843E]">National Integration</h1>
+            <div class="hidden md:flex space-x-8">
+                <a href="#unity" class="nav-link font-semibold border-b-2 border-transparent pb-1">Unity</a>
+                <a href="#cohesion" class="nav-link font-semibold border-b-2 border-transparent pb-1">Cohesion</a>
+                <a href="#unification" class="nav-link font-semibold border-b-2 border-transparent pb-1">Unification</a>
+                <a href="#quiz" class="nav-link font-semibold border-b-2 border-transparent pb-1">Quiz</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#unity" class="block py-2 nav-link">Unity</a>
+            <a href="#cohesion" class="block py-2 nav-link">Cohesion</a>
+            <a href="#unification" class="block py-2 nav-link">Unification</a>
+            <a href="#quiz" class="block py-2 nav-link">Quiz</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-6xl font-bold text-gray-800 leading-tight">Strengthening National Integration</h2>
+                <p class="text-lg md:text-xl text-gray-600 mt-4 max-w-3xl mx-auto">An interactive exploration of the continuous process of building unity within Malaysia's diverse society.</p>
+            </div>
+        </section>
+
+        <!-- Section 4.1: Unity -->
+        <section id="unity" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">Unity: The Desired Goal</h3>
+                    <p class="text-gray-600 mt-2">Unity is the ultimate aspiration, a process that unites society through a shared identity and common values.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="p-8 bg-green-50 rounded-lg border border-green-200 card-hover">
+                        <h4 class="text-2xl font-semibold text-green-800 mb-3">✅ Moments of Unity</h4>
+                        <p class="text-green-700">These are everyday situations where Malaysians come together, showcasing a natural sense of togetherness.</p>
+                        <ul class="list-disc list-inside text-green-700 space-y-2 mt-4">
+                            <li>Supporting national sports teams.</li>
+                            <li>Helping one another during natural disasters.</li>
+                            <li>Celebrating diverse festivals and weddings.</li>
+                        </ul>
+                    </div>
+                    <div class="p-8 bg-red-50 rounded-lg border border-red-200 card-hover">
+                        <h4 class="text-2xl font-semibold text-red-800 mb-3">⚠️ Moments of Difference</h4>
+                        <p class="text-red-700">These are instances where sensitivities are not respected, leading to friction and division.</p>
+                        <ul class="list-disc list-inside text-red-700 space-y-2 mt-4">
+                            <li>Instances of racism and discrimination.</li>
+                            <li>Disputes over language, culture, and religion.</li>
+                            <li>Friction from disrespecting cultural sensitivities.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4.2: Cohesion -->
+        <section id="cohesion" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">Cohesion: The Level Achieved</h3>
+                    <p class="text-gray-600 mt-2">Cohesion is the state of harmony built on tolerance and respect. Explore its key components below.</p>
+                </div>
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/4">
+                        <div class="flex flex-col space-y-2">
+                            <button class="tab-btn p-4 text-left rounded-lg transition duration-300 active" data-tab="national-cohesion">National Cohesion</button>
+                            <button class="tab-btn p-4 text-left rounded-lg transition duration-300" data-tab="social-cohesion">Social Cohesion</button>
+                            <button class="tab-btn p-4 text-left rounded-lg transition duration-300" data-tab="national-ethos">National Ethos</button>
+                        </div>
+                    </div>
+                    <div class="md:w-3/4">
+                        <div id="national-cohesion-content" class="tab-content p-6 bg-gray-50 rounded-lg">
+                            <h4 class="text-xl font-semibold text-[#C0843E] mb-2">National Cohesion</h4>
+                            <p class="text-gray-700">The unification of various groups into a single entity, guided by the **Federal Constitution** and the **Rukun Negara**. It reflects our society's dynamic evolution into a modern, industrial, and cosmopolitan nation.</p>
+                        </div>
+                        <div id="social-cohesion-content" class="tab-content p-6 bg-gray-50 rounded-lg hidden">
+                            <h4 class="text-xl font-semibold text-[#C0843E] mb-2">Social Cohesion vs. Social Deficit</h4>
+                            <p class="text-gray-700 mb-2"><strong>Social Cohesion:</strong> A state of harmony built on positive social norms like politeness and respect. It's achieved by overcoming inequality and mistrust.</p>
+                            <p class="text-gray-700"><strong>Social Deficit:</strong> The gaps in perception and needs among different groups. Key areas include ethnicity, religion, class, and the urban/rural divide.</p>
+                        </div>
+                        <div id="national-ethos-content" class="tab-content p-6 bg-gray-50 rounded-lg hidden">
+                            <h4 class="text-xl font-semibold text-[#C0843E] mb-2">The National Ethos</h4>
+                            <p class="text-gray-700">The set of shared characteristics that binds Malaysians together, built on four pillars: Shared Values, Shared Feelings, Shared Beliefs, and a Shared Identity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4.3: Unification -->
+        <section id="unification" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">Unification: The Process of Effort</h3>
+                    <p class="text-gray-600 mt-2">Unification is the continuous effort to bridge social deficits by creating "integration sites" at all levels of society.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="p-8 bg-white rounded-lg shadow-md card-hover">
+                        <h4 class="text-xl font-semibold text-[#C0843E] mb-2">Thinning Ethnic Boundaries</h4>
+                        <p>The goal is to make the lines drawn by cultural and religious differences thinner to encourage more interaction and understanding, moving away from isolation.</p>
+                    </div>
+                    <div class="p-8 bg-white rounded-lg shadow-md card-hover">
+                        <h4 class="text-xl font-semibold text-[#C0843E] mb-2">Fostering Cross-Ethnic Relations</h4>
+                        <p>Promoting collective activities and relationships across different groups is vital for strengthening social cohesion and building a truly integrated society.</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                     <h4 class="text-2xl font-bold text-gray-800 mb-8">Core Principles of Unification</h4>
+                     <div class="grid md:grid-cols-3 gap-8">
+                        <div class="p-6">
+                            <div class="text-6xl mb-4">🔄</div>
+                            <h5 class="text-xl font-semibold mb-2">Bargaining</h5>
+                            <p>A process of give-and-take to reach mutually beneficial agreements.</p>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-6xl mb-4">🗣️</div>
+                            <h5 class="text-xl font-semibold mb-2">Negotiation</h5>
+                            <p>Open and respectful discussion to find common solutions to shared problems.</p>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-6xl mb-4">🕊️</div>
+                            <h5 class="text-xl font-semibold mb-2">Mediation</h5>
+                            <p>Using neutral parties to help resolve disputes and build bridges between communities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Interactive Quiz Section -->
+        <section id="quiz" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">Check Your Understanding</h3>
+                    <p class="text-gray-600 mt-2">Test your knowledge of the key concepts from this chapter.</p>
+                </div>
+                <div id="quiz-container" class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                    <!-- Question 1 -->
+                    <div class="mb-6">
+                        <p class="font-semibold mb-2">1. What are the three core principles or "tools" of unification in Malaysia?</p>
+                        <div class="space-y-2" id="q1">
+                            <label class="block"><input type="radio" name="q1" value="a"> A) Segregation, Assimilation, Amalgamation</label>
+                            <label class="block"><input type="radio" name="q1" value="b"> B) Bargaining, Negotiation, Mediation</label>
+                            <label class="block"><input type="radio" name="q1" value="c"> C) Unity, Cohesion, Unification</label>
+                        </div>
+                    </div>
+                    <!-- Question 2 -->
+                    <div class="mb-6">
+                        <p class="font-semibold mb-2">2. The peaceful, stable state built on tolerance and mutual respect is known as...</p>
+                        <div class="space-y-2" id="q2">
+                            <label class="block"><input type="radio" name="q2" value="a"> A) National Ethos</label>
+                            <label class="block"><input type="radio" name="q2" value="b"> B) Social Deficit</label>
+                            <label class="block"><input type="radio" name="q2" value="c"> C) Social Cohesion</label>
+                        </div>
+                    </div>
+                     <!-- Question 3 -->
+                    <div class="mb-6">
+                        <p class="font-semibold mb-2">3. According to the notes, what is the ultimate aspirational goal for a multi-ethnic nation like Malaysia?</p>
+                        <div class="space-y-2" id="q3">
+                            <label class="block"><input type="radio" name="q3" value="a"> A) Unity</label>
+                            <label class="block"><input type="radio" name="q3" value="b"> B) Economic Growth</label>
+                            <label class="block"><input type="radio" name="q3" value="c"> C) Global Recognition</label>
+                        </div>
+                    </div>
+                    <button id="submit-quiz" class="w-full bg-[#C0843E] text-white font-bold py-3 px-4 rounded-lg hover:bg-[#a87030] transition duration-300">Check Answers</button>
+                    <div id="quiz-results" class="mt-4 text-center font-bold"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-12 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Sunway University APEC Course Materials.</p>
+            <p class="text-sm text-gray-400 mt-2">Interactive document generated for educational purposes.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Smooth Scrolling & Active Nav Link
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('main section');
+            const headerHeight = document.getElementById('header').offsetHeight;
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - headerHeight,
+                            behavior: 'smooth'
+                        });
+                    }
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+            
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - headerHeight - 50;
+                    if (pageYOffset >= sectionTop) {
+                        current = '#' + section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            // Tabbed Content for Cohesion Section
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const selectedTab = button.dataset.tab;
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    tabContents.forEach(content => {
+                        content.classList.toggle('hidden', content.id !== `${selectedTab}-content`);
+                    });
+                });
+            });
+
+            // Interactive Quiz Logic
+            const submitButton = document.getElementById('submit-quiz');
+            const resultsContainer = document.getElementById('quiz-results');
+            const correctAnswers = { q1: 'b', q2: 'c', q3: 'a' };
+
+            submitButton.addEventListener('click', () => {
+                let score = 0;
+                const totalQuestions = Object.keys(correctAnswers).length;
+
+                for (const qId in correctAnswers) {
+                    const questionDiv = document.getElementById(qId);
+                    const labels = questionDiv.querySelectorAll('label');
+                    labels.forEach(label => {
+                        label.classList.remove('text-green-600', 'text-red-600', 'font-bold');
+                    });
+                    
+                    const selected = document.querySelector(`input[name="${qId}"]:checked`);
+                    if (selected) {
+                        const selectedLabel = selected.parentElement;
+                        if (selected.value === correctAnswers[qId]) {
+                            score++;
+                            selectedLabel.classList.add('text-green-600', 'font-bold');
+                        } else {
+                            selectedLabel.classList.add('text-red-600', 'font-bold');
+                            // Also highlight the correct answer
+                            const correctLabel = questionDiv.querySelector(`input[value="${correctAnswers[qId]}"]`).parentElement;
+                            correctLabel.classList.add('text-green-600', 'font-bold');
+                        }
+                    }
+                }
+                resultsContainer.textContent = `You scored ${score} out of ${totalQuestions}!`;
+                resultsContainer.classList.add(score / totalQuestions > 0.5 ? 'text-green-600' : 'text-red-600');
+            });
+        });
+    </script>
+</body>
+</html>
