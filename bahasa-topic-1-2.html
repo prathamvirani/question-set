@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahasa Melayu Notes: Numbers, Currency & Time</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic styles for light and dark mode transition */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light mode background */
+            color: #1f2937; /* Light mode text */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .dark body {
+            background-color: #0d1117; /* Dark mode background */
+            color: #e5e7eb; /* Dark mode text */
+        }
+        /* Header gradient from the provided theme */
+        .header-card {
+            background: linear-gradient(135deg, #38b2ac 0%, #3182ce 100%);
+        }
+        /* Card styles for content sections */
+        .content-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+        .dark .content-card:hover {
+             box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+        /* Style for the fixed theme toggle button */
+        #theme-toggle-container {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 50;
+        }
+    </style>
+    <script>
+        // --- IMPORTANT THEME SCRIPT ---
+        // This script runs before the page is displayed to prevent flickering.
+        // It sets the theme based on the user's saved preference in localStorage.
+        
+        // 1. Set Tailwind to use the 'class' strategy for dark mode.
+        tailwind.config = {
+          darkMode: 'class',
+        }
+
+        // 2. Check for a saved theme in localStorage and apply it immediately.
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+    </script>
+</head>
+<body class="min-h-screen p-4 sm:p-6 md:p-8">
+
+    <!-- Container for all content -->
+    <div class="w-full max-w-7xl mx-auto">
+        <!-- Header Section -->
+        <header class="header-card text-white p-8 rounded-2xl mb-10 shadow-lg">
+            <div class="flex items-center mb-2">
+                 <!-- Simple SVG Icon for Clock/Time -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 md:h-16 md:w-16 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <h1 class="text-3xl md:text-5xl font-bold">Bahasa Melayu: Numbers, Currency & Time</h1>
+            </div>
+            <p class="text-lg text-teal-100">Topic 1.2: A guide to using numbers, money, and time.</p>
+        </header>
+
+        <!-- Main Content Grid -->
+        <main class="space-y-12">
+
+            <!-- Nombor (Numbers) Section -->
+            <div>
+                <h2 class="text-3xl font-bold dark:text-white mb-6 border-l-4 border-blue-500 pl-4">1. Nombor (Numbers)</h2>
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md content-card">
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">Numbers in Bahasa Melayu follow a logical system. Once you learn the basics from 1-20, you can construct almost any number.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Column 1: Numbers 1-10 -->
+                        <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <h3 class="font-bold text-xl text-blue-600 dark:text-blue-400 mb-2">Basics (1-10)</h3>
+                            <ul class="space-y-1 text-gray-700 dark:text-gray-300">
+                                <li><strong>1</strong> - Satu</li>
+                                <li><strong>2</strong> - Dua</li>
+                                <li><strong>3</strong> - Tiga</li>
+                                <li><strong>4</strong> - Empat</li>
+                                <li><strong>5</strong> - Lima</li>
+                                <li><strong>6</strong> - Enam</li>
+                                <li><strong>7</strong> - Tujuh</li>
+                                <li><strong>8</strong> - Lapan</li>
+                                <li><strong>9</strong> - Sembilan</li>
+                                <li><strong>10</strong> - Sepuluh</li>
+                            </ul>
+                        </div>
+                        <!-- Column 2: Numbers 11-20 -->
+                        <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <h3 class="font-bold text-xl text-blue-600 dark:text-blue-400 mb-2">Teens (11-20)</h3>
+                            <ul class="space-y-1 text-gray-700 dark:text-gray-300">
+                                <li><strong>11</strong> - Sebelas</li>
+                                <li><strong>12</strong> - Dua belas</li>
+                                <li><strong>13</strong> - Tiga belas</li>
+                                <li><strong>14</strong> - Empat belas</li>
+                                <li><strong>15</strong> - Lima belas</li>
+                                <li><strong>16</strong> - Enam belas</li>
+                                <li><strong>17</strong> - Tujuh belas</li>
+                                <li><strong>18</strong> - Lapan belas</li>
+                                <li><strong>19</strong> - Sembilan belas</li>
+                                <li><strong>20</strong> - Dua puluh</li>
+                            </ul>
+                        </div>
+                        <!-- Column 3: Larger Numbers -->
+                        <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <h3 class="font-bold text-xl text-blue-600 dark:text-blue-400 mb-2">Larger Numbers</h3>
+                             <ul class="space-y-1 text-gray-700 dark:text-gray-300">
+                                <li><strong>10</strong> - Sepuluh</li>
+                                <li><strong>100</strong> - Seratus</li>
+                                <li><strong>1,000</strong> - Seribu</li>
+                                <li><strong>10,000</strong> - Sepuluh ribu</li>
+                                <li><strong>100,000</strong> - Seratus ribu</li>
+                                <li><strong>1,000,000</strong> - Sejuta</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mata Wang (Currency) Section -->
+            <div>
+                <h2 class="text-3xl font-bold dark:text-white mb-6 border-l-4 border-green-500 pl-4">2. Mata Wang (Currency)</h2>
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md content-card">
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">The Malaysian currency is the **Ringgit (RM)** and **Sen**. There are 100 sen in 1 ringgit.</p>
+                     <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead class="bg-gray-100 dark:bg-gray-700">
+                                <tr>
+                                    <th class="p-4 font-semibold rounded-tl-lg">Amount</th>
+                                    <th class="p-4 font-semibold rounded-tr-lg">Pronunciation (Sebutan)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b dark:border-gray-600">
+                                    <td class="p-4 font-mono">RM 0.50</td>
+                                    <td class="p-4">Lima puluh sen</td>
+                                </tr>
+                                <tr class="border-b dark:border-gray-600">
+                                    <td class="p-4 font-mono">RM 1.00</td>
+                                    <td class="p-4">Satu ringgit</td>
+                                </tr>
+                                 <tr class="border-b dark:border-gray-600">
+                                    <td class="p-4 font-mono">RM 10.50</td>
+                                    <td class="p-4">Sepuluh ringgit lima puluh sen</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-mono">RM 100.45</td>
+                                    <td class="p-4">Seratus ringgit empat puluh lima sen</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-500 dark:text-gray-400"><strong>Note:</strong> When writing a cheque, you add **"sahaja"** (only) at the end.</p>
+                </div>
+            </div>
+
+            <!-- Waktu (Time) Section -->
+            <div>
+                <h2 class="text-3xl font-bold dark:text-white mb-6 border-l-4 border-yellow-500 pl-4">3. Waktu (Time)</h2>
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md content-card space-y-8">
+                    <!-- Parts of the Day & Telling Time -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="font-semibold text-xl mb-3">Parts of the Day</h3>
+                            <ul class="list-disc list-inside space-y-1 text-gray-600 dark:text-gray-300">
+                                <li><strong>Pagi</strong> (Morning: ~1am - 11:59am)</li>
+                                <li><strong>Tengah Hari</strong> (Noon: 12pm - 1:59pm)</li>
+                                <li><strong>Petang</strong> (Afternoon: 2pm - 6:59pm)</li>
+                                <li><strong>Malam</strong> (Night: 7pm - 11:59pm)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-xl mb-3">How to Tell Time</h3>
+                            <p class="mb-3 text-gray-600 dark:text-gray-300">Use the word <strong class="text-yellow-600 dark:text-yellow-400">"Pukul"</strong> before the hour.</p>
+                             <ul class="list-disc list-inside space-y-1 text-gray-600 dark:text-gray-300">
+                                <li><strong>4:00</strong> &rarr; Pukul empat</li>
+                                <li><strong>1:15</strong> &rarr; Pukul satu lima belas minit</li>
+                                <li><strong>12:30</strong> &rarr; Pukul dua belas tiga puluh minit</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Days and Months -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="font-semibold text-xl mb-3">Days of the Week (Hari)</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Isnin, Selasa, Rabu, Khamis, Jumaat, Sabtu, Ahad</p>
+                        </div>
+                         <div>
+                            <h3 class="font-semibold text-xl mb-3">Months of the Year (Bulan)</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Januari, Februari, Mac, April, Mei, Jun, Julai, Ogos, September, Oktober, November, Disember</p>
+                        </div>
+                    </div>
+                    <!-- Time Expressions -->
+                     <div>
+                        <h3 class="font-semibold text-xl mb-3">Time Expressions (Kata Keterangan Waktu)</h3>
+                         <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <thead class="bg-gray-100 dark:bg-gray-700">
+                                    <tr>
+                                        <th class="p-4 font-semibold rounded-tl-lg">Bahasa Melayu</th>
+                                        <th class="p-4 font-semibold">English</th>
+                                        <th class="p-4 font-semibold">Bahasa Melayu</th>
+                                        <th class="p-4 font-semibold rounded-tr-lg">English</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b dark:border-gray-600">
+                                        <td class="p-3"><strong>Hari ini</strong></td><td class="p-3">Today</td>
+                                        <td class="p-3"><strong>Akan</strong></td><td class="p-3">Will (Future)</td>
+                                    </tr>
+                                    <tr class="border-b dark:border-gray-600">
+                                        <td class="p-3"><strong>Semalam</strong></td><td class="p-3">Yesterday</td>
+                                        <td class="p-3"><strong>Sudah / Telah</strong></td><td class="p-3">Already (Past)</td>
+                                    </tr>
+                                    <tr class="border-b dark:border-gray-600">
+                                        <td class="p-3"><strong>Esok</strong></td><td class="p-3">Tomorrow</td>
+                                        <td class="p-3"><strong>Sedang</strong></td><td class="p-3">-ing (Present)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3"><strong>Sekarang</strong></td><td class="p-3">Now</td>
+                                        <td class="p-3"><strong>Selalu</strong></td><td class="p-3">Always</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        
+        <!-- Footer -->
+        <footer class="text-center mt-12 py-6 border-t border-gray-200 dark:border-gray-700">
+            <p class="text-gray-500 dark:text-gray-400">&copy; 2024 Bahasa Melayu Learning Portal. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Persistent Theme Toggle Button -->
+    <div id="theme-toggle-container">
+        <button id="theme-toggle" type="button" class="bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-full text-sm p-3 shadow-lg">
+            <!-- Moon Icon -->
+            <svg id="theme-toggle-dark-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            <!-- Sun Icon -->
+            <svg id="theme-toggle-light-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.121-3.536a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM4.95 6.364a1 1 0 00-1.414 1.414l.707.707a1 1 0 001.414-1.414l-.707-.707zM15.636 4.95a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM1.646 13.636a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1z"></path></svg>
+            <span class="sr-only">Toggle theme</span>
+        </button>
+    </div>
+
+    <script>
+        // This script runs after the page content is loaded to handle the button logic.
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+        
+        // Function to update the button icon based on the current theme
+        function updateIcons() {
+            if (document.documentElement.classList.contains('dark')) {
+                themeToggleDarkIcon.classList.add('hidden');
+                themeToggleLightIcon.classList.remove('hidden');
+            } else {
+                themeToggleDarkIcon.classList.remove('hidden');
+                themeToggleLightIcon.classList.add('hidden');
+            }
+        }
+
+        // Function to handle the theme toggle when the button is clicked
+        function toggleTheme() {
+            // Toggle the 'dark' class on the root <html> element
+            document.documentElement.classList.toggle('dark');
+            
+            // Save the user's preference to localStorage
+            if (document.documentElement.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+            
+            // Update the icon to reflect the new theme
+            updateIcons();
+        };
+
+        // Add the click event listener to the button
+        themeToggleBtn.addEventListener('click', toggleTheme);
+
+        // Update the icons to the correct state when the page loads
+        updateIcons();
+    </script>
+
+</body>
+</html>
