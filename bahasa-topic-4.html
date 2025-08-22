@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahasa Melayu Notes: Conversational Situations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic styles for light and dark mode transition */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light mode background */
+            color: #1f2937; /* Light mode text */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .dark body {
+            background-color: #0d1117; /* Dark mode background */
+            color: #e5e7eb; /* Dark mode text */
+        }
+        /* Header gradient */
+        .header-card {
+            background: linear-gradient(135deg, #38b2ac 0%, #319795 100%);
+        }
+        /* Card styles for content sections */
+        .content-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+        .dark .content-card:hover {
+             box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+        /* Style for the fixed theme toggle button */
+        #theme-toggle-container {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 50;
+        }
+    </style>
+    <script>
+        // --- IMPORTANT THEME SCRIPT ---
+        // Prevents theme flashing on page load
+        tailwind.config = {
+          darkMode: 'class',
+        }
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+    </script>
+</head>
+<body class="min-h-screen p-4 sm:p-6 md:p-8">
+
+    <!-- Container for all content -->
+    <div class="w-full max-w-7xl mx-auto">
+        <!-- Header Section -->
+        <header class="header-card text-white p-8 rounded-2xl mb-10 shadow-lg">
+            <div class="flex items-center mb-2">
+                 <!-- SVG Icon for Conversation -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 md:h-16 md:w-16 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+                <h1 class="text-3xl md:text-5xl font-bold">Bahasa Melayu: Conversational Situations</h1>
+            </div>
+            <p class="text-lg text-teal-100">Topic 4: Mastering conversations on the phone, at counters, and in shops.</p>
+        </header>
+
+        <!-- Main Content Grid -->
+        <main class="space-y-12">
+
+            <!-- Telephone Conversations Section -->
+            <div>
+                <h2 class="text-3xl font-bold dark:text-white mb-6 border-l-4 border-blue-500 pl-4">1. Perbualan di Telefon (Telephone Conversations)</h2>
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md content-card">
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">Essential phrases for handling phone calls politely and effectively.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Common Phrases -->
+                        <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <h3 class="font-semibold text-lg text-blue-600 dark:text-blue-400 mb-2">Greetings & Openers</h3>
+                            <ul class="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-1">
+                                <li><strong>Apa khabar?</strong> (How are you?)</li>
+                                <li><strong>Siapakah dalam talian?</strong> (Who is on the line?)</li>
+                                <li><strong>Adakah ini...?</strong> (Is this...?)</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <h3 class="font-semibold text-lg text-blue-600 dark:text-blue-400 mb-2">Handling Issues</h3>
+                            <ul class="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-1">
+                                <li><strong>Maaf, tolong ulang.</strong> (Sorry, please repeat.)</li>
+                                <li><strong>Talian sibuk.</strong> (The line is busy.)</li>
+                                <li><strong>Sila menelefon semula.</strong> (Please call again later.)</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <h3 class="font-semibold text-lg text-blue-600 dark:text-blue-400 mb-2">Managing the Call</h3>
+                            <ul class="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-1">
+                                <li><strong>Tunggu sebentar.</strong> (Please hold on.)</li>
+                                <li><strong>Dia tidak ada.</strong> (He/She is not here.)</li>
+                                <li><strong>Saya akan telefon semula.</strong> (I will call back.)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Honorifics -->
+                    <div class="mt-8">
+                        <h3 class="text-2xl font-bold dark:text-white mb-4 border-b pb-2">Kata Rujukan Hormat (Honorific Terms)</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Always use respectful terms when addressing others, especially those who are older or in a position of authority.</p>
+                        <div class="flex flex-wrap gap-4">
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Encik (Mr.)</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Puan (Mrs.)</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Cik (Miss)</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Profesor</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Cikgu (Teacher)</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Pak cik (Uncle)</span>
+                             <span class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Mak cik (Auntie)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- At a Counter Section -->
+            <div>
+                <h2 class="text-3xl font-bold dark:text-white mb-6 border-l-4 border-green-500 pl-4">2. Perbualan di Kaunter (At a Counter)</h2>
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md content-card">
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">A typical interaction when buying tickets or seeking services.</p>
+                    <!-- Example Dialogue -->
+                    <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg mb-8">
+                        <h4 class="font-bold text-lg mb-2">Example: Buying a Bus Ticket</h4>
+                        <div class="space-y-2 text-gray-800 dark:text-gray-200">
+                            <p><strong class="text-green-600 dark:text-green-400">Ali:</strong> Selamat pagi. Saya mahu membeli tiket bas ke KLIA.</p>
+                            <p><strong class="text-gray-500 dark:text-gray-400">Kerani:</strong> Selamat pagi. Ya, ada. Bilakah awak mahu pergi?</p>
+                            <p><strong class="text-green-600 dark:text-green-400">Ali:</strong> Esok. Untuk dua orang. Pukul berapa bas ada?</p>
+                            <p><strong class="text-gray-500 dark:text-gray-400">Kerani:</strong> Ada pukul 8.00 pagi dan 5.00 petang.</p>
+                        </div>
+                    </div>
+                    <!-- Grammar Focus -->
+                    <h3 class="text-2xl font-bold dark:text-white mb-4 border-b pb-2">Grammar Focus</h3>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <!-- Conjunctions -->
+                        <div>
+                            <h4 class="font-bold text-xl text-green-600 dark:text-green-400 mb-3">Kata Hubung (Conjunctions)</h4>
+                            <ul class="space-y-2">
+                                <li><strong>dan</strong> (and): <span class="text-gray-500 dark:text-gray-400">Saya mahu setem <span class="font-semibold">dan</span> sampul surat.</span></li>
+                                <li><strong>tetapi</strong> (but): <span class="text-gray-500 dark:text-gray-400">Tempat itu dekat <span class="font-semibold">tetapi</span> mahal.</span></li>
+                                <li><strong>atau</strong> (or): <span class="text-gray-500 dark:text-gray-400">Awak mahu kopi <span class="font-semibold">atau</span> teh?</span></li>
+                                <li><strong>kerana</strong> (because): <span class="text-gray-500 dark:text-gray-400">Saya tidak datang <span class="font-semibold">kerana</span> sakit.</span></li>
+                            </ul>
+                        </div>
+                        <!-- Modals -->
+                        <div>
+                            <h4 class="font-bold text-xl text-green-600 dark:text-green-400 mb-3">Kata Bantu (Modals)</h4>
+                             <ul class="space-y-2">
+                                <li><strong>mahu/hendak</strong> (want): <span class="text-gray-500 dark:text-gray-400">Dia <span class="font-semibold">mahu</span> membeli tiket.</span></li>
+                                <li><strong>mesti</strong> (must): <span class="text-gray-500 dark:text-gray-400">Awak <span class="font-semibold">mesti</span> bayar sekarang.</span></li>
+                                <li><strong>boleh</strong> (can/may): <span class="text-gray-500 dark:text-gray-400"><span class="font-semibold">Boleh</span> saya bantu?</span></li>
+                                <li><strong>harus/patut</strong> (should): <span class="text-gray-500 dark:text-gray-400">Kita <span class="font-semibold">harus</span> pergi awal.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- At a Shop/Restaurant Section -->
+            <div>
+                <h2 class="text-3xl font-bold dark:text-white mb-6 border-l-4 border-yellow-500 pl-4">3. Perbualan di Kedai & Restoran (At a Shop & Restaurant)</h2>
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md content-card">
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">Useful descriptive words for ordering food or shopping.</p>
+                     <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead class="bg-gray-100 dark:bg-gray-700">
+                                <tr>
+                                    <th class="p-4 font-semibold rounded-tl-lg">Word</th>
+                                    <th class="p-4 font-semibold">Meaning</th>
+                                    <th class="p-4 font-semibold rounded-tr-lg">Example Sentence</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b dark:border-gray-600">
+                                    <td class="p-4 font-mono font-bold">agak</td>
+                                    <td class="p-4">quite</td>
+                                    <td class="p-4">Harga ini <strong class="text-yellow-600 dark:text-yellow-400">agak</strong> murah. (This price is quite cheap.)</td>
+                                </tr>
+                                <tr class="border-b dark:border-gray-600">
+                                    <td class="p-4 font-mono font-bold">lebih</td>
+                                    <td class="p-4">more</td>
+                                    <td class="p-4">Saya mahu sup <strong class="text-yellow-600 dark:text-yellow-400">lebih</strong> pedas. (I want the soup to be more spicy.)</td>
+                                </tr>
+                                 <tr class="border-b dark:border-gray-600">
+                                    <td class="p-4 font-mono font-bold">terlalu</td>
+                                    <td class="p-4">too / extremely</td>
+                                    <td class="p-4">Kopi ini <strong class="text-yellow-600 dark:text-yellow-400">terlalu</strong> pahit. (This coffee is too bitter.)</td>
+                                </tr>
+                                 <tr class="border-b dark:border-gray-600">
+                                    <td class="p-4 font-mono font-bold">sangat</td>
+                                    <td class="p-4">very</td>
+                                    <td class="p-4">Nasi lemak itu <strong class="text-yellow-600 dark:text-yellow-400">sangat</strong> pedas. (The nasi lemak is very spicy.)</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-mono font-bold">sebelum/selepas</td>
+                                    <td class="p-4">before/after</td>
+                                    <td class="p-4">Basuh tangan <strong class="text-yellow-600 dark:text-yellow-400">sebelum</strong> makan. (Wash hands before eating.)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        
+        <!-- Footer -->
+        <footer class="text-center mt-12 py-6 border-t border-gray-200 dark:border-gray-700">
+            <p class="text-gray-500 dark:text-gray-400">&copy; 2024 Bahasa Melayu Learning Portal. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Persistent Theme Toggle Button -->
+    <div id="theme-toggle-container">
+        <button id="theme-toggle" type="button" class="bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-full text-sm p-3 shadow-lg">
+            <!-- Moon Icon -->
+            <svg id="theme-toggle-dark-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            <!-- Sun Icon -->
+            <svg id="theme-toggle-light-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.121-3.536a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM4.95 6.364a1 1 0 00-1.414 1.414l.707.707a1 1 0 001.414-1.414l-.707-.707zM15.636 4.95a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM1.646 13.636a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1z"></path></svg>
+            <span class="sr-only">Toggle theme</span>
+        </button>
+    </div>
+
+    <script>
+        // This script handles the theme toggle button logic after the page loads.
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+        
+        function updateIcons() {
+            if (document.documentElement.classList.contains('dark')) {
+                themeToggleDarkIcon.classList.add('hidden');
+                themeToggleLightIcon.classList.remove('hidden');
+            } else {
+                themeToggleDarkIcon.classList.remove('hidden');
+                themeToggleLightIcon.classList.add('hidden');
+            }
+        }
+
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+            updateIcons();
+        };
+
+        themeToggleBtn.addEventListener('click', toggleTheme);
+        updateIcons(); // Set initial icon state
+    </script>
+
+</body>
+</html>
