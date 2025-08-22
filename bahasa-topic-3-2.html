@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahasa Melayu Notes: My Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic styles for light and dark mode transition */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light mode background */
+            color: #1f2937; /* Light mode text */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .dark body {
+            background-color: #0d1117; /* Dark mode background */
+            color: #e5e7eb; /* Dark mode text */
+        }
+        /* Header gradient with a home-like feel */
+        .header-card {
+            background: linear-gradient(135deg, #5A9AE8 0%, #3C6E71 100%);
+        }
+        /* Card styles for content sections */
+        .content-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+        .dark .content-card:hover {
+             box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+        /* Style for the fixed theme toggle button */
+        #theme-toggle-container {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 50;
+        }
+    </style>
+    <script>
+        // --- IMPORTANT THEME SCRIPT ---
+        // This script runs before the page is displayed to prevent flickering.
+        // It sets the theme based on the user's saved preference in localStorage.
+        
+        // 1. Set Tailwind to use the 'class' strategy for dark mode.
+        tailwind.config = {
+          darkMode: 'class',
+        }
+
+        // 2. Check for a saved theme in localStorage and apply it immediately.
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+    </script>
+</head>
+<body class="min-h-screen p-4 sm:p-6 md:p-8">
+
+    <!-- Container for all content -->
+    <div class="w-full max-w-7xl mx-auto">
+        <!-- Header Section -->
+        <header class="header-card text-white p-8 rounded-2xl mb-10 shadow-lg">
+            <div class="flex items-center mb-2">
+                 <!-- Simple SVG Icon for Home -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 md:h-16 md:w-16 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+                <h1 class="text-3xl md:text-5xl font-bold">Bahasa Melayu: My Home</h1>
+            </div>
+            <p class="text-lg text-blue-200">Topic 3.2: Vocabulary for residences, rooms, furniture, and grammar.</p>
+        </header>
+
+        <!-- Main Content Grid -->
+        <main class="space-y-12">
+
+            <!-- Jenis-jenis Rumah (Types of Houses) Section -->
+            <div>
+                <h2 class="text-3xl font-bold dark:text-white mb-6 border-l-4 border-blue-500 pl-4">1. Jenis-jenis Rumah (Types of Houses)</h2>
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md content-card">
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">Learn the names for different types of homes in Malaysia.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <h3 class="font-bold text-lg text-blue-700 dark:text-blue-400">pangsapuri</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Apartment</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <h3 class="font-bold text-lg text-blue-700 dark:text-blue-400">rumah teres</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Terrace house</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <h3 class="font-bold text-lg text-blue-700 dark:text-blue-400">banglo</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Bungalow</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <h3 class="font-bold text-lg text-blue-700 dark:text-blue-400">kondominium</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Condominium</p>
+                        </div>
+                         <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <h3 class="font-bold text-lg text-blue-700 dark:text-blue-400">rumah kedai</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Shophouse</p>
+                        </div>
+                         <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <h3 class="font-bold text-lg text-blue-700 dark:text-blue-400">rumah panjang</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Longhouse</p>
+                        </div>
+                         <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <h3 class="font-bold text-lg text-blue-700 dark:text-blue-400">rumah kampung</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Village house</p>
+                        </div>
+                         <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <h3 class="font-bold text-lg text-blue-700 dark:text-blue-400">rumah pangsa</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Flat</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ruang Rumah (Living Areas) & Perabot (Furniture) Section -->
+            <div>
+                 <h2 class="text-3xl font-bold dark:text-white mb-6 border-l-4 border-green-500 pl-4">2. Ruang & Perabot (Rooms & Furniture)</h2>
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md content-card grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-6">
+                    <!-- Column 1: Ruang Rumah -->
+                    <div>
+                        <h3 class="text-2xl font-semibold dark:text-white mb-4">Ruang Rumah (Living Areas)</h3>
+                        <ul class="space-y-3">
+                            <li class="flex justify-between border-b pb-2 dark:border-gray-600"><span>ruang tamu</span> <span class="text-gray-500 dark:text-gray-400">living room</span></li>
+                            <li class="flex justify-between border-b pb-2 dark:border-gray-600"><span>ruang makan</span> <span class="text-gray-500 dark:text-gray-400">dining room</span></li>
+                            <li class="flex justify-between border-b pb-2 dark:border-gray-600"><span>bilik tidur</span> <span class="text-gray-500 dark:text-gray-400">bedroom</span></li>
+                            <li class="flex justify-between border-b pb-2 dark:border-gray-600"><span>dapur</span> <span class="text-gray-500 dark:text-gray-400">kitchen</span></li>
+                            <li class="flex justify-between border-b pb-2 dark:border-gray-600"><span>bilik air / tandas</span> <span class="text-gray-500 dark:text-gray-400">bathroom / toilet</span></li>
+                            <li class="flex justify-between border-b pb-2 dark:border-gray-600"><span>garaj kereta</span> <span class="text-gray-500 dark:text-gray-400">garage</span></li>
+                            <li class="flex justify-between"><span>laman rumah</span> <span class="text-gray-500 dark:text-gray-400">garden</span></li>
+                        </ul>
+                    </div>
+                     <!-- Column 2: Perabot -->
+                    <div>
+                        <h3 class="text-2xl font-semibold dark:text-white mb-4">Perabot (Furniture)</h3>
+                        <ul class="space-y-3">
+                            <li class="flex justify-between border-b pb-2 dark:border-gray-600"><span>meja makan</span> <span class="text-gray-500 dark:text-gray-400">dining table</span></li>
+                            <li class="flex justify-between border-b pb-2 dark:border-gray-600"><span>kerusi</span> <span class="text-gray-500 dark:text-gray-400">chair</span></li>
+                             <li class="flex justify-between border-b pb-2 dark:border-gray-600"><span>sofa</span> <span class="text-gray-500 dark:text-gray-400">sofa</span></li>
+                            <li class="flex justify-between border-b pb-2 dark:border-gray-600"><span>katil</span> <span class="text-gray-500 dark:text-gray-400">bed</span></li>
+                            <li class="flex justify-between border-b pb-2 dark:border-gray-600"><span>almari</span> <span class="text-gray-500 dark:text-gray-400">cupboard</span></li>
+                            <li class="flex justify-between border-b pb-2 dark:border-gray-600"><span>peti ais</span> <span class="text-gray-500 dark:text-gray-400">refrigerator</span></li>
+                            <li class="flex justify-between"><span>mesin basuh</span> <span class="text-gray-500 dark:text-gray-400">washing machine</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kata Bantu (Function Words) Section -->
+            <div>
+                <h2 class="text-3xl font-bold dark:text-white mb-6 border-l-4 border-yellow-500 pl-4">3. Tatabahasa: Kata Bantu (Grammar: Modals)</h2>
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md content-card">
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">"Kata bantu" are function words, similar to modals in English, that add context like desire, ability, or obligation to a verb.</p>
+                    <div class="space-y-6">
+                        <!-- Mahu / Hendak -->
+                        <div>
+                            <h3 class="font-bold text-xl text-yellow-600 dark:text-yellow-400">Mahu / Hendak <span class="text-lg font-normal text-gray-500 dark:text-gray-400">- Want</span></h3>
+                            <blockquote class="border-l-4 border-gray-200 dark:border-gray-600 pl-4 mt-2">
+                                <p class="italic text-gray-800 dark:text-gray-200">Saya <strong class="text-yellow-600 dark:text-yellow-400">mahu</strong> pergi ke kelas.</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">I want to go to class.</p>
+                            </blockquote>
+                        </div>
+                        <!-- Boleh -->
+                        <div>
+                            <h3 class="font-bold text-xl text-yellow-600 dark:text-yellow-400">Boleh <span class="text-lg font-normal text-gray-500 dark:text-gray-400">- Can</span></h3>
+                            <blockquote class="border-l-4 border-gray-200 dark:border-gray-600 pl-4 mt-2">
+                                <p class="italic text-gray-800 dark:text-gray-200">Zhang Li <strong class="text-yellow-600 dark:text-yellow-400">boleh</strong> menyanyi.</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Zhang Li can sing.</p>
+                            </blockquote>
+                        </div>
+                        <!-- Mesti -->
+                        <div>
+                            <h3 class="font-bold text-xl text-yellow-600 dark:text-yellow-400">Mesti <span class="text-lg font-normal text-gray-500 dark:text-gray-400">- Must</span></h3>
+                            <blockquote class="border-l-4 border-gray-200 dark:border-gray-600 pl-4 mt-2">
+                                <p class="italic text-gray-800 dark:text-gray-200">Awak <strong class="text-yellow-600 dark:text-yellow-400">mesti</strong> membayar sewa rumah.</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">You must pay the house rent.</p>
+                            </blockquote>
+                        </div>
+                        <!-- Sedang -->
+                        <div>
+                            <h3 class="font-bold text-xl text-yellow-600 dark:text-yellow-400">Sedang <span class="text-lg font-normal text-gray-500 dark:text-gray-400">- In the process of / -ing</span></h3>
+                            <blockquote class="border-l-4 border-gray-200 dark:border-gray-600 pl-4 mt-2">
+                                <p class="italic text-gray-800 dark:text-gray-200">Ibu <strong class="text-yellow-600 dark:text-yellow-400">sedang</strong> memasak.</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Mother is cooking.</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        
+        <!-- Footer -->
+        <footer class="text-center mt-12 py-6 border-t border-gray-200 dark:border-gray-700">
+            <p class="text-gray-500 dark:text-gray-400">&copy; 2024 Bahasa Melayu Learning Portal. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Persistent Theme Toggle Button -->
+    <div id="theme-toggle-container">
+        <button id="theme-toggle" type="button" class="bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-full text-sm p-3 shadow-lg">
+            <!-- Moon Icon -->
+            <svg id="theme-toggle-dark-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            <!-- Sun Icon -->
+            <svg id="theme-toggle-light-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.121-3.536a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM4.95 6.364a1 1 0 00-1.414 1.414l.707.707a1 1 0 001.414-1.414l-.707-.707zM15.636 4.95a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM1.646 13.636a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1z"></path></svg>
+            <span class="sr-only">Toggle theme</span>
+        </button>
+    </div>
+
+    <script>
+        // This script runs after the page content is loaded to handle the button logic.
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+        
+        // Function to update the button icon based on the current theme
+        function updateIcons() {
+            if (document.documentElement.classList.contains('dark')) {
+                themeToggleDarkIcon.classList.add('hidden');
+                themeToggleLightIcon.classList.remove('hidden');
+            } else {
+                themeToggleDarkIcon.classList.remove('hidden');
+                themeToggleLightIcon.classList.add('hidden');
+            }
+        }
+
+        // Function to handle the theme toggle when the button is clicked
+        function toggleTheme() {
+            // Toggle the 'dark' class on the root <html> element
+            document.documentElement.classList.toggle('dark');
+            
+            // Save the user's preference to localStorage
+            if (document.documentElement.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+            
+            // Update the icon to reflect the new theme
+            updateIcons();
+        };
+
+        // Add the click event listener to the button
+        themeToggleBtn.addEventListener('click', toggleTheme);
+
+        // Update the icons to the correct state when the page loads
+        updateIcons();
+    </script>
+
+</body>
+</html>
